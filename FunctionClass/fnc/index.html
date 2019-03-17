@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Functions and Class - TeachMe.Codes</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Functions and Class";
+    var mkdocs_page_input_path = "FunctionClass/fnc.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TeachMe.Codes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/cloud.md">Lunching an EC2 instance in AWS Cloud</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Fundamentals of Programming</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Functions and Class
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#functions-and-classes">
+      Functions and Classes
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#class-circle">Class Circle</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#class-gravity">Class Gravity</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/array/array/">Array</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/grid/meshgrid/">MeshGrid</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/algebra/algebra/">Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/DataFrame/dataframe/">Dataframe</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/GroupBy/groupby/">GroupBy</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Linear Models</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../LinearModels/Linear-models/">Regression</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Classification</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Classifiers/Logistic/Logistic/">Logistic</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Classifiers/Tree/Tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Classifiers/Ensamble/ensamble/">Ensamble</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Classifiers/SVM/svm/">SVM</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TeachMe.Codes</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Fundamentals of Programming &raquo;</li>
+        
+      
+    
+    <li>Functions and Class</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="functions-and-classes">Functions and Classes</h1>
+<hr />
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+</pre></div>
+
+
+<h3 id="class-circle">Class Circle</h3>
+<p>Define a function which will take radious as input and provides area as output for a circle.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">area</span>(r):
+    A <span style="color: #555555">=</span> np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>r<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
+    <span style="color: #006699; font-weight: bold">return</span> A
+</pre></div>
+
+
+<p>Claculate the area of a sample circle of radius 10.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>area(<span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>314.1592653589793
+</pre></div>
+
+
+<p>Define a function which will take radious as input and provides circumference as output for a circle.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">circumference</span>(r):
+    C <span style="color: #555555">=</span> <span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>r
+    <span style="color: #006699; font-weight: bold">return</span> C
+</pre></div>
+
+
+<p>Claculate the circumference of a sample circle of radius 10.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>circumference(<span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>62.83185307179586
+</pre></div>
+
+
+<p>Lets build a class implementing above constants and functions</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">Circle</span>():
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>, r):
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>r <span style="color: #555555">=</span> r
+
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">area</span>(<span style="color: #336666">self</span>):
+        A <span style="color: #555555">=</span> np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span><span style="color: #336666">self</span><span style="color: #555555">.</span>r<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
+        <span style="color: #006699; font-weight: bold">return</span> A
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">circumference</span>(<span style="color: #336666">self</span>):
+        C <span style="color: #555555">=</span> <span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span><span style="color: #336666">self</span><span style="color: #555555">.</span>r
+        <span style="color: #006699; font-weight: bold">return</span> C
+</pre></div>
+
+
+<p>Test using examples</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Circle(<span style="color: #FF6600">5</span>)<span style="color: #555555">.</span>area()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>78.53981633974483
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>CC <span style="color: #555555">=</span> Circle(<span style="color: #FF6600">5</span>)
+CC<span style="color: #555555">.</span>area(),CC<span style="color: #555555">.</span>circumference()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(78.53981633974483, 31.41592653589793)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>CC<span style="color: #555555">.</span>r
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>5
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> r <span style="color: #000000; font-weight: bold">in</span> [<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">6</span>,<span style="color: #FF6600">24</span>,<span style="color: #FF6600">25</span>,<span style="color: #FF6600">46</span>,<span style="color: #FF6600">567</span>]:
+    CC <span style="color: #555555">=</span> Circle(r)
+    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;radius: &quot;</span> , r,\
+          <span style="color: #CC3300">&quot;area : &quot;</span> , CC<span style="color: #555555">.</span>area(),\
+          <span style="color: #CC3300">&quot;circumf : &quot;</span> , CC<span style="color: #555555">.</span>circumference())
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>radius:  2 area :  12.566370614359172 circumf :  12.566370614359172
+radius:  3 area :  28.274333882308138 circumf :  18.84955592153876
+radius:  6 area :  113.09733552923255 circumf :  37.69911184307752
+radius:  24 area :  1809.5573684677208 circumf :  150.79644737231007
+radius:  25 area :  1963.4954084936207 circumf :  157.07963267948966
+radius:  46 area :  6647.610054996002 circumf :  289.02652413026095
+radius:  567 area :  1009987.480609929 circumf :  3562.5660691708254
+</pre></div>
+
+
+<hr />
+<h3 id="class-gravity">Class Gravity</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">gravity</span>(m1,m2,d):
+    F <span style="color: #555555">=</span> (m1<span style="color: #555555">*</span>m2)<span style="color: #555555">/</span>d<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
+    <span style="color: #006699; font-weight: bold">return</span> F
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>gravity(<span style="color: #FF6600">5</span>,<span style="color: #FF6600">4</span>,<span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>0.2
+</pre></div>
+
+
+<p>Lets create a class for Gravity calculation</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">Newton</span>():
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>,value_of_G, value_of_g, supplied_info):
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>G <span style="color: #555555">=</span> value_of_G
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>info <span style="color: #555555">=</span> supplied_info
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>g <span style="color: #555555">=</span> value_of_g
+
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">gravity</span>(<span style="color: #336666">self</span>,m1,m2,d):
+        F <span style="color: #555555">=</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>G<span style="color: #555555">*</span>(m1<span style="color: #555555">*</span>m2)<span style="color: #555555">/</span>d<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
+        <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #336666">self</span><span style="color: #555555">.</span>info)
+        <span style="color: #006699; font-weight: bold">return</span> F  
+
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">gravity_pot</span>(<span style="color: #336666">self</span>,m1):
+        F <span style="color: #555555">=</span> m1<span style="color: #555555">*</span><span style="color: #336666">self</span><span style="color: #555555">.</span>g
+        <span style="color: #006699; font-weight: bold">return</span> F
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N1 <span style="color: #555555">=</span> Newton(value_of_G <span style="color: #555555">=</span><span style="color: #FF6600">6.7</span>, value_of_g<span style="color: #555555">=</span> <span style="color: #FF6600">9.8</span>,\
+            supplied_info <span style="color: #555555">=</span> <span style="color: #CC3300">&quot;great job&quot;</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N1<span style="color: #555555">.</span>G, N1<span style="color: #555555">.</span>g,N1<span style="color: #555555">.</span>gravity(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">13</span>),N1<span style="color: #555555">.</span>gravity_pot(<span style="color: #FF6600">12</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>great job
+
+
+
+
+
+(6.7, 9.8, 0.2378698224852071, 117.60000000000001)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N1<span style="color: #555555">.</span>gravity(m1<span style="color: #555555">=</span><span style="color: #FF6600">11</span>,m2<span style="color: #555555">=</span><span style="color: #FF6600">12</span>,d<span style="color: #555555">=</span><span style="color: #FF6600">3</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>great job
+
+
+
+
+
+98.26666666666667
+</pre></div>
+
+
+<hr />
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Projects/Ncharges/Ncharges/" class="btn btn-neutral float-right" title="Project N-charges">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Projects/Diffusion/Diffusion/" class="btn btn-neutral" title="Project Diffusion"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Projects/Diffusion/Diffusion/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Projects/Ncharges/Ncharges/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

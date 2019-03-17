@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>MeshGrid - TeachMe.Codes</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "MeshGrid";
+    var mkdocs_page_input_path = "Numpy/grid/meshgrid.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> TeachMe.Codes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/cloud.md">Lunching an EC2 instance in AWS Cloud</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Fundamentals of Programming</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../array/array/">Array</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        MeshGrid
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#numpy-tutorial-arangemeshgrid">
+      Numpy tutorial : arange,meshgrid
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#how-to-import-numpy-library-in-python">How to import Numpy library in python</a>
+        </li>
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#1-arange-how-to-generate-integers-from-n1-to-n2">
+      1. arange : How to generate integers from n1 to n2
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#11-application">1.1 Application</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#creating-numpy-array">Creating Numpy array</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#2-meshgrid-how-to-create-a-grid-and-its-application-to-ploting-cost-functions">
+      2. meshgrid :  How to create a grid and it's application to ploting cost functions
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#1-example-cost-function">1. Example Cost function</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#example-2-simulated-annealing">Example 2: Simulated annealing</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../algebra/algebra/">Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/DataFrame/dataframe/">Dataframe</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/GroupBy/groupby/">GroupBy</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Linear Models</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LinearModels/Linear-models/">Regression</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Classification</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Logistic/Logistic/">Logistic</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Tree/Tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Ensamble/ensamble/">Ensamble</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/SVM/svm/">SVM</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">TeachMe.Codes</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Numpy &raquo;</li>
+        
+      
+    
+    <li>MeshGrid</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="numpy-tutorial-arangemeshgrid">Numpy tutorial : <code>arange</code>,<code>meshgrid</code></h2>
+<h4 id="how-to-import-numpy-library-in-python">How to import Numpy library in python</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+</pre></div>
+
+
+<h3 id="1-arange-how-to-generate-integers-from-n1-to-n2">1. <strong><em>arange</em></strong> : How to generate integers from n1 to n2</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>X <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">10</span>)
+X
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>X<span style="color: #555555">*</span>X
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">3</span>,<span style="color: #FF6600">12</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([ 3,  4,  5,  6,  7,  8,  9, 10, 11])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">1</span>,<span style="color: #FF6600">10</span>,<span style="color: #FF6600">2</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([1, 3, 5, 7, 9])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">10</span>,<span style="color: #FF6600">11</span>,<span style="color: #FF6600">0.01</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([10.  , 10.01, 10.02, 10.03, 10.04, 10.05, 10.06, 10.07, 10.08,
+       10.09, 10.1 , 10.11, 10.12, 10.13, 10.14, 10.15, 10.16, 10.17,
+       10.18, 10.19, 10.2 , 10.21, 10.22, 10.23, 10.24, 10.25, 10.26,
+       10.27, 10.28, 10.29, 10.3 , 10.31, 10.32, 10.33, 10.34, 10.35,
+       10.36, 10.37, 10.38, 10.39, 10.4 , 10.41, 10.42, 10.43, 10.44,
+       10.45, 10.46, 10.47, 10.48, 10.49, 10.5 , 10.51, 10.52, 10.53,
+       10.54, 10.55, 10.56, 10.57, 10.58, 10.59, 10.6 , 10.61, 10.62,
+       10.63, 10.64, 10.65, 10.66, 10.67, 10.68, 10.69, 10.7 , 10.71,
+       10.72, 10.73, 10.74, 10.75, 10.76, 10.77, 10.78, 10.79, 10.8 ,
+       10.81, 10.82, 10.83, 10.84, 10.85, 10.86, 10.87, 10.88, 10.89,
+       10.9 , 10.91, 10.92, 10.93, 10.94, 10.95, 10.96, 10.97, 10.98,
+       10.99])
+</pre></div>
+
+
+<h4 id="11-application">1.1 Application</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">seaborn</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sns</span>
+<span style="color: #555555">%</span>matplotlib inline
+sns<span style="color: #555555">.</span>set()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">1</span>,<span style="color: #FF6600">0.01</span>)
+plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">10</span>,<span style="color: #FF6600">10</span>])
+
+plt<span style="color: #555555">.</span>plot(x,x<span style="color: #555555">**</span><span style="color: #FF6600">2</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">3</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">4</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">5</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">6</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">7</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">8</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">9</span>,\
+         x,x<span style="color: #555555">**</span><span style="color: #FF6600">10</span>)
+
+plt<span style="color: #555555">.</span>grid(<span style="color: #336666">True</span>)
+
+plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&#39;x&#39;</span>,fontsize <span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
+plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&#39;x^n&#39;</span>,fontsize <span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_11_0.png" /></p>
+<h4 id="creating-numpy-array">Creating Numpy array</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>data_array <span style="color: #555555">=</span> np<span style="color: #555555">.</span>array([x,x<span style="color: #555555">**</span><span style="color: #FF6600">2</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">3</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">4</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">5</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">6</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">7</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">8</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">9</span>,x<span style="color: #555555">**</span><span style="color: #FF6600">10</span>])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>data_array[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>,<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>]
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([[0.000e+00, 1.000e-02, 2.000e-02, 3.000e-02, 4.000e-02],
+       [0.000e+00, 1.000e-04, 4.000e-04, 9.000e-04, 1.600e-03],
+       [0.000e+00, 1.000e-06, 8.000e-06, 2.700e-05, 6.400e-05],
+       [0.000e+00, 1.000e-08, 1.600e-07, 8.100e-07, 2.560e-06],
+       [0.000e+00, 1.000e-10, 3.200e-09, 2.430e-08, 1.024e-07]])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>data_array<span style="color: #555555">.</span>shape
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(10, 100)
+</pre></div>
+
+
+<hr />
+<h3 id="2-meshgrid-how-to-create-a-grid-and-its-application-to-ploting-cost-functions">2. <strong><em>meshgrid</em></strong> :  How to create a grid and it's application to ploting cost functions</h3>
+<hr />
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">6</span>,<span style="color: #FF6600">6</span>,<span style="color: #FF6600">0.05</span>)
+y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">6</span>,<span style="color: #FF6600">6</span>,<span style="color: #FF6600">0.05</span>)
+grid <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x,y)
+</pre></div>
+
+
+<h5 id="1-example-cost-function">1. Example Cost function</h5>
+<p>$\large{Z = \frac{sin(x^2+y^2).cos(x^2-y^2)}{x^2+y^2}}$</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>xx, yy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x, y, sparse<span style="color: #555555">=</span><span style="color: #336666">True</span>)  <span style="color: #0099FF; font-style: italic">#   &lt;---------------------------------------------</span>
+
+z <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sin(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)<span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">-</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>) <span style="color: #555555">/</span> (xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
+plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
+h <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>contour(x,y,z)
+<span style="color: #0099FF; font-style: italic"># Label contours</span>
+plt<span style="color: #555555">.</span>clabel(CS, inline<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;a list of 147 text.Text objects&amp;gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_22_1.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">mpl_toolkits.mplot3d</span> <span style="color: #006699; font-weight: bold">import</span> Axes3D
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span> <span style="color: #006699; font-weight: bold">import</span> cm
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.ticker</span> <span style="color: #006699; font-weight: bold">import</span> LinearLocator, FormatStrFormatter
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+
+
+fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
+ax <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>gca(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>)
+
+<span style="color: #0099FF; font-style: italic"># Make data.</span>
+x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">3</span>, <span style="color: #FF6600">3</span>, <span style="color: #FF6600">0.01</span>)
+y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">3</span>, <span style="color: #FF6600">3</span>, <span style="color: #FF6600">0.01</span>)
+
+xx, yy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x, y) <span style="color: #0099FF; font-style: italic">#  &lt;-------------------------------</span>
+
+
+z <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sin(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)<span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">-</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>) <span style="color: #555555">/</span> (xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
+
+<span style="color: #0099FF; font-style: italic"># Plot the surface.</span>
+surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(xx, yy, z, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #336666">False</span>)
+
+<span style="color: #0099FF; font-style: italic"># Customize the z axis.</span>
+<span style="color: #0099FF; font-style: italic">#ax.set_zlim(-1.01, 1.01)</span>
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_locator(LinearLocator(<span style="color: #FF6600">10</span>))
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_formatter(FormatStrFormatter(<span style="color: #CC3300">&#39;</span><span style="color: #AA0000">%.02f</span><span style="color: #CC3300">&#39;</span>))
+
+<span style="color: #0099FF; font-style: italic"># Add a color bar which maps values to colors.</span>
+fig<span style="color: #555555">.</span>colorbar(surf, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.5</span>, aspect<span style="color: #555555">=</span><span style="color: #FF6600">5</span>)
+
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_23_0.png" /></p>
+<hr />
+<h5 id="example-2-simulated-annealing">Example 2: Simulated annealing</h5>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+</pre></div>
+
+
+<p>$\large{Z =  0.2 + x^2 + y^2 -0.1 \cos(6 \pi x) - 0.1\cos(6 \pi y)}$</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Design variables at mesh points</span>
+x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>, <span style="color: #FF6600">1.0</span>, <span style="color: #FF6600">0.01</span>)
+y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>, <span style="color: #FF6600">1.0</span>, <span style="color: #FF6600">0.01</span>)
+
+xx, yy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x, y) <span style="color: #0099FF; font-style: italic">#&lt;-----------------------------</span>
+
+
+z <span style="color: #555555">=</span>  <span style="color: #FF6600">0.2</span> <span style="color: #555555">+</span> xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>\
+       <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(<span style="color: #FF6600">6.0</span><span style="color: #555555">*</span>math<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>xx)\
+       <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(<span style="color: #FF6600">6.0</span><span style="color: #555555">*</span>math<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>yy)
+
+
+
+<span style="color: #0099FF; font-style: italic"># Create a contour plot</span>
+plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span>[<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
+CS <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>contour(xx, yy, z)
+
+<span style="color: #0099FF; font-style: italic"># Label contours</span>
+plt<span style="color: #555555">.</span>clabel(CS, inline<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">10</span>)
+
+
+plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&#39;Non-Convex Function&#39;</span>)
+plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&#39;x1&#39;</span>)
+plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&#39;x2&#39;</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Text(0,0.5,&#39;x2&#39;)
+</pre></div>
+
+
+<p><img alt="png" src="../output_28_1.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">mpl_toolkits.mplot3d</span> <span style="color: #006699; font-weight: bold">import</span> Axes3D
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span> <span style="color: #006699; font-weight: bold">import</span> cm
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.ticker</span> <span style="color: #006699; font-weight: bold">import</span> LinearLocator, FormatStrFormatter
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+
+
+fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
+ax <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>gca(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>)
+
+<span style="color: #0099FF; font-style: italic"># Make data.</span>
+x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">1</span>, <span style="color: #FF6600">1</span>, <span style="color: #FF6600">0.01</span>)
+y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">1</span>, <span style="color: #FF6600">1</span>, <span style="color: #FF6600">0.01</span>)
+
+xx, yy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x, y) <span style="color: #0099FF; font-style: italic">#  &lt;-------------------------------</span>
+
+
+z <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</span> <span style="color: #555555">+</span> xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>\
+       <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(<span style="color: #FF6600">6.0</span><span style="color: #555555">*</span>math<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>xx)\
+       <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(<span style="color: #FF6600">6.0</span><span style="color: #555555">*</span>math<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>yy)
+
+
+
+<span style="color: #0099FF; font-style: italic"># Plot the surface.</span>
+surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(xx, yy, z, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #336666">False</span>)
+
+<span style="color: #0099FF; font-style: italic"># Customize the z axis.</span>
+<span style="color: #0099FF; font-style: italic">#ax.set_zlim(-1.01, 1.01)</span>
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_locator(LinearLocator(<span style="color: #FF6600">10</span>))
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_formatter(FormatStrFormatter(<span style="color: #CC3300">&#39;</span><span style="color: #AA0000">%.02f</span><span style="color: #CC3300">&#39;</span>))
+
+<span style="color: #0099FF; font-style: italic"># Add a color bar which maps values to colors.</span>
+fig<span style="color: #555555">.</span>colorbar(surf, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.5</span>, aspect<span style="color: #555555">=</span><span style="color: #FF6600">5</span>)
+
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_29_0.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../algebra/algebra/" class="btn btn-neutral float-right" title="Algebra">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../array/array/" class="btn btn-neutral" title="Array"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../array/array/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../algebra/algebra/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
