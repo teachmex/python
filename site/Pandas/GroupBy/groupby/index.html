@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>GroupBy - TeachMe.Codes</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "GroupBy";
+    var mkdocs_page_input_path = "Pandas/GroupBy/groupby.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> TeachMe.Codes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/cloud.md">Lunching an EC2 instance in AWS Cloud</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Fundamentals of Programming</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/array/array/">Array</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/grid/meshgrid/">MeshGrid</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/algebra/algebra/">Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../DataFrame/dataframe/">Dataframe</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        GroupBy
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#data-handeling-groupby-merge-split">
+      Data Handeling: Groupby, Merge, Split
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#load-data">Load data</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#setting-name-column-as-index">Setting Name column as index</a>
+        </li>
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#group-by-groupbyaggregate-groupbysizegroupbymean">
+      Group By : groupby.aggregate(), groupby.size(),groupby.mean(),
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#the-groupby-operation-split-apply-combine">The groupby operation (split-apply-combine)</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#exercise-with-titanic-dataset">Exercise with Titanic Dataset</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#advanced-groupby-operations">Advanced Groupby Operations</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#group-by-followed-by-transformation-groupbytransform">Group by followed by Transformation: groupby.transform()</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Linear Models</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LinearModels/Linear-models/">Regression</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Classification</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Logistic/Logistic/">Logistic</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Tree/Tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Ensamble/ensamble/">Ensamble</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/SVM/svm/">SVM</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">TeachMe.Codes</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pandas &raquo;</li>
+        
+      
+    
+    <li>GroupBy</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="data-handeling-groupby-merge-split">Data Handeling: Groupby, Merge, Split</h1>
+<hr />
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">pandas</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">pd</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">seaborn</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sns</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #555555">%</span>matplotlib inline
+sns<span style="color: #555555">.</span>set()
+</pre></div>
+
+
+<h4 id="load-data">Load data</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>read_csv(<span style="color: #CC3300">&#39;data/titanic.csv&#39;</span>)
+</pre></div>
+
+
+<h3 id="setting-name-column-as-index">Setting Name column as index</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>copy(deep <span style="color: #555555">=</span><span style="color: #336666">True</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>set_index(<span style="color: #CC3300">&#39;Name&#39;</span>)
+titanic_df1<span style="color: #555555">.</span>head(<span style="color: #FF6600">2</span>)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Braund, Mr. Owen Harris</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="group-by-groupbyaggregate-groupbysizegroupbymean">Group By : <code>groupby.aggregate()</code>, <code>groupby.size()</code>,<code>groupby.mean()</code>,</h2>
+<hr />
+<h3 id="the-groupby-operation-split-apply-combine">The groupby operation (split-apply-combine)</h3>
+<p>The "group by" concept: we want to <strong>apply the same function on subsets of your dataframe, based on some key to split the dataframe in subsets</strong></p>
+<p>This operation is also referred to as the "split-apply-combine" operation, involving the following steps:</p>
+<ul>
+<li><strong>Splitting</strong> the data into groups based on some criteria</li>
+<li><strong>Applying</strong> a function to each group independently</li>
+<li><strong>Combining</strong> the results into a data structure</li>
+</ul>
+<p><img src="plots/splitApplyCombine.png"></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>DataFrame({<span style="color: #CC3300">&#39;key&#39;</span>:[<span style="color: #CC3300">&#39;A&#39;</span>,<span style="color: #CC3300">&#39;B&#39;</span>,<span style="color: #CC3300">&#39;C&#39;</span>,<span style="color: #CC3300">&#39;A&#39;</span>,<span style="color: #CC3300">&#39;B&#39;</span>,<span style="color: #CC3300">&#39;C&#39;</span>,<span style="color: #CC3300">&#39;A&#39;</span>,<span style="color: #CC3300">&#39;B&#39;</span>,<span style="color: #CC3300">&#39;C&#39;</span>],
+                   <span style="color: #CC3300">&#39;data&#39;</span>: [<span style="color: #FF6600">0</span>, <span style="color: #FF6600">5</span>, <span style="color: #FF6600">10</span>, <span style="color: #FF6600">5</span>, <span style="color: #FF6600">10</span>, <span style="color: #FF6600">15</span>, <span style="color: #FF6600">10</span>, <span style="color: #FF6600">15</span>, <span style="color: #FF6600">20</span>]})
+df
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+      <th>data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>A</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>B</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>C</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;key&#39;</span>)<span style="color: #555555">.</span>aggregate(np<span style="color: #555555">.</span>sum)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="exercise-with-titanic-dataset">Exercise with Titanic Dataset</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;Sex&#39;</span>)<span style="color: #555555">.</span>size()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Sex
+female    314
+male      577
+dtype: int64
+</pre></div>
+
+
+<div class="alert alert-success">
+    <b>EXERCISE</b>: Using groupby(), calculate the average age for each sex.
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;Sex&#39;</span>)[<span style="color: #CC3300">&#39;Age&#39;</span>]<span style="color: #555555">.</span>mean()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Sex
+female    27.915709
+male      30.726645
+Name: Age, dtype: float64
+</pre></div>
+
+
+<hr />
+<div class="alert alert-success">
+    <b>EXERCISE</b>: Calculate the average survival ratio for all passengers.
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1[<span style="color: #CC3300">&#39;Survived&#39;</span>]<span style="color: #555555">.</span>sum() <span style="color: #555555">/</span> <span style="color: #336666">len</span>(titanic_df1[<span style="color: #CC3300">&#39;Survived&#39;</span>])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>0.3838383838383838
+</pre></div>
+
+
+<hr />
+<div class="alert alert-success">
+    <b>EXERCISE</b>: Calculate this survival ratio for all passengers younger that 25 (remember: filtering/boolean indexing).
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df25 <span style="color: #555555">=</span> titanic_df1[titanic_df1[<span style="color: #CC3300">&#39;Age&#39;</span>] <span style="color: #555555">&lt;=</span> <span style="color: #FF6600">25</span>]
+df25[<span style="color: #CC3300">&#39;Survived&#39;</span>]<span style="color: #555555">.</span>sum() <span style="color: #555555">/</span> <span style="color: #336666">len</span>(df25[<span style="color: #CC3300">&#39;Survived&#39;</span>])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>0.4119601328903654
+</pre></div>
+
+
+<hr />
+<div class="alert alert-success">
+    <b>EXERCISE</b>: Is there a difference in this survival ratio between the sexes? (tip: write the above calculation of the survival ratio as a function)
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">survival_ratio</span>(survived):
+    <span style="color: #006699; font-weight: bold">return</span> survived<span style="color: #555555">.</span>sum() <span style="color: #555555">/</span> <span style="color: #336666">len</span>(survived)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;Sex&#39;</span>)[<span style="color: #CC3300">&#39;Survived&#39;</span>]<span style="color: #555555">.</span>aggregate(survival_ratio)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Sex
+female    0.742038
+male      0.188908
+Name: Survived, dtype: float64
+</pre></div>
+
+
+<hr />
+<div class="alert alert-success">
+    <b>EXERCISE</b>: Make a bar plot of the survival ratio for the different classes ('Pclass' column).
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;Pclass&#39;</span>)[<span style="color: #CC3300">&#39;Survived&#39;</span>]<span style="color: #555555">.</span>aggregate(survival_ratio)<span style="color: #555555">.</span>plot(kind<span style="color: #555555">=</span><span style="color: #CC3300">&#39;bar&#39;</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb321d163c8&amp;gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_30_1.png" /></p>
+<h2 id="advanced-groupby-operations">Advanced Groupby Operations</h2>
+<div class="alert alert-success">
+    <b>EXERCISE</b>: Find data for age distribution.
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #336666">type</span>(<span style="color: #FF6600">10</span><span style="color: #555555">//</span><span style="color: #FF6600">2</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>int
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df <span style="color: #555555">=</span> titanic_df1<span style="color: #555555">.</span>copy(deep <span style="color: #555555">=</span><span style="color: #336666">True</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df<span style="color: #555555">.</span>groupby(df<span style="color: #555555">.</span>Age<span style="color: #555555">//</span><span style="color: #FF6600">10</span> <span style="color: #555555">*</span> <span style="color: #FF6600">10</span>)<span style="color: #555555">.</span>size()<span style="color: #555555">.</span>plot(kind<span style="color: #555555">=</span><span style="color: #CC3300">&#39;bar&#39;</span>,figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">10</span>,<span style="color: #FF6600">10</span>])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb31d63f2b0&amp;gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_35_1.png" /></p>
+<div class="alert alert-success">
+    <b>EXERCISE</b>: Find data for male age distribution.
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Male <span style="color: #555555">=</span> df[df[<span style="color: #CC3300">&#39;Sex&#39;</span>] <span style="color: #555555">==</span> <span style="color: #CC3300">&#39;male&#39;</span>]
+Male<span style="color: #555555">.</span>groupby(Male<span style="color: #555555">.</span>Age <span style="color: #555555">//</span> <span style="color: #FF6600">10</span> <span style="color: #555555">*</span> <span style="color: #FF6600">10</span>)<span style="color: #555555">.</span>size()<span style="color: #555555">.</span>plot(kind<span style="color: #555555">=</span><span style="color: #CC3300">&#39;bar&#39;</span>,figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">10</span>,<span style="color: #FF6600">10</span>])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb31d524dd8&amp;gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_37_1.png" /></p>
+<div class="alert alert-success">
+    <b>EXERCISE</b>: List data with Fare size greater then 50.
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Fare50 <span style="color: #555555">=</span> df[df<span style="color: #555555">.</span>Fare<span style="color: #555555">&gt;</span><span style="color: #FF6600">50</span>]
+Fare50<span style="color: #555555">.</span>groupby([ <span style="color: #CC3300">&#39;Sex&#39;</span>])<span style="color: #555555">.</span>size()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Sex
+female    87
+male      73
+dtype: int64
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Fare50<span style="color: #555555">.</span>groupby([<span style="color: #CC3300">&#39;Age&#39;</span>, <span style="color: #CC3300">&#39;Sex&#39;</span>,<span style="color: #CC3300">&#39;Survived&#39;</span>])<span style="color: #555555">.</span>size()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Age    Sex     Survived
+0.92   male    1           1
+2.00   female  0           1
+4.00   male    1           1
+11.00  male    1           1
+14.00  female  1           1
+15.00  female  1           1
+16.00  female  1           2
+17.00  female  1           2
+       male    1           1
+18.00  female  1           3
+       male    0           2
+19.00  female  1           1
+       male    0           2
+21.00  female  1           2
+       male    0           3
+22.00  female  1           3
+       male    0           1
+23.00  female  1           2
+       male    1           1
+24.00  female  1           5
+       male    0           3
+25.00  female  0           1
+       male    1           2
+26.00  female  1           1
+       male    1           1
+27.00  male    0           1
+               1           2
+28.00  male    0           2
+29.00  female  1           1
+       male    0           1
+                          ..
+45.00  female  1           1
+       male    0           1
+46.00  male    0           2
+47.00  female  1           1
+       male    0           1
+48.00  female  1           1
+       male    1           2
+49.00  female  1           1
+       male    0           1
+               1           2
+50.00  female  1           1
+       male    0           2
+               1           1
+51.00  female  1           1
+       male    0           1
+52.00  female  1           2
+       male    0           1
+53.00  female  1           1
+54.00  female  1           2
+       male    0           2
+56.00  female  1           1
+58.00  female  1           2
+       male    0           1
+60.00  female  1           1
+       male    1           1
+62.00  female  1           1
+63.00  female  1           1
+64.00  male    0           1
+65.00  male    0           1
+70.00  male    0           1
+Length: 87, dtype: int64
+</pre></div>
+
+
+<hr />
+<h2 id="group-by-followed-by-transformation-groupbytransform">Group by followed by Transformation: <code>groupby.transform()</code></h2>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>DataFrame({<span style="color: #CC3300">&#39;key&#39;</span>:[<span style="color: #CC3300">&#39;A&#39;</span>,<span style="color: #CC3300">&#39;B&#39;</span>,<span style="color: #CC3300">&#39;C&#39;</span>,<span style="color: #CC3300">&#39;A&#39;</span>,<span style="color: #CC3300">&#39;B&#39;</span>,<span style="color: #CC3300">&#39;C&#39;</span>,<span style="color: #CC3300">&#39;A&#39;</span>,<span style="color: #CC3300">&#39;B&#39;</span>,<span style="color: #CC3300">&#39;C&#39;</span>],
+                   <span style="color: #CC3300">&#39;data&#39;</span>: [<span style="color: #FF6600">0</span>, <span style="color: #FF6600">5</span>, <span style="color: #FF6600">10</span>, <span style="color: #FF6600">5</span>, <span style="color: #FF6600">10</span>, <span style="color: #FF6600">15</span>, <span style="color: #FF6600">10</span>, <span style="color: #FF6600">15</span>, <span style="color: #FF6600">20</span>]})
+df
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data</th>
+      <th>key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>15</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>15</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>20</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;key&#39;</span>)<span style="color: #555555">.</span>transform(<span style="color: #CC3300">&#39;mean&#39;</span>)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">normalize</span>(group):
+    <span style="color: #006699; font-weight: bold">return</span> (group <span style="color: #555555">-</span> group<span style="color: #555555">.</span>mean()) <span style="color: #555555">/</span> group<span style="color: #555555">.</span>std()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;key&#39;</span>)<span style="color: #555555">.</span>transform(normalize)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df<span style="color: #555555">.</span>groupby(<span style="color: #CC3300">&#39;key&#39;</span>)<span style="color: #555555">.</span>transform(<span style="color: #CC3300">&#39;sum&#39;</span>)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Lambda/lambda/" class="btn btn-neutral float-right" title="Lambda Transform">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Explor/explor/" class="btn btn-neutral" title="Data Exploration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Explor/explor/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Lambda/lambda/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

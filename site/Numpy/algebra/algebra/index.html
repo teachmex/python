@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Algebra - TeachMe.Codes</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Algebra";
+    var mkdocs_page_input_path = "Numpy/algebra/algebra.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> TeachMe.Codes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/cloud.md">Lunching an EC2 instance in AWS Cloud</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Fundamentals of Programming</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../array/array/">Array</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../grid/meshgrid/">MeshGrid</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Algebra
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#algebra-transpose-dot-linalg">
+      Algebra: transpose,    dot,    linalg
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#dot-product">Dot Product</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#transpose-of-a-matrix">Transpose of a matrix</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#solve">Solve</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#inverse">Inverse</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#determinant">Determinant</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#singular-value-decomposition">Singular Value Decomposition</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/DataFrame/dataframe/">Dataframe</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/GroupBy/groupby/">GroupBy</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Linear Models</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LinearModels/Linear-models/">Regression</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Classification</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Logistic/Logistic/">Logistic</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Tree/Tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Ensamble/ensamble/">Ensamble</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/SVM/svm/">SVM</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">TeachMe.Codes</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Numpy &raquo;</li>
+        
+      
+    
+    <li>Algebra</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="algebra-transpose-dot-linalg">Algebra: <code>transpose</code>,    <code>dot</code>,    <code>linalg</code></h1>
+<p>https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.linalg.html</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">seaborn</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sns</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #555555">%</span> matplotlib inline
+sns<span style="color: #555555">.</span>set()
+</pre></div>
+
+
+<h3 id="dot-product">Dot Product</h3>
+<p>$ u = M.v $</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>v <span style="color: #555555">=</span> np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>rand(<span style="color: #FF6600">5</span>)
+v
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([ 0.61880652,  0.16277711,  0.77725885,  0.39357105,  0.72518988])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>M <span style="color: #555555">=</span> np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>rand(<span style="color: #FF6600">5</span>,<span style="color: #FF6600">5</span>)
+M
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([[ 0.44722927,  0.75871176,  0.74971577,  0.83610699,  0.18085266],
+       [ 0.00121306,  0.84271476,  0.65241612,  0.27094445,  0.63364293],
+       [ 0.07906587,  0.85301928,  0.62214839,  0.59205861,  0.70427723],
+       [ 0.88162665,  0.76250728,  0.15724579,  0.63985535,  0.04617605],
+       [ 0.57250482,  0.6551876 ,  0.562632  ,  0.29052545,  0.29159418]])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>u <span style="color: #555555">=</span> np<span style="color: #555555">.</span>dot(M,v)
+u
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([ 1.44319253,  1.21116885,  1.41510068,  1.07721068,  1.22403352])
+</pre></div>
+
+
+<h3 id="transpose-of-a-matrix">Transpose of a matrix</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">6</span>])
+plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">1</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">1</span>)
+sns<span style="color: #555555">.</span>heatmap(M, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">1</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>)
+sns<span style="color: #555555">.</span>heatmap(M<span style="color: #555555">.</span>T, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x11ce902b0&amp;gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_8_1.png" /></p>
+<h3 id="solve">Solve</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy.linalg</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">LA</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>M <span style="color: #555555">=</span> np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>rand(<span style="color: #FF6600">5</span>,<span style="color: #FF6600">5</span>)
+v <span style="color: #555555">=</span> np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>rand(<span style="color: #FF6600">5</span>)
+LA<span style="color: #555555">.</span>solve(M, v)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([-0.70443073,  0.00920272,  1.79273467,  0.28129874,  0.0351515 ])
+</pre></div>
+
+
+<h3 id="inverse">Inverse</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>MI <span style="color: #555555">=</span> LA<span style="color: #555555">.</span>inv(M)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>np<span style="color: #555555">.</span>dot(MI,M)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([[  1.00000000e+00,   1.11022302e-16,  -2.22044605e-16,
+         -2.77555756e-17,  -5.55111512e-17],
+       [ -4.44089210e-16,   1.00000000e+00,  -4.44089210e-16,
+         -3.74700271e-16,  -2.22044605e-16],
+       [  1.11022302e-16,   1.11022302e-16,   1.00000000e+00,
+          2.08166817e-17,   1.38777878e-16],
+       [  0.00000000e+00,   2.22044605e-16,   2.22044605e-16,
+          1.00000000e+00,   5.55111512e-17],
+       [  4.44089210e-16,   1.11022302e-16,   2.22044605e-16,
+          4.16333634e-17,   1.00000000e+00]])
+</pre></div>
+
+
+<h3 id="determinant">Determinant</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>LA<span style="color: #555555">.</span>det(M)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>-0.045069829276640772
+</pre></div>
+
+
+<h3 id="singular-value-decomposition">Singular Value Decomposition</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>U,s,v <span style="color: #555555">=</span> LA<span style="color: #555555">.</span>svd(M)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>U
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([[-0.36955796,  0.82623516, -0.10506496, -0.38322577,  0.15120101],
+       [-0.40915055, -0.52825188,  0.07308364, -0.58566133,  0.45299599],
+       [-0.27156968, -0.02207665, -0.5227498 ,  0.57959325,  0.56264272],
+       [-0.70259694, -0.01970269,  0.54356007,  0.39190428, -0.23858507],
+       [-0.35865051, -0.19341623, -0.64412362, -0.14360195, -0.63122359]])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>s
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([ 2.22951719,  1.04725056,  0.39529212,  0.2559056 ,  0.19082116])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>v
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([[-0.5796746 , -0.39152082, -0.43864895, -0.32442397, -0.46154631],
+       [-0.5284475 ,  0.42628206, -0.3319487 ,  0.63137979,  0.1737713 ],
+       [ 0.36619987, -0.57923042, -0.56088856,  0.3066463 ,  0.3489439 ],
+       [-0.23678668,  0.14559935, -0.16403051, -0.58705857,  0.74242112],
+       [-0.44107859, -0.55523689,  0.59656951,  0.2396642 ,  0.28952991]])
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../stat/stat/" class="btn btn-neutral float-right" title="Statistics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../grid/meshgrid/" class="btn btn-neutral" title="MeshGrid"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../grid/meshgrid/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../stat/stat/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
