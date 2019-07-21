@@ -1,5 +1,5 @@
 
-### Introduction to Python programming
+### Introduction to Pandas
 
 Course Track:
 
