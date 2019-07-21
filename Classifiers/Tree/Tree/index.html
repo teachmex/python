@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Decision Tree - TeachMe.Codes</title>
+  <title>Decision Tree - TeachMe.Codes (Python)</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes</a>
+        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -106,13 +106,6 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/cloud.md">Lunching an EC2 instance in AWS Cloud</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
     <a class="" href="../../../GettingStarted/git/">How to Git</a>
   </li>
         
@@ -121,7 +114,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Fundamentals of Programming</p>
+    <p class="caption">Python Programming</p>
   </li>
 
 
@@ -130,6 +123,13 @@
   
     <li class="navtree toctree-l1 group">
       <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../prog/">Introduction</a>
+  </li>
+        
           
 
 
@@ -197,6 +197,13 @@
 
 
   <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/numpy/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
     <a class="" href="../../../Numpy/array/array/">Array</a>
   </li>
         
@@ -235,6 +242,13 @@
   
     <li class="navtree toctree-l1 group">
       <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/pandas/">Introduction</a>
+  </li>
+        
           
 
 
@@ -432,7 +446,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes</a>
+        <a href="../../..">TeachMe.Codes (Python)</a>
       </nav>
 
       
@@ -533,22 +547,6 @@ graph<span style="color: #555555">.</span>write_pdf(<span style="color: #CC3300"
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>---------------------------------------------------------------------------
-
-ModuleNotFoundError                       Traceback (most recent call last)
-
-&amp;lt;ipython-input-12-52bcb3d743e1&amp;gt; in &amp;lt;module&amp;gt;()
-      1 from sklearn.externals.six import StringIO
-----&amp;gt; 2 import pydot
-      3 dot_data = StringIO()
-      4 tree.export_graphviz(clf, out_file=dot_data)
-      5 graph = pydot.graph_from_dot_data(dot_data.getvalue())
-
-
-ModuleNotFoundError: No module named &#39;pydot&#39;
-</pre></div>
-
-
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">IPython.display</span> <span style="color: #006699; font-weight: bold">import</span> Image  
 dot_data <span style="color: #555555">=</span> StringIO()  
 tree<span style="color: #555555">.</span>export_graphviz(clf, out_file<span style="color: #555555">=</span>dot_data,  
@@ -561,68 +559,8 @@ Image(graph<span style="color: #555555">.</span>create_png())
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>---------------------------------------------------------------------------
-
-NameError                                 Traceback (most recent call last)
-
-&amp;lt;ipython-input-13-d9934c394935&amp;gt; in &amp;lt;module&amp;gt;()
-      6                          filled=True, rounded=True,
-      7                          special_characters=True)  
-----&amp;gt; 8 graph = pydot.graph_from_dot_data(dot_data.getvalue())
-      9 Image(graph.create_png())
-
-
-NameError: name &#39;pydot&#39; is not defined
-</pre></div>
-
-
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">IPython.display</span> <span style="color: #006699; font-weight: bold">import</span> Image
 Image(filename<span style="color: #555555">=</span><span style="color: #CC3300">&#39;iris.png&#39;</span>)
-</pre></div>
-
-
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>---------------------------------------------------------------------------
-
-FileNotFoundError                         Traceback (most recent call last)
-
-&amp;lt;ipython-input-14-53607bd2a2e8&amp;gt; in &amp;lt;module&amp;gt;()
-      1 from IPython.display import Image
-----&amp;gt; 2 Image(filename=&#39;iris.png&#39;)
-
-
-~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in __init__(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata)
-   1132         self.unconfined = unconfined
-   1133         super(Image, self).__init__(data=data, url=url, filename=filename, 
--&amp;gt; 1134                 metadata=metadata)
-   1135 
-   1136         if self.width is None and self.metadata.get(&#39;width&#39;, {}):
-
-
-~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in __init__(self, data, url, filename, metadata)
-    606             self.metadata = {}
-    607 
---&amp;gt; 608         self.reload()
-    609         self._check_data()
-    610
-
-
-~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in reload(self)
-   1163         &quot;&quot;&quot;Reload the raw data from file or URL.&quot;&quot;&quot;
-   1164         if self.embed:
--&amp;gt; 1165             super(Image,self).reload()
-   1166             if self.retina:
-   1167                 self._retina_shape()
-
-
-~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in reload(self)
-    631         &quot;&quot;&quot;Reload the raw data from file or URL.&quot;&quot;&quot;
-    632         if self.filename is not None:
---&amp;gt; 633             with open(self.filename, self._read_flags) as f:
-    634                 self.data = f.read()
-    635         elif self.url is not None:
-
-
-FileNotFoundError: [Errno 2] No such file or directory: &#39;iris.png&#39;
 </pre></div>
 
 
@@ -826,20 +764,6 @@ stack <span style="color: #555555">=</span> [(<span style="color: #FF6600">0</sp
                  children_right[i],
                  ))
 <span style="color: #006699; font-weight: bold">print</span>()
-</pre></div>
-
-
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>node=0 test node: go to node 1 if X[:, 3] &amp;lt;= 0.800000011921s else to node 2.
-    node=1 leaf node.
-    node=2 test node: go to node 3 if X[:, 2] &amp;lt;= 4.94999980927s else to node 4.
-        node=3 leaf node.
-        node=4 leaf node.
-
-
-
-/Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:7: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-/Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:3: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-  app.launch_new_instance()
 </pre></div>
 
 
@@ -1111,6 +1035,7 @@ plt<span style="color: #555555">.</span>show()
 </div>
     <script>var base_url = '../../..';</script>
     <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
       <script src="../../../search/main.js" defer></script>
 
 </body>
