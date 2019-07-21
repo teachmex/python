@@ -156,7 +156,7 @@ for i in range(n_repeat):
 X_test, y_test = generate(n_samples=n_test, noise=noise, n_repeat=n_repeat)
 ```
 
- ### Plot
+### Plot
 
 
 ```python
@@ -234,7 +234,6 @@ plt.show()
 
 
 ----------------
-
 ### 2. OOB Errors for Random Forests ([source](https://github.com/scikit-learn/scikit-learn/tree/master/examples/ensemble))
 
 -----------------
@@ -262,7 +261,7 @@ from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 
 ```
 
- #### Data Set
+#### Data Set
 
 
 ```python
@@ -323,7 +322,7 @@ for label, clf in ensemble_clfs:
 
 ```
 
- #### Plot
+#### Plot
 
 
 ```python
@@ -383,7 +382,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.datasets import make_classification
 ```
 
- #### Data
+#### Data
 
 
 ```python
@@ -421,7 +420,7 @@ y_pred_rt = pipeline.predict_proba(X_test)[:, 1]
 fpr_rt_lm, tpr_rt_lm, _ = roc_curve(y_test, y_pred_rt)
 ```
 
- #### Model
+#### Model
 
 
 ```python
@@ -526,7 +525,7 @@ from sklearn.datasets import fetch_olivetti_faces
 from sklearn.ensemble import ExtraTreesClassifier
 ```
 
- #### Data
+#### Data
 
 
 ```python
@@ -565,7 +564,7 @@ importances = importances.reshape(data.images[0].shape)
     done in 2.155s
 
 
- ##### Plot
+##### Plot
 
 
 ```python
@@ -1527,31 +1526,6 @@ cv_best_iter = x[np.argmin(cv_score)]
 
 
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-6-331f159e761d> in <module>()
-         32 
-         33 # Estimate best n_estimator using cross-validation
-    ---> 34 cv_score = cv_estimate(3)
-         35 
-         36 # Compute best n_estimator for test data
-
-
-    <ipython-input-6-331f159e761d> in cv_estimate(n_folds)
-         21 
-         22 def cv_estimate(n_folds=3):
-    ---> 23     cv = KFold(n_folds=n_folds)
-         24     cv_clf = ensemble.GradientBoostingClassifier(**params)
-         25     val_scores = np.zeros((n_estimators,), dtype=np.float64)
-
-
-    TypeError: __init__() missing 1 required positional argument: 'n'
-
-
- - Plot
-
 
 ```python
 
@@ -1585,21 +1559,6 @@ plt.xlabel('number of iterations')
 
 plt.show()
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-7-3dcde55ed4f9> in <module>()
-          6 
-          7 # plot curves and vertical lines for best iterations
-    ----> 8 plt.plot(x, cumsum, label='OOB loss', color=oob_color)
-          9 plt.plot(x, test_score, label='Test loss', color=test_color)
-         10 plt.plot(x, cv_score, label='CV loss', color=cv_color)
-
-
-    NameError: name 'cumsum' is not defined
 
 
 --------------

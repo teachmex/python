@@ -1,7 +1,7 @@
 
 # Algebra: ```transpose```,    ```dot```,    ```linalg```
 
-https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.linalg.html
+Read more about algebra library [here](https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.linalg.html)
 
 
 ```python
@@ -14,7 +14,7 @@ sns.set()
 
 ### Dot Product
 
-$ u = M.v $
+$$ u = M.v $$
 
 
 ```python

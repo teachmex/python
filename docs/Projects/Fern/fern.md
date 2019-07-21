@@ -12,9 +12,9 @@ import random as random
 sns.set()
 ```
 
-https://en.wikipedia.org/wiki/Barnsley_fern
+Read more about Fern [here](https://en.wikipedia.org/wiki/Barnsley_fern).
 
-#### Method - 1: Blind implementation 
+#### Method - 1: Direct implementation 
 
 
 ```python
@@ -84,18 +84,20 @@ plt.show()
 
 ![png](output_7_0.png)
 
+---------------
+
 
 #### Method-2 : Manual Matrix Multiplication
 
 These correspond to the following transformations:
 
-$ {\displaystyle f_{1}(x,y)={\begin{bmatrix}\ 0.00&\ 0.00\ \\0.00&\ 0.16\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}}$
+$$ {\displaystyle f_{1}(x,y)={\begin{bmatrix}\ 0.00&\ 0.00\ \\\ 0.00&\ 0.16\end{bmatrix}}{\begin{bmatrix}\ x\\\y\end{bmatrix}}}$$
 
-${\displaystyle f_{2}(x,y)={\begin{bmatrix}\ 0.85&\ 0.04\ \\-0.04&\ 0.85\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\1.60\end{bmatrix}}}$
+$${\displaystyle f_{2}(x,y)={\begin{bmatrix}\ 0.85 &\ 0.04\ \\\ -0.04&\ 0.85\end{bmatrix}}{\begin{bmatrix}\ x\\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\\ 1.60\end{bmatrix}}}$$
 
-$ {\displaystyle f_{3}(x,y)={\begin{bmatrix}\ 0.20&\ -0.26\ \\0.23&\ 0.22\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\1.60\end{bmatrix}}}$
+$$ {\displaystyle f_{3}(x,y)={\begin{bmatrix}\ 0.20&\ -0.26\ \\\ 0.23&\ 0.22\end{bmatrix}}{\begin{bmatrix}\ x\\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\\ 1.60\end{bmatrix}}}$$
 
-${\displaystyle f_{4}(x,y)={\begin{bmatrix}\ -0.15&\ 0.28\ \\0.26&\ 0.24\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\0.44\end{bmatrix}}}$
+$${\displaystyle f_{4}(x,y)={\begin{bmatrix}\ -0.15&\ 0.28\ \\\ 0.26&\ 0.24\end{bmatrix}}{\begin{bmatrix}\ x\\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\\0.44\end{bmatrix}}}$$
 
 
 ```python
@@ -192,6 +194,8 @@ plt.show()
 
 
 ![png](output_14_0.png)
+
+-----------------
 
 
 ### Method 3-Numpy

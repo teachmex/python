@@ -1,11 +1,11 @@
 
 # Project: N-charge system
 
-$ E = q * \frac{\hat{r}}{r}$
+$$ E = q * \frac{\hat{r}}{r}$$
 
-$ V  = q * \frac{1}{r}$
+$$ V  = q * \frac{1}{r}$$
 
-$ V  = q * \frac{1}{\sqrt{((x-x^{'})^{2} + (y - y^{'})^{2})}} $
+$$ V  = q * \frac{1}{\sqrt{((x-x^{'})^{2} + (y - y^{'})^{2})}} $$
 
 
 

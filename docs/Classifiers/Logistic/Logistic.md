@@ -287,14 +287,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/neural_network/multilayer_perceptron.py:563: ConvergenceWarning: Stochastic Optimizer: Maximum iterations reached and the optimization hasn't converged yet.
-      % (), ConvergenceWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/neural_network/multilayer_perceptron.py:563: ConvergenceWarning: Stochastic Optimizer: Maximum iterations reached and the optimization hasn't converged yet.
-      % (), ConvergenceWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/neural_network/multilayer_perceptron.py:563: ConvergenceWarning: Stochastic Optimizer: Maximum iterations reached and the optimization hasn't converged yet.
-      % (), ConvergenceWarning)
-
-
 
 ![png](output_19_1.png)
 
@@ -354,12 +346,6 @@ classifier = svm.SVC(gamma=0.001)
 classifier.fit(data[:n_samples / 2], digits.target[:n_samples / 2])
 ```
 
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:1: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-      if __name__ == '__main__':
-
-
-
-
 
     SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
       decision_function_shape=None, degree=3, gamma=0.001, kernel='rbf',
@@ -375,12 +361,6 @@ classifier.fit(data[:n_samples / 2], digits.target[:n_samples / 2])
 expected = digits.target[n_samples / 2:]
 predicted = classifier.predict(data[n_samples / 2:])
 ```
-
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:1: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-      if __name__ == '__main__':
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:2: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-      from ipykernel import kernelapp as app
-
 
 
 ```python
@@ -442,10 +422,6 @@ for index, (image, prediction) in enumerate(images_and_predictions[:4]):
 
 plt.show()
 ```
-
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:10: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-
-
 
 ![png](output_35_1.png)
 

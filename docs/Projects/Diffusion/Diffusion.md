@@ -1,7 +1,7 @@
 
 # Diffusion Patterns
 
-https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/
+Read more about diffusion [here](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/)
 
 
 ```python
@@ -79,7 +79,7 @@ sns.heatmap(P,annot=True,cmap='YlGn')
 
 ####  Create a function to diffuse a particle:
 
-$ P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1]$
+$$ P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1]$$
 
 
 ```python

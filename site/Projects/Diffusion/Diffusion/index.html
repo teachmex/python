@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Project Diffusion - TeachMe.Codes</title>
+  <title>Project Diffusion - TeachMe.Codes (Python)</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes</a>
+        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -106,13 +106,6 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/cloud.md">Lunching an EC2 instance in AWS Cloud</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
     <a class="" href="../../../GettingStarted/git/">How to Git</a>
   </li>
         
@@ -121,7 +114,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Fundamentals of Programming</p>
+    <p class="caption">Python Programming</p>
   </li>
 
 
@@ -130,6 +123,13 @@
   
     <li class="navtree toctree-l1 group">
       <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../prog/">Introduction</a>
+  </li>
+        
           
 
 
@@ -257,6 +257,13 @@
 
 
   <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/numpy/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
     <a class="" href="../../../Numpy/array/array/">Array</a>
   </li>
         
@@ -295,6 +302,13 @@
   
     <li class="navtree toctree-l1 group">
       <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/pandas/">Introduction</a>
+  </li>
+        
           
 
 
@@ -427,7 +441,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes</a>
+        <a href="../../..">TeachMe.Codes (Python)</a>
       </nav>
 
       
@@ -439,7 +453,7 @@
     
       
         
-          <li>Fundamentals of Programming &raquo;</li>
+          <li>Python Programming &raquo;</li>
         
       
     
@@ -454,7 +468,7 @@
             <div class="section">
               
                 <h1 id="diffusion-patterns">Diffusion Patterns</h1>
-<p>https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/</p>
+<p>Read more about diffusion <a href="https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/">here</a></p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">json</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
@@ -513,7 +527,7 @@ sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #5555
 
 <p><img alt="png" src="../output_9_1.png" /></p>
 <h4 id="create-a-function-to-diffuse-a-particle">Create a function to diffuse a particle:</h4>
-<p>$ P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1]$</p>
+<p>$$ P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1]$$</p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">diffuse_primitive</span>(P,L):
 
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;create vacant list of list&#39;&#39;&#39;</span>
@@ -709,6 +723,7 @@ plt<span style="color: #555555">.</span>show()
 </div>
     <script>var base_url = '../../..';</script>
     <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
       <script src="../../../search/main.js" defer></script>
 
 </body>

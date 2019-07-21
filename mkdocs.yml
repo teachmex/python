@@ -1,4 +1,13 @@
-site_name: TeachMe.Codes
+
+site_name: TeachMe.Codes (Python)
+
+
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+    
 
 
 theme:
@@ -33,10 +42,10 @@ nav:
   - Guide to Python Libraries: GettingStarted/lib.md
   - Setting up Python Environment: GettingStarted/env.md
   - Installing Jupyter Notebook : GettingStarted/jupyter.md
-  - Lunching an EC2 instance in AWS Cloud: GettingStarted/cloud.md
   - How to Git: GettingStarted/git.md
   
-- Fundamentals of Programming:
+- Python Programming:
+  - Introduction: prog.md
   - DataStructure: DataStructure/ds.md
   - Loops and Conditions: LoopsConditions/lnc.md
   - Project Fern: Projects/Fern/fern.md
@@ -47,17 +56,21 @@ nav:
          
   
 - Numpy:
+  - Introduction: Numpy/numpy.md
   - Array: Numpy/array/array.md
   - MeshGrid: Numpy/grid/meshgrid.md
   - Algebra: Numpy/algebra/algebra.md
   - Statistics: Numpy/stat/stat.md
   
+
 - Pandas:
+  - Introduction: Pandas/pandas.md
   - Dataframe: Pandas/DataFrame/dataframe.md
   - Indexing: Pandas/Indexing/Indexing.md
   - Data Exploration: Pandas/Explor/explor.md
   - GroupBy: Pandas/GroupBy/groupby.md
   - Lambda Transform : Pandas/Lambda/lambda.md
+
   
 - Linear Models:
   - Regression: LinearModels/Linear-models.md

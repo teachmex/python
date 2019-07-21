@@ -547,9 +547,6 @@ from sklearn.datasets import load_iris
 
 ```
 
-    /home/bitnami/anaconda3/envs/caseolap/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
-      "This module will be removed in 0.20.", DeprecationWarning)
-
 
 * Utility function to move the midpoint of a colormap to be around the values of interest.
 
@@ -615,21 +612,6 @@ grid.fit(X, y)
 print("The best parameters are %s with a score of %0.2f"
       % (grid.best_params_, grid.best_score_))
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-40-3e73776bfe50> in <module>()
-          2 gamma_range = np.logspace(-9, 3, 13)
-          3 param_grid = dict(gamma=gamma_range, C=C_range)
-    ----> 4 cv = StratifiedShuffleSplit(n_splits=5, test_size=0.2, random_state=42)
-          5 grid = GridSearchCV(SVC(), param_grid=param_grid, cv=cv)
-          6 grid.fit(X, y)
-
-
-    TypeError: __init__() got an unexpected keyword argument 'n_splits'
 
 
 - Now we need to fit a classifier for all parameters in the 2d version
@@ -701,21 +683,6 @@ plt.title('Validation accuracy')
 plt.show()
 
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-45-d7c9f3ffab83> in <module>()
-         21 # grid_scores_ contains parameter settings and scores
-         22 # We extract just the scores
-    ---> 23 scores = [x[1] for x in grid.grid_scores_]
-         24 scores = np.array(scores).reshape(len(C_range), len(gamma_range))
-         25 
-
-
-    NameError: name 'grid' is not defined
 
 
 -------------
@@ -953,139 +920,6 @@ for percentile in percentiles:
     score_means.append(this_scores.mean())
     score_stds.append(this_scores.std())
 ```
-
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  7  8 15 16 23 24 31 32 39 40 47 48 56 63] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:113: UserWarning: Features [ 0  8 15 16 23 31 32 39 40 48 56] are constant.
-      UserWarning)
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/sklearn/feature_selection/univariate_selection.py:114: RuntimeWarning: invalid value encountered in true_divide
-      f = msb / msw
 
 
  - Plot
@@ -1598,26 +1432,6 @@ for fignum, (clf, cs, X, y) in enumerate(clf_sets):
 plt.show()
 
 ```
-
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:14: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:15: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-
-
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-83-3265a6814293> in <module>()
-         35         grid = GridSearchCV(clf, refit=False, param_grid=param_grid,
-         36                             cv=ShuffleSplit(train_size=train_size, n_iter=250,
-    ---> 37                                             random_state=1))
-         38         grid.fit(X, y)
-         39         scores = [x[1] for x in grid.grid_scores_]
-
-
-    TypeError: __init__() got an unexpected keyword argument 'n_iter'
-
 
 -----------
 

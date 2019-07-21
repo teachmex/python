@@ -100,20 +100,6 @@ graph.write_pdf("iris.pdf")
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    ModuleNotFoundError                       Traceback (most recent call last)
-
-    <ipython-input-12-52bcb3d743e1> in <module>()
-          1 from sklearn.externals.six import StringIO
-    ----> 2 import pydot
-          3 dot_data = StringIO()
-          4 tree.export_graphviz(clf, out_file=dot_data)
-          5 graph = pydot.graph_from_dot_data(dot_data.getvalue())
-
-
-    ModuleNotFoundError: No module named 'pydot'
-
 
 
 ```python
@@ -129,69 +115,13 @@ Image(graph.create_png())
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-13-d9934c394935> in <module>()
-          6                          filled=True, rounded=True,
-          7                          special_characters=True)  
-    ----> 8 graph = pydot.graph_from_dot_data(dot_data.getvalue())
-          9 Image(graph.create_png())
-
-
-    NameError: name 'pydot' is not defined
-
+   
 
 
 ```python
 from IPython.display import Image
 Image(filename='iris.png')
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    FileNotFoundError                         Traceback (most recent call last)
-
-    <ipython-input-14-53607bd2a2e8> in <module>()
-          1 from IPython.display import Image
-    ----> 2 Image(filename='iris.png')
-    
-
-    ~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in __init__(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata)
-       1132         self.unconfined = unconfined
-       1133         super(Image, self).__init__(data=data, url=url, filename=filename, 
-    -> 1134                 metadata=metadata)
-       1135 
-       1136         if self.width is None and self.metadata.get('width', {}):
-
-
-    ~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in __init__(self, data, url, filename, metadata)
-        606             self.metadata = {}
-        607 
-    --> 608         self.reload()
-        609         self._check_data()
-        610 
-
-
-    ~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in reload(self)
-       1163         """Reload the raw data from file or URL."""
-       1164         if self.embed:
-    -> 1165             super(Image,self).reload()
-       1166             if self.retina:
-       1167                 self._retina_shape()
-
-
-    ~/anaconda3/envs/caseolap/lib/python3.6/site-packages/IPython/core/display.py in reload(self)
-        631         """Reload the raw data from file or URL."""
-        632         if self.filename is not None:
-    --> 633             with open(self.filename, self._read_flags) as f:
-        634                 self.data = f.read()
-        635         elif self.url is not None:
-
-
-    FileNotFoundError: [Errno 2] No such file or directory: 'iris.png'
 
 
 
@@ -429,18 +359,6 @@ for i in range(n_nodes):
                  ))
 print()
 ```
-
-    node=0 test node: go to node 1 if X[:, 3] <= 0.800000011921s else to node 2.
-    	node=1 leaf node.
-    	node=2 test node: go to node 3 if X[:, 2] <= 4.94999980927s else to node 4.
-    		node=3 leaf node.
-    		node=4 leaf node.
-    
-
-
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:7: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-    /Users/dibakarsigdel/anaconda/lib/python3.5/site-packages/ipykernel/__main__.py:3: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
-      app.launch_new_instance()
 
 
 * First let's retrieve the decision path of each sample. The decision_path
