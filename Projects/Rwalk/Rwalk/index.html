@@ -114,7 +114,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Python Programming</p>
+    <p class="caption">Introduction to Python</p>
   </li>
 
 
@@ -148,28 +148,28 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Fern/fern/">Project Fern</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Diffusion/Diffusion/">Project Diffusion</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
     <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
   </li>
         
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Projects</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Ncharges/Ncharges/">Project N-charges</a>
+    <a class="" href="../../Fern/fern/">Project Fern</a>
   </li>
         
           
@@ -215,53 +215,23 @@
     
       
         <li class="toctree-l4">
-          <a class="toctree-l5" href="#direct-implementation">Direct Implementation</a>
+          <a class="toctree-l5" href="#random-walk-1d-direct">Random Walk 1D (Direct)</a>
         </li>
     
-    </ul>
-  </li>
-
       
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#random-walk-1d-function">Random Walk 1D (Function)</a>
+        </li>
     
       
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#implement-with-function">Implement with function</a>
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#random-walk-1d-class">Random Walk 1D (Class)</a>
         </li>
     
       
           
 
-  <li class="toctree-l3">
-    <a href="#object-oriented-programming">
-      Object Oriented Programming
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-  <li class="toctree-l3">
-    <ul class="subnav-l3 toc-hidden">
-    
-      
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#lets-generate-4-different-random-walks-of-step-1000-each">Let's generate 4 different random walks of step 1000 each</a>
-        </li>
-    
-      
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#lets-visualize-them">Let's visualize them</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-          
-
-  <li class="toctree-l3">
+  <li class="toctree-l4">
     <a href="#random-walk-in-2d">
       Random Walk in 2D
       <span class="toctree-expand"></span>
@@ -270,22 +240,22 @@
 
 
 
-  <li class="toctree-l3">
-    <ul class="subnav-l3 toc-hidden">
+  <li class="toctree-l4">
+    <ul class="subnav-l4 toc-hidden">
     
       
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#create-a-function-to-walk-a-single-step">Create a function to walk a single step</a>
+        <li class="toctree-l5">
+          <a class="toctree-l6" href="#random-walk-2d-function">Random Walk 2D (Function)</a>
         </li>
     
+    </ul>
+  </li>
+
       
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#lets-walk-in-2d-using-above-function">Lets walk in 2D using above function</a>
-        </li>
     
       
         <li class="toctree-l4">
-          <a class="toctree-l5" href="#lets-create-a-3-different-random-walk-in-2d">Lets create a 3 different Random walk in 2D</a>
+          <a class="toctree-l5" href="#random-walk-in-3d">Random Walk in 3D</a>
         </li>
     
     </ul>
@@ -298,6 +268,20 @@
 
 
   
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
         
       </ul>
     </li>
@@ -513,7 +497,7 @@
     
       
         
-          <li>Python Programming &raquo;</li>
+          <li>Projects &raquo;</li>
         
       
     
@@ -536,8 +520,9 @@ sns<span style="color: #555555">.</span>set()
 </pre></div>
 
 
-<h3 id="random-walk-in-one-dimension">Random walk in one dimension</h3>
-<h4 id="direct-implementation">Direct Implementation</h4>
+<h2 id="random-walk-in-one-dimension">Random walk in one dimension</h2>
+<p>To create reandom walk in 1D, we generate random step <code>1, -1</code> and move in one direction. Since we are taking one direction and time to create a  plot. It is displayed in plot below. Lets try to implement random walk with direct implementation with <code>for loop</code> and with function <code>walk1D</code>.</p>
+<h4 id="random-walk-1d-direct">Random Walk 1D (Direct)</h4>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;X stores 1-D coordinate&#39;&#39;&#39;</span>
 X <span style="color: #555555">=</span> []
 <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;T stores time coordinate&#39;&#39;&#39;</span>
@@ -561,7 +546,7 @@ d <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;Make a plot&#39;&#39;&#39;</span>    
-plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">6</span>])
+plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">4</span>])
 plt<span style="color: #555555">.</span>scatter(T,X,marker <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;.&#39;</span>)
 plt<span style="color: #555555">.</span>plot(T,X)
 plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&quot;Time&quot;</span>)
@@ -572,7 +557,7 @@ plt<span style="color: #555555">.</span>show()
 
 
 <p><img alt="png" src="../output_5_0.png" /></p>
-<h3 id="implement-with-function">Implement with function</h3>
+<h4 id="random-walk-1d-function">Random Walk 1D (Function)</h4>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">walk1D</span>(x,N,d):
 
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;This function returns the space &#39;X&#39; and time &#39;T&#39; for random walk in 1D</span>
@@ -605,7 +590,7 @@ plt<span style="color: #555555">.</span>show()
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;Implement function to get data&#39;&#39;&#39;</span>
 X,T <span style="color: #555555">=</span> walk1D(x<span style="color: #555555">=</span><span style="color: #FF6600">0</span>,N<span style="color: #555555">=</span><span style="color: #FF6600">100</span>,d<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)
 <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;Make a plot&#39;&#39;&#39;</span> 
-plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">6</span>])
+plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">4</span>])
 plt<span style="color: #555555">.</span>scatter(T,X,marker <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;.&#39;</span>)
 plt<span style="color: #555555">.</span>plot(T,X)
 plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&quot;Time&quot;</span>)
@@ -616,7 +601,7 @@ plt<span style="color: #555555">.</span>show()
 
 
 <p><img alt="png" src="../output_8_0.png" /></p>
-<h3 id="object-oriented-programming">Object Oriented Programming</h3>
+<h4 id="random-walk-1d-class">Random Walk 1D (Class)</h4>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">Walker1D</span>(<span style="color: #336666">object</span>):
 
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39; </span>
@@ -650,7 +635,9 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<h4 id="lets-generate-4-different-random-walks-of-step-1000-each">Let's generate 4 different random walks of step 1000 each</h4>
+<ul>
+<li>Let's generate 4 different random walks of step 1000 each</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>X1 <span style="color: #555555">=</span> Walker1D(N <span style="color: #555555">=</span><span style="color: #FF6600">1000</span>,d <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>,x0<span style="color: #555555">=</span><span style="color: #FF6600">0</span>)<span style="color: #555555">.</span>walk1D()
 X2 <span style="color: #555555">=</span> Walker1D(N <span style="color: #555555">=</span><span style="color: #FF6600">1000</span>,d <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>,x0<span style="color: #555555">=</span><span style="color: #FF6600">0</span>)<span style="color: #555555">.</span>walk1D()
 X3<span style="color: #555555">=</span> Walker1D(N <span style="color: #555555">=</span><span style="color: #FF6600">1000</span>,d <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>,x0<span style="color: #555555">=</span><span style="color: #FF6600">0</span>)<span style="color: #555555">.</span>walk1D()
@@ -665,8 +652,10 @@ T <span style="color: #555555">=</span> [i <span style="color: #006699; font-wei
 </pre></div>
 
 
-<h4 id="lets-visualize-them">Let's visualize them</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">20</span>,<span style="color: #FF6600">12</span>])
+<ul>
+<li>Let's visualize them</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">4</span>])
 plt<span style="color: #555555">.</span>plot(T,X1)
 plt<span style="color: #555555">.</span>plot(T,X2)
 plt<span style="color: #555555">.</span>plot(T,X3)
@@ -674,14 +663,15 @@ plt<span style="color: #555555">.</span>plot(T,X4)
 plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&quot;Time&quot;</span>)
 plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&#39;Displacement&#39;</span>)
 plt<span style="color: #555555">.</span>grid(<span style="color: #006699; font-weight: bold">True</span>)
-plt<span style="color: #555555">.</span>savefig(<span style="color: #CC3300">&#39;plot/rwalk4.pdf&#39;</span>) 
 plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
 <p><img alt="png" src="../output_15_0.png" /></p>
 <h3 id="random-walk-in-2d">Random Walk in 2D</h3>
-<h5 id="create-a-function-to-walk-a-single-step">Create a function to walk a single step</h5>
+<p>Lets repeat the function implementation for 2D Random Walk.</p>
+<h4 id="random-walk-2d-function">Random Walk 2D (Function)</h4>
+<p>We will create two functions <code>move2D</code> to move one step and <code>walk2D</code> to walk multiple steps.</p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">move2D</span>(xi,yi):
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;</span>
 <span style="color: #CC3300; font-style: italic">    This function choose a direction and walk one step in 2D</span>
@@ -701,7 +691,6 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<h5 id="lets-walk-in-2d-using-above-function">Lets walk in 2D using above function</h5>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">walk2D</span>(N,pos):
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;</span>
 <span style="color: #CC3300; font-style: italic">    This function walks N step in 2d implementing move2D</span>
@@ -736,34 +725,31 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<h4 id="lets-create-a-3-different-random-walk-in-2d">Lets create a 3 different Random walk in 2D</h4>
+<ul>
+<li>Lets create a 3 different Random walk in 2D</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N <span style="color: #555555">=</span> <span style="color: #FF6600">10000</span>
 U <span style="color: #555555">=</span> walk2D(N,[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>])
 V <span style="color: #555555">=</span> walk2D(N,[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>])
 W <span style="color: #555555">=</span> walk2D(N,[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>])
 
-
-
-<span style="color: #006699; font-weight: bold">with</span> <span style="color: #336666">open</span> (<span style="color: #CC3300">&#39;data/rwalk4.json&#39;</span>, <span style="color: #CC3300">&#39;w&#39;</span>)<span style="color: #006699; font-weight: bold">as</span> f:
-    json<span style="color: #555555">.</span>dump([U,V,W],f)
-
-
-plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">12</span>])
-
+plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">8</span>,<span style="color: #FF6600">8</span>])
 plt<span style="color: #555555">.</span>plot(U[<span style="color: #FF6600">0</span>],U[<span style="color: #FF6600">1</span>],<span style="color: #CC3300">&quot;-&quot;</span>)
 plt<span style="color: #555555">.</span>plot(V[<span style="color: #FF6600">0</span>],V[<span style="color: #FF6600">1</span>],<span style="color: #CC3300">&quot;-&quot;</span>)
 plt<span style="color: #555555">.</span>plot(W[<span style="color: #FF6600">0</span>],W[<span style="color: #FF6600">1</span>],<span style="color: #CC3300">&quot;-&quot;</span>)
-plt<span style="color: #555555">.</span>axis([<span style="color: #555555">-</span><span style="color: #FF6600">100</span>, <span style="color: #FF6600">100</span>, <span style="color: #555555">-</span><span style="color: #FF6600">100</span>, <span style="color: #FF6600">100</span>])
+<span style="color: #0099FF; font-style: italic">#plt.axis([-100, 100, -100, 100])</span>
 plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&quot;x-axis&quot;</span>)
 plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&quot;y-axis&quot;</span>)
 plt<span style="color: #555555">.</span>grid(<span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;Brownian motion in 2D&quot;</span>)
-plt<span style="color: #555555">.</span>savefig(<span style="color: #CC3300">&#39;plot/rwalk2D.pdf&#39;</span>) 
 plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<p><img alt="png" src="../output_22_0.png" /></p>
+<p><img alt="png" src="../output_21_0.png" /></p>
+<h3 id="random-walk-in-3d">Random Walk in 3D</h3>
+<p>Similarly Random Walk in 3D can be created and visualized with <code>.gif</code> file as shown below</p>
+<p><img alt="img" src="../walk.gif" /></p>
               
             </div>
           </div>
@@ -771,10 +757,10 @@ plt<span style="color: #555555">.</span>show()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../Numpy/numpy/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Ncharges/Ncharges/" class="btn btn-neutral float-right" title="Project N-charges">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../Ncharges/Ncharges/" class="btn btn-neutral" title="Project N-charges"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Fern/fern/" class="btn btn-neutral" title="Project Fern"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -800,10 +786,10 @@ plt<span style="color: #555555">.</span>show()
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../Ncharges/Ncharges/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../Fern/fern/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../../Numpy/numpy/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Ncharges/Ncharges/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
