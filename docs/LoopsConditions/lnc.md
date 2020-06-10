@@ -1,14 +1,14 @@
-
 # Loops and conditions
 
--------
+Loops provide the method of iteration while condition allows or blocks the code execution  when specified condition is meet.
+
+### For loop and While Loop
+
+- To iterate over the List. Lets prin the items in the list
 
 
 ```python
 L =['apple','banana','kite','cellphone']
-
-'''Iterate over the items in a list'''
-
 for item in L:
     print(item)
 ```
@@ -19,29 +19,27 @@ for item in L:
     cellphone
 
 
+- What is range?
+
+
+```python
+range(5), range(1,100), sum(range(100))
+```
+
+
+
+
+    (range(0, 5), range(1, 100), 4950)
+
+
+
+- To iterate with ```for``` loop and adding the iterating index (the value of ```10*k```) to a blank List ```L```.
+
 
 ```python
 L = []
 for k in range(10):
-    print(k)
-    '''Append values to list L'''
     L.append(10*k)
-```
-
-    0
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-
-
-
-```python
 L
 ```
 
@@ -52,214 +50,105 @@ L
 
 
 
+- To create a double loop also called ***nested for loop***. Lets create double for loop with ```i``` and ```j``` with range ```5``` and also populate the dictionary with ```key``` as ```(i,j)```and ```value``` as ```10*i+j``` when ```i=j``` and ```100*1+j``` when ```i!=j```.
+
 
 ```python
 D = {}
 for i in range(5):
     for j in range(5):
         if i == j :
-            
-            print(i,"is equal to",j)
-            
-            '''update dictionary with (i,j) as key and 2*i as value'''
-            
             D.update({(i,j) : 10*i+j})
-            
         elif i!= j:
+            D.update({(i,j) : 100*i+j})
             
-            '''update dictionary with (i,j) as key and 2*i as value'''
-            
-            D.update({(i,j) : 101*i+j})
-            print(i,"is not equal to",j)
-     
-        
+print(D)
 ```
 
-    0 is equal to 0
-    0 is not equal to 1
-    0 is not equal to 2
-    0 is not equal to 3
-    0 is not equal to 4
-    1 is not equal to 0
-    1 is equal to 1
-    1 is not equal to 2
-    1 is not equal to 3
-    1 is not equal to 4
-    2 is not equal to 0
-    2 is not equal to 1
-    2 is equal to 2
-    2 is not equal to 3
-    2 is not equal to 4
-    3 is not equal to 0
-    3 is not equal to 1
-    3 is not equal to 2
-    3 is equal to 3
-    3 is not equal to 4
-    4 is not equal to 0
-    4 is not equal to 1
-    4 is not equal to 2
-    4 is not equal to 3
-    4 is equal to 4
+    {(0, 0): 0, (0, 1): 1, (0, 2): 2, (0, 3): 3, (0, 4): 4, 
+    (1, 0): 100, (1, 1): 11, (1, 2): 102, (1, 3): 103, (1, 4):
+    104, (2, 0): 200, (2, 1): 201, (2, 2): 22, (2, 3): 203, 
+    (2, 4): 204, (3, 0): 300, (3, 1): 301, (3, 2): 302, 
+    (3, 3): 33, (3, 4): 304, (4, 0): 400, (4, 1): 401, (4, 2):
+    402, (4, 3): 403, (4, 4): 44}
 
+
+- To iterate two elements from two seperate Lists. It is not like nested for loop.
 
 
 ```python
-D
+for item,j,k in zip(['apple','banana','kite','cellphone','pen'],\
+                    range(5),[12,45,45,67,34]):
+    print(item,"|",j,"|",k)
 ```
 
+    apple | 0 | 12
+    banana | 1 | 45
+    kite | 2 | 45
+    cellphone | 3 | 67
+    pen | 4 | 34
 
 
-
-    {(0, 0): 0,
-     (0, 1): 1,
-     (0, 2): 2,
-     (0, 3): 3,
-     (0, 4): 4,
-     (1, 0): 101,
-     (1, 1): 11,
-     (1, 2): 103,
-     (1, 3): 104,
-     (1, 4): 105,
-     (2, 0): 202,
-     (2, 1): 203,
-     (2, 2): 22,
-     (2, 3): 205,
-     (2, 4): 206,
-     (3, 0): 303,
-     (3, 1): 304,
-     (3, 2): 305,
-     (3, 3): 33,
-     (3, 4): 307,
-     (4, 0): 404,
-     (4, 1): 405,
-     (4, 2): 406,
-     (4, 3): 407,
-     (4, 4): 44}
-
-
-
-
-```python
-range(5)
-```
-
-
-
-
-    range(0, 5)
-
-
-
-
-```python
-for i,j in zip(range(5),range(5)):
-    print(i,j)
-```
-
-    0 0
-    1 1
-    2 2
-    3 3
-    4 4
-
-
-
-```python
-for item,j in zip(['apple','banana','kite','cellphone','pen'],range(5)):
-    print(item,j)
-```
-
-    apple 0
-    banana 1
-    kite 2
-    cellphone 3
-    pen 4
-
+- To iterate and ```ennumerate``` both together.
 
 
 ```python
 for i,item in enumerate(['apple','banana','kite','cellphone']):
-    print(i, item)
+    print("The",i,"th element is: ", item)
 ```
 
-    0 apple
-    1 banana
-    2 kite
-    3 cellphone
+    The 0 th element is:  apple
+    The 1 th element is:  banana
+    The 2 th element is:  kite
+    The 3 th element is:  cellphone
+
+
+- To create a list with ```for``` loop
+
+
+```python
+A = [10*k**2+5*k+1 for k in range(10)]
+print(A)
+```
+
+    [1, 16, 51, 106, 181, 276, 391, 526, 681, 856]
 
 
 
 ```python
-A = [0 for k in range(10)]
-A
+AA = [[10*x**2+5*y+1 for x in range(3)] for y in range(3)]
+print(AA)
 ```
 
+    [[1, 11, 41], [6, 16, 46], [11, 21, 51]]
 
 
-
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-
+- To iterate over List of List
 
 
 ```python
-A = [k for k in range(10)]
-A
+for i in range(3): 
+    for j in range(3):
+        print("The","(",i,",",j,")","th element is: ",AA[i][j])
 ```
 
+    The ( 0 , 0 ) th element is:  1
+    The ( 0 , 1 ) th element is:  11
+    The ( 0 , 2 ) th element is:  41
+    The ( 1 , 0 ) th element is:  6
+    The ( 1 , 1 ) th element is:  16
+    The ( 1 , 2 ) th element is:  46
+    The ( 2 , 0 ) th element is:  11
+    The ( 2 , 1 ) th element is:  21
+    The ( 2 , 2 ) th element is:  51
 
 
-
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
-
-
-```python
-L = [[1,2,3],[3,4,5],[5,7,9]]
-
-for i in range(len(L)): 
-    for j in range(len(L[0])):
-        print(L[i][j])
-```
-
-    1
-    2
-    3
-    3
-    4
-    5
-    5
-    7
-    9
-
-
-
-```python
-LL = [[k+j for k in range(10)]for j in range(10)]
-LL
-```
-
-
-
-
-    [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-     [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-     [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-     [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-     [5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-     [6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-     [7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-     [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
-     [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]]
-
-
+- To use ```while``` loop.
 
 
 ```python
 i = 0
-while i < 10:
+while i <5:
     print( i, "th turn")
     i = i+1
 ```
@@ -269,94 +158,57 @@ while i < 10:
     2 th turn
     3 th turn
     4 th turn
-    5 th turn
-    6 th turn
-    7 th turn
-    8 th turn
-    9 th turn
 
+
+- To break for loop implementing ```if``` condition
 
 
 ```python
-import json 
-'''download'''
-with open('data/mylist.json', 'w') as f1:
-    json.dump(LL,f1)
+for i in range(10):
+    print(i)
+    if i ==3:
+        break
 ```
 
--------
+    0
+    1
+    2
+    3
+
+
+- To test the if conditions:
 
 
 ```python
-import json 
-'''upload'''
-with open('data/mydic.json', 'r') as f2:
-    AA = json.load(f2)
+import random as random
+
+for i in range(10):
+    r = random.uniform(1,10)
+    if r<2 and r>0:
+        print("It is samaller then 2 and greater then 1","|", r)
+    elif r<4 and r>2:
+        print("It is samaller then 4 and greater then 2","|", r)
+    elif r<6 and r>4:
+        print("It is samaller then 6 and greater then 4","|", r)
+    elif r<8 and r>6:
+        print("It is samaller then 8 and greater then 6","|", r)
+    elif r<10 and r>8:
+        print("It is samaller then 10 and greater then 8","|", r)
 ```
 
-
-```python
-for key,value in AA.items():
-    print("key : ", key,"|", "value: ", value)
-```
-
-    key :  A | value:  [0.8623300586958146, 0.9817282451404751, 0.918013419185538, 0.7163654763224003, 0.9605939306786828, 0.10535569850024595, 0.11017993829505879, 0.7967874445465515, 0.40100560974033395, 0.6683804538904957]
-    key :  B | value:  [0.9108032733225849, 0.5126845596833859, 0.2889475226297349, 0.4361419616905007, 0.9162781988261498, 0.6417420997937421, 0.5703303219382578, 0.8317203028864074, 0.9987773067590386, 0.19901433153401582]
-    key :  C | value:  [0.6877286885216957, 0.16565933820204293, 0.25063345210121424, 0.31595887595060124, 0.03522116131022823, 0.5286776181365936, 0.8154337189974739, 0.8202821745739262, 0.0672014040433101, 0.12327287509980445]
-    key :  D | value:  [0.4836330819912691, 0.8546497284804153, 0.14752285825255218, 0.5918584543549938, 0.14518319590340412, 0.025762251428333438, 0.016788596008689316, 0.009725555304236244, 0.8177641188673302, 0.5450138847266498]
-    key :  E | value:  [0.6456541452062622, 0.7662672636891902, 0.04445215914793821, 0.3159171150800496, 0.9400712936126994, 0.6085210458061509, 0.6029509689621034, 0.34555270993185316, 0.7452915466172698, 0.03229045002223074]
-
+    It is samaller then 10 and greater then 8 | 8.910435750481426
+    It is samaller then 8 and greater then 6 | 6.616669779231224
+    It is samaller then 4 and greater then 2 | 3.8009645328925896
+    It is samaller then 4 and greater then 2 | 3.3039198434839117
+    It is samaller then 4 and greater then 2 | 3.2192327041596696
+    It is samaller then 10 and greater then 8 | 8.658302824387317
+    It is samaller then 10 and greater then 8 | 9.048987906482312
+    It is samaller then 10 and greater then 8 | 8.061577985253708
+    It is samaller then 8 and greater then 6 | 6.301327115111054
+    It is samaller then 6 and greater then 4 | 5.316492901781898
 
 
-```python
-DNA = 'ATGCATGCATATCAAGCTAGCTAGCTAGCTAGCTAGAGCTATTTAATGCTA\
-        GCTATATAGCGCTAGCTATAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCT\
-        AGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCGCGCGCTA\
-        TATATAGAGAGAGAGAGAGACACACATATATCTCTCTCTCTCGAGATCGAT\
-        CGTACTAGCTAGCTAGCTAGCTAGCTAGCT'
-```
-
-
-```python
-DNA.count('A'),DNA.count('AT')
-```
-
-
-
-
-    (66, 16)
-
-
-
-
-```python
-count = 0
-for letter in DNA:
-    if letter == 'T':
-        count = count+1
-count
-```
-
-
-
-
-    61
-
-
-
-
-```python
-'I am ok'.split()
-```
-
-
-
-
-    ['I', 'am', 'ok']
-
-
-
-#### Q: find sum from 0 to 1000
+- To find sum from 0 to 1000
 
 
 ```python
@@ -373,7 +225,7 @@ s
 
 
 
-#### Q: find sum from 0 to 1000 (only even)
+- To find sum from 0 to 1000 (only even)
 
 
 ```python

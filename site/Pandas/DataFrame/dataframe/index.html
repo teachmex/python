@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Dataframe - Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Dataframe";
+    var mkdocs_page_input_path = "Pandas/DataFrame/dataframe.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Python Programming</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../prog/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/numpy/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/array/array/">Array</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/grid/meshgrid/">MeshGrid</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/algebra/algebra/">Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../pandas/">Introduction</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Dataframe
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#data-view-with-titanic-dataset">
+      Data View with Titanic dataset
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+          
+
+  <li class="toctree-l3 current with-children">
+    <a href="#load-data">
+      Load data
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3 current">
+    <ul class="subnav-l3 current">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#preliminary-satatistics">Preliminary Satatistics</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#setting-name-column-as-index">Setting Name column as index</a>
+        </li>
+    
+      
+          
+
+  <li class="toctree-l4">
+    <a href="#dataframe-creation-numpy-array">
+      DataFrame Creation (Numpy Array)
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l4">
+    <ul class="subnav-l4 toc-hidden">
+    
+      
+          
+
+  <li class="toctree-l5 current with-children">
+    <a href="#from-numpy-array-dataframe">
+      From Numpy array =&gt; Dataframe
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l5 current">
+    <ul class="subnav-l5 current">
+    
+      
+        <li class="toctree-l6">
+          <a class="toctree-l7" href="#data-frame-numpy-array">Data Frame =&gt; Numpy Array</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+    </ul>
+  </li>
+
+      
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#data-frame-list-of-dictionary">Data Frame (List of Dictionary)</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#data-view">Data View</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GroupBy/groupby/">GroupBy</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Linear Models</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LinearModels/Linear-models/">Regression</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Classification</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Logistic/Logistic/">Logistic</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Tree/Tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/Ensamble/ensamble/">Ensamble</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Classifiers/SVM/svm/">SVM</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pandas &raquo;</li>
+        
+      
+    
+    <li>Dataframe</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="data-view-with-titanic-dataset">Data View with Titanic dataset</h1>
+<hr />
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">pandas</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">pd</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">seaborn</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sns</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #555555">%</span>matplotlib inline
+sns<span style="color: #555555">.</span>set()
+</pre></div>
+
+
+<h2 id="load-data">Load data</h2>
+<hr />
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>read_csv(<span style="color: #CC3300">&#39;data/titanic.csv&#39;</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic<span style="color: #555555">.</span>head(<span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>113803</td>
+      <td>53.1000</td>
+      <td>C123</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Allen, Mr. William Henry</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>373450</td>
+      <td>8.0500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Moran, Mr. James</td>
+      <td>male</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>330877</td>
+      <td>8.4583</td>
+      <td>NaN</td>
+      <td>Q</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>0</td>
+      <td>1</td>
+      <td>McCarthy, Mr. Timothy J</td>
+      <td>male</td>
+      <td>54.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>17463</td>
+      <td>51.8625</td>
+      <td>E46</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Palsson, Master. Gosta Leonard</td>
+      <td>male</td>
+      <td>2.0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>349909</td>
+      <td>21.0750</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td>
+      <td>female</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>347742</td>
+      <td>11.1333</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>1</td>
+      <td>2</td>
+      <td>Nasser, Mrs. Nicholas (Adele Achem)</td>
+      <td>female</td>
+      <td>14.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>237736</td>
+      <td>30.0708</td>
+      <td>NaN</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic<span style="color: #555555">.</span>shape
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(891, 12)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic<span style="color: #555555">.</span>columns
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Index([&#39;PassengerId&#39;, &#39;Survived&#39;, &#39;Pclass&#39;, &#39;Name&#39;, &#39;Sex&#39;, &#39;Age&#39;, &#39;SibSp&#39;,
+       &#39;Parch&#39;, &#39;Ticket&#39;, &#39;Fare&#39;, &#39;Cabin&#39;, &#39;Embarked&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic<span style="color: #555555">.</span>index
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>RangeIndex(start=0, stop=891, step=1)
+</pre></div>
+
+
+<h3 id="preliminary-satatistics">Preliminary Satatistics</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic<span style="color: #555555">.</span>describe()
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>714.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>446.000000</td>
+      <td>0.383838</td>
+      <td>2.308642</td>
+      <td>29.699118</td>
+      <td>0.523008</td>
+      <td>0.381594</td>
+      <td>32.204208</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>257.353842</td>
+      <td>0.486592</td>
+      <td>0.836071</td>
+      <td>14.526497</td>
+      <td>1.102743</td>
+      <td>0.806057</td>
+      <td>49.693429</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.420000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>223.500000</td>
+      <td>0.000000</td>
+      <td>2.000000</td>
+      <td>20.125000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>7.910400</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>446.000000</td>
+      <td>0.000000</td>
+      <td>3.000000</td>
+      <td>28.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>14.454200</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>668.500000</td>
+      <td>1.000000</td>
+      <td>3.000000</td>
+      <td>38.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>31.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>891.000000</td>
+      <td>1.000000</td>
+      <td>3.000000</td>
+      <td>80.000000</td>
+      <td>8.000000</td>
+      <td>6.000000</td>
+      <td>512.329200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h3 id="setting-name-column-as-index">Setting Name column as index</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>copy(deep <span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>set_index(<span style="color: #CC3300">&#39;Name&#39;</span>)
+titanic_df1<span style="color: #555555">.</span>head(<span style="color: #FF6600">2</span>)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Braund, Mr. Owen Harris</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h3 id="dataframe-creation-numpy-array">DataFrame Creation (Numpy Array)</h3>
+<h4 id="from-numpy-array-dataframe">From Numpy array =&gt; Dataframe</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>A <span style="color: #555555">=</span> np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>rand(<span style="color: #FF6600">100</span>,<span style="color: #FF6600">20</span>)
+A<span style="color: #555555">.</span>shape
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(100, 20)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>letter <span style="color: #555555">=</span> [<span style="color: #CC3300">&#39;A&#39;</span>,<span style="color: #CC3300">&#39;B&#39;</span>,<span style="color: #CC3300">&#39;C&#39;</span>,<span style="color: #CC3300">&#39;D&#39;</span>,<span style="color: #CC3300">&#39;E&#39;</span>,<span style="color: #CC3300">&#39;F&#39;</span>,<span style="color: #CC3300">&#39;G&#39;</span>,<span style="color: #CC3300">&#39;H&#39;</span>,<span style="color: #CC3300">&#39;X&#39;</span>]
+
+col_names <span style="color: #555555">=</span> [ random<span style="color: #555555">.</span>choice(letter)\
+             <span style="color: #555555">+</span>random<span style="color: #555555">.</span>choice(letter)\
+             <span style="color: #555555">+</span>random<span style="color: #555555">.</span>choice(letter)\
+             <span style="color: #555555">+</span>random<span style="color: #555555">.</span>choice(letter) <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(A<span style="color: #555555">.</span>shape[<span style="color: #FF6600">1</span>])]
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>col_names
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[&#39;BHBE&#39;,
+ &#39;FCEX&#39;,
+ &#39;HCDC&#39;,
+ &#39;BABH&#39;,
+ &#39;DHCC&#39;,
+ &#39;BEAH&#39;,
+ &#39;CGCA&#39;,
+ &#39;CBFF&#39;,
+ &#39;GDBX&#39;,
+ &#39;GDBD&#39;,
+ &#39;GCXG&#39;,
+ &#39;EBAF&#39;,
+ &#39;FHFC&#39;,
+ &#39;ADXF&#39;,
+ &#39;XGDB&#39;,
+ &#39;FDCB&#39;,
+ &#39;BGGD&#39;,
+ &#39;CXXC&#39;,
+ &#39;GBDE&#39;,
+ &#39;HGXX&#39;]
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>DataFrame(A, columns <span style="color: #555555">=</span> col_names )
+df<span style="color: #555555">.</span>to_csv(<span style="color: #CC3300">&#39;data/test.csv&#39;</span>)
+df<span style="color: #555555">.</span>head()
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BHBE</th>
+      <th>FCEX</th>
+      <th>HCDC</th>
+      <th>BABH</th>
+      <th>DHCC</th>
+      <th>BEAH</th>
+      <th>CGCA</th>
+      <th>CBFF</th>
+      <th>GDBX</th>
+      <th>GDBD</th>
+      <th>GCXG</th>
+      <th>EBAF</th>
+      <th>FHFC</th>
+      <th>ADXF</th>
+      <th>XGDB</th>
+      <th>FDCB</th>
+      <th>BGGD</th>
+      <th>CXXC</th>
+      <th>GBDE</th>
+      <th>HGXX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.505613</td>
+      <td>0.863802</td>
+      <td>0.064671</td>
+      <td>0.044665</td>
+      <td>0.661631</td>
+      <td>0.010504</td>
+      <td>0.441470</td>
+      <td>0.749321</td>
+      <td>0.389375</td>
+      <td>0.468762</td>
+      <td>0.061095</td>
+      <td>0.779629</td>
+      <td>0.262696</td>
+      <td>0.834874</td>
+      <td>0.762955</td>
+      <td>0.464253</td>
+      <td>0.762709</td>
+      <td>0.425008</td>
+      <td>0.131542</td>
+      <td>0.791414</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.722504</td>
+      <td>0.465511</td>
+      <td>0.555621</td>
+      <td>0.843348</td>
+      <td>0.987537</td>
+      <td>0.955876</td>
+      <td>0.788946</td>
+      <td>0.461034</td>
+      <td>0.278317</td>
+      <td>0.269186</td>
+      <td>0.616559</td>
+      <td>0.095630</td>
+      <td>0.552730</td>
+      <td>0.531865</td>
+      <td>0.056233</td>
+      <td>0.796237</td>
+      <td>0.705609</td>
+      <td>0.683914</td>
+      <td>0.168146</td>
+      <td>0.312616</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.577487</td>
+      <td>0.355478</td>
+      <td>0.939323</td>
+      <td>0.547315</td>
+      <td>0.158492</td>
+      <td>0.226048</td>
+      <td>0.941994</td>
+      <td>0.025595</td>
+      <td>0.291006</td>
+      <td>0.549547</td>
+      <td>0.157811</td>
+      <td>0.358243</td>
+      <td>0.297590</td>
+      <td>0.767994</td>
+      <td>0.804289</td>
+      <td>0.349676</td>
+      <td>0.786392</td>
+      <td>0.806113</td>
+      <td>0.386147</td>
+      <td>0.766741</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.612300</td>
+      <td>0.610556</td>
+      <td>0.141520</td>
+      <td>0.657244</td>
+      <td>0.694400</td>
+      <td>0.555290</td>
+      <td>0.912868</td>
+      <td>0.350494</td>
+      <td>0.203160</td>
+      <td>0.703884</td>
+      <td>0.873016</td>
+      <td>0.420604</td>
+      <td>0.361509</td>
+      <td>0.380023</td>
+      <td>0.819483</td>
+      <td>0.988239</td>
+      <td>0.455447</td>
+      <td>0.732307</td>
+      <td>0.063254</td>
+      <td>0.123586</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.476368</td>
+      <td>0.890201</td>
+      <td>0.923328</td>
+      <td>0.931688</td>
+      <td>0.481882</td>
+      <td>0.411059</td>
+      <td>0.540152</td>
+      <td>0.831890</td>
+      <td>0.737365</td>
+      <td>0.681351</td>
+      <td>0.620813</td>
+      <td>0.018067</td>
+      <td>0.794526</td>
+      <td>0.491711</td>
+      <td>0.116032</td>
+      <td>0.096085</td>
+      <td>0.086113</td>
+      <td>0.813632</td>
+      <td>0.828594</td>
+      <td>0.063989</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h5 id="data-frame-numpy-array">Data Frame =&gt; Numpy Array</h5>
+<h3 id="data-frame-list-of-dictionary">Data Frame (List of Dictionary)</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>LD <span style="color: #555555">=</span> []
+<span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">100</span>):
+    LD<span style="color: #555555">.</span>append({<span style="color: #CC3300">&#39;Player&#39;</span> : random<span style="color: #555555">.</span>choice(letter)<span style="color: #555555">+</span>random<span style="color: #555555">.</span>choice(letter)<span style="color: #555555">+</span>random<span style="color: #555555">.</span>choice(letter)<span style="color: #555555">+</span>random<span style="color: #555555">.</span>choice(letter),\
+               <span style="color: #CC3300">&#39;game1&#39;</span> : random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">1</span>),\
+               <span style="color: #CC3300">&#39;game2&#39;</span> : random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">1</span>),\
+               <span style="color: #CC3300">&#39;game3&#39;</span> : random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">1</span>),
+               <span style="color: #CC3300">&#39;game4&#39;</span> : random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">1</span>),
+               <span style="color: #CC3300">&#39;game5&#39;</span> : random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">1</span>)})
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>DF <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>DataFrame(LD)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>DF<span style="color: #555555">.</span>head(<span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>game1</th>
+      <th>game2</th>
+      <th>game3</th>
+      <th>game4</th>
+      <th>game5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CGHX</td>
+      <td>0.222859</td>
+      <td>0.370064</td>
+      <td>0.966385</td>
+      <td>0.350200</td>
+      <td>0.294583</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FFHX</td>
+      <td>0.390963</td>
+      <td>0.339934</td>
+      <td>0.614410</td>
+      <td>0.251014</td>
+      <td>0.132956</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BACC</td>
+      <td>0.143930</td>
+      <td>0.217735</td>
+      <td>0.117256</td>
+      <td>0.999636</td>
+      <td>0.566992</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BCGH</td>
+      <td>0.499326</td>
+      <td>0.749363</td>
+      <td>0.457431</td>
+      <td>0.087111</td>
+      <td>0.385008</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>HBCH</td>
+      <td>0.944682</td>
+      <td>0.199605</td>
+      <td>0.372076</td>
+      <td>0.745106</td>
+      <td>0.278212</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DAEE</td>
+      <td>0.491847</td>
+      <td>0.137834</td>
+      <td>0.517073</td>
+      <td>0.175743</td>
+      <td>0.289975</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>DCBA</td>
+      <td>0.747629</td>
+      <td>0.920831</td>
+      <td>0.151625</td>
+      <td>0.168380</td>
+      <td>0.153710</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>FGBB</td>
+      <td>0.964832</td>
+      <td>0.963819</td>
+      <td>0.465629</td>
+      <td>0.928988</td>
+      <td>0.448380</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>EHBF</td>
+      <td>0.727150</td>
+      <td>0.743628</td>
+      <td>0.510928</td>
+      <td>0.363017</td>
+      <td>0.856924</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>CXDB</td>
+      <td>0.448294</td>
+      <td>0.261936</td>
+      <td>0.147476</td>
+      <td>0.539172</td>
+      <td>0.736563</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>DF <span style="color: #555555">=</span> DF<span style="color: #555555">.</span>set_index(<span style="color: #CC3300">&#39;Player&#39;</span>)
+DF<span style="color: #555555">.</span>head()
+</pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>game1</th>
+      <th>game2</th>
+      <th>game3</th>
+      <th>game4</th>
+      <th>game5</th>
+    </tr>
+    <tr>
+      <th>Player</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CGBG</th>
+      <td>0.030258</td>
+      <td>0.018657</td>
+      <td>0.932341</td>
+      <td>0.586397</td>
+      <td>0.089513</td>
+    </tr>
+    <tr>
+      <th>DXHD</th>
+      <td>0.759187</td>
+      <td>0.309100</td>
+      <td>0.862211</td>
+      <td>0.094455</td>
+      <td>0.169772</td>
+    </tr>
+    <tr>
+      <th>FDHF</th>
+      <td>0.058685</td>
+      <td>0.568902</td>
+      <td>0.405327</td>
+      <td>0.592841</td>
+      <td>0.244399</td>
+    </tr>
+    <tr>
+      <th>CGCE</th>
+      <td>0.130951</td>
+      <td>0.806490</td>
+      <td>0.185252</td>
+      <td>0.341298</td>
+      <td>0.262757</td>
+    </tr>
+    <tr>
+      <th>XHAC</th>
+      <td>0.433210</td>
+      <td>0.658711</td>
+      <td>0.680462</td>
+      <td>0.682604</td>
+      <td>0.179386</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h3 id="data-view">Data View</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>DF<span style="color: #555555">.</span>plot(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">18</span>,<span style="color: #FF6600">10</span>])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a19fd8860&gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_32_1.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>DF[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">50</span>]<span style="color: #555555">.</span>plot<span style="color: #555555">.</span>bar(stacked<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">20</span>, <span style="color: #FF6600">15</span>),fontsize <span style="color: #555555">=</span><span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x107cd7198&gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_33_1.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>DF[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">10</span>]<span style="color: #555555">.</span>plot<span style="color: #555555">.</span>bar(stacked<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">20</span>, <span style="color: #FF6600">15</span>),fontsize <span style="color: #555555">=</span><span style="color: #FF6600">10</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a1a0b9cf8&gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_34_1.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">pandas.plotting</span> <span style="color: #006699; font-weight: bold">import</span> scatter_matrix
+scatter_matrix(DF, alpha<span style="color: #555555">=</span><span style="color: #FF6600">0.2</span>, figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">18</span>, <span style="color: #FF6600">15</span>), diagonal<span style="color: #555555">=</span><span style="color: #CC3300">&#39;kde&#39;</span>)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_35_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>DF<span style="color: #555555">.</span>plot<span style="color: #555555">.</span>hexbin(x<span style="color: #555555">=</span><span style="color: #CC3300">&#39;game1&#39;</span>, y<span style="color: #555555">=</span><span style="color: #CC3300">&#39;game2&#39;</span>,figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">12</span>, <span style="color: #FF6600">10</span>), gridsize<span style="color: #555555">=</span><span style="color: #FF6600">25</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a242a7550&gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_36_1.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>A <span style="color: #555555">=</span> np<span style="color: #555555">.</span>array([<span style="color: #FF6600">1</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">4</span>,<span style="color: #FF6600">5</span>])
+<span style="color: #336666">type</span>(A)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>numpy.ndarray
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>A<span style="color: #555555">*</span><span style="color: #FF6600">2</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([ 2,  4,  6,  8, 10])
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Indexing/Indexing/" class="btn btn-neutral float-right" title="Indexing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../pandas/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../pandas/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Indexing/Indexing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
