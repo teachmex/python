@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Data Exploration - TeachMe.Codes (Python)</title>
+  <title>Data Exploration - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -426,7 +426,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -469,7 +469,7 @@ sns<span style="color: #555555">.</span>set()
 
 
 <h3 id="setting-name-column-as-index">Setting Name column as index</h3>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>copy(deep <span style="color: #555555">=</span><span style="color: #336666">True</span>)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>copy(deep <span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 </pre></div>
 
 
@@ -929,7 +929,7 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 45222 entries, 0 to 45221
 Data columns (total 14 columns):
 age                45222 non-null int64
@@ -978,7 +978,7 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x7efd84af9358&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7efd84af9358&gt;
 </pre></div>
 
 
@@ -989,12 +989,12 @@ sns<span style="color: #555555">.</span>pairplot(charitydf, hue<span style="colo
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;seaborn.axisgrid.PairGrid at 0x7efd84b28ba8&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7efd84b28ba8&gt;
 
 
 
 
-&amp;lt;matplotlib.figure.Figure at 0x7efd84b197b8&amp;gt;
+&lt;matplotlib.figure.Figure at 0x7efd84b197b8&gt;
 </pre></div>
 
 
@@ -1005,13 +1005,13 @@ sns<span style="color: #555555">.</span>pairplot(charitydf, hue<span style="colo
 
 <p><img alt="png" src="../output_20_0.png" /></p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> (<span style="color: #FF6600">16</span>,<span style="color: #FF6600">21</span>))
-sns<span style="color: #555555">.</span>set(style<span style="color: #555555">=</span><span style="color: #CC3300">&quot;whitegrid&quot;</span>, color_codes<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>set(style<span style="color: #555555">=</span><span style="color: #CC3300">&quot;whitegrid&quot;</span>, color_codes<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 sns<span style="color: #555555">.</span>factorplot(<span style="color: #CC3300">&quot;sex&quot;</span>, col<span style="color: #555555">=</span><span style="color: #CC3300">&quot;marital-status&quot;</span>, data<span style="color: #555555">=</span>charitydf, 
                hue<span style="color: #555555">=</span><span style="color: #CC3300">&#39;income&#39;</span>, kind<span style="color: #555555">=</span><span style="color: #CC3300">&quot;count&quot;</span>, col_wrap<span style="color: #555555">=</span><span style="color: #FF6600">2</span>);
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.figure.Figure at 0x7efd860fd9b0&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.figure.Figure at 0x7efd860fd9b0&gt;
 </pre></div>
 
 
@@ -1030,7 +1030,7 @@ sns<span style="color: #555555">.</span>jointplot(x<span style="color: #555555">
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.figure.Figure at 0x7efd7ee362b0&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.figure.Figure at 0x7efd7ee362b0&gt;
 </pre></div>
 
 

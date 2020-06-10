@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Array - TeachMe.Codes (Python)</title>
+  <title>Array - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -531,7 +531,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -630,11 +630,11 @@ sns<span style="color: #555555">.</span>set()
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
-sns<span style="color: #555555">.</span>heatmap(X, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(X, annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x7f3dcc89b9b0&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f3dcc89b9b0&gt;
 </pre></div>
 
 
@@ -642,13 +642,13 @@ sns<span style="color: #555555">.</span>heatmap(X, annot<span style="color: #555
 <h3 id="find-subarray-splitting-to-4-subarrays">Find subarray : splitting to 4 subarrays</h3>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">1</span>)
-sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>,<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>], annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>,<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>], annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>)
-sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>,<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>], annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>,<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>], annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>)
-sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>,<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>], annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">5</span>,<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>], annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">4</span>)
-sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>,<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>], annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(X[<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>,<span style="color: #FF6600">5</span>:<span style="color: #FF6600">10</span>], annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>show()
 </pre></div>
 
@@ -684,11 +684,11 @@ X
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
-sns<span style="color: #555555">.</span>heatmap(X, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(X, annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x7f3dccc2e4a8&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f3dccc2e4a8&gt;
 </pre></div>
 
 
@@ -710,11 +710,11 @@ X
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">8</span>,<span style="color: #FF6600">6</span>])
-sns<span style="color: #555555">.</span>heatmap(XX, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(XX, annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x7f3dcca794e0&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f3dcca794e0&gt;
 </pre></div>
 
 
@@ -779,13 +779,13 @@ B <span style="color: #555555">=</span> np<span style="color: #555555">.</span>r
 <h4 id="array-disply">Array Disply</h4>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">1</span>)
-sns<span style="color: #555555">.</span>heatmap(A, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(A, annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>)
-sns<span style="color: #555555">.</span>heatmap(B, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(B, annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>)
-sns<span style="color: #555555">.</span>heatmap(C, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(C, annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">4</span>)
-sns<span style="color: #555555">.</span>heatmap(D, annot<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+sns<span style="color: #555555">.</span>heatmap(D, annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 plt<span style="color: #555555">.</span>show()
 </pre></div>
 

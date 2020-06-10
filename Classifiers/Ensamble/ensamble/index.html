@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Ensamble - TeachMe.Codes (Python)</title>
+  <title>Ensamble - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -594,7 +594,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -780,8 +780,8 @@ X_test, y_test <span style="color: #555555">=</span> generate(n_samples<span sty
     y_bias <span style="color: #555555">=</span> (f(X_test) <span style="color: #555555">-</span> np<span style="color: #555555">.</span>mean(y_predict, axis<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>
     y_var <span style="color: #555555">=</span> np<span style="color: #555555">.</span>var(y_predict, axis<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)
 
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;{0}: {1:.4f} (error) = {2:.4f} (bias^2) &quot;</span>
-          <span style="color: #CC3300">&quot; + {3:.4f} (var) + {4:.4f} (noise)&quot;</span><span style="color: #555555">.</span>format(name,
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #AA0000">{0}</span><span style="color: #CC3300">: </span><span style="color: #AA0000">{1:.4f}</span><span style="color: #CC3300"> (error) = </span><span style="color: #AA0000">{2:.4f}</span><span style="color: #CC3300"> (bias^2) &quot;</span>
+          <span style="color: #CC3300">&quot; + </span><span style="color: #AA0000">{3:.4f}</span><span style="color: #CC3300"> (var) + </span><span style="color: #AA0000">{4:.4f}</span><span style="color: #CC3300"> (noise)&quot;</span><span style="color: #555555">.</span>format(name,
                                                       np<span style="color: #555555">.</span>mean(y_error),
                                                       np<span style="color: #555555">.</span>mean(y_bias),
                                                       np<span style="color: #555555">.</span>mean(y_var),
@@ -799,7 +799,7 @@ X_test, y_test <span style="color: #555555">=</span> generate(n_samples<span sty
             plt<span style="color: #555555">.</span>plot(X_test, y_predict[:, i], <span style="color: #CC3300">&quot;r&quot;</span>, alpha<span style="color: #555555">=</span><span style="color: #FF6600">0.05</span>)
 
     plt<span style="color: #555555">.</span>plot(X_test, np<span style="color: #555555">.</span>mean(y_predict, axis<span style="color: #555555">=</span><span style="color: #FF6600">1</span>), <span style="color: #CC3300">&quot;c&quot;</span>,
-             label<span style="color: #555555">=</span><span style="color: #CC3300">&quot;$\mathbb{E}_{LS} \^y(x)$&quot;</span>)
+             label<span style="color: #555555">=</span><span style="color: #CC3300">&quot;$\mathbb</span><span style="color: #AA0000">{E}</span><span style="color: #CC3300">_</span><span style="color: #AA0000">{LS}</span><span style="color: #CC3300"> \^y(x)$&quot;</span>)
 
     plt<span style="color: #555555">.</span>xlim([<span style="color: #555555">-</span><span style="color: #FF6600">5</span>, <span style="color: #FF6600">5</span>])
     plt<span style="color: #555555">.</span>title(name)
@@ -867,16 +867,16 @@ error trajectory during training.</li>
 </ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>ensemble_clfs <span style="color: #555555">=</span> [
     (<span style="color: #CC3300">&quot;RandomForestClassifier, max_features=&#39;sqrt&#39;&quot;</span>,
-        RandomForestClassifier(warm_start<span style="color: #555555">=</span><span style="color: #336666">True</span>, oob_score<span style="color: #555555">=</span><span style="color: #336666">True</span>,
+        RandomForestClassifier(warm_start<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>, oob_score<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,
                                max_features<span style="color: #555555">=</span><span style="color: #CC3300">&quot;sqrt&quot;</span>,
                                random_state<span style="color: #555555">=</span>RANDOM_STATE)),
     (<span style="color: #CC3300">&quot;RandomForestClassifier, max_features=&#39;log2&#39;&quot;</span>,
-        RandomForestClassifier(warm_start<span style="color: #555555">=</span><span style="color: #336666">True</span>, max_features<span style="color: #555555">=</span><span style="color: #CC3300">&#39;log2&#39;</span>,
-                               oob_score<span style="color: #555555">=</span><span style="color: #336666">True</span>,
+        RandomForestClassifier(warm_start<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>, max_features<span style="color: #555555">=</span><span style="color: #CC3300">&#39;log2&#39;</span>,
+                               oob_score<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,
                                random_state<span style="color: #555555">=</span>RANDOM_STATE)),
     (<span style="color: #CC3300">&quot;RandomForestClassifier, max_features=None&quot;</span>,
-        RandomForestClassifier(warm_start<span style="color: #555555">=</span><span style="color: #336666">True</span>, max_features<span style="color: #555555">=</span><span style="color: #336666">None</span>,
-                               oob_score<span style="color: #555555">=</span><span style="color: #336666">True</span>,
+        RandomForestClassifier(warm_start<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>, max_features<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>,
+                               oob_score<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,
                                random_state<span style="color: #555555">=</span>RANDOM_STATE))
 ]
 </pre></div>
@@ -1092,7 +1092,7 @@ y <span style="color: #555555">=</span> y[mask]
 <li>Perform parallel fitting of the forest model</li>
 </ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Build a forest and compute the pixel importances</span>
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;Fitting ExtraTreesClassifier on faces data with </span><span style="color: #AA0000">%d</span><span style="color: #CC3300"> cores...&quot;</span> <span style="color: #555555">%</span> n_jobs)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;Fitting ExtraTreesClassifier on faces data with </span><span style="color: #AA0000">%d</span><span style="color: #CC3300"> cores...&quot;</span> <span style="color: #555555">%</span> n_jobs)
 t0 <span style="color: #555555">=</span> time()
 forest <span style="color: #555555">=</span> ExtraTreesClassifier(n_estimators<span style="color: #555555">=</span><span style="color: #FF6600">1000</span>,
                               max_features<span style="color: #555555">=</span><span style="color: #FF6600">128</span>,
@@ -1100,7 +1100,7 @@ forest <span style="color: #555555">=</span> ExtraTreesClassifier(n_estimators<s
                               random_state<span style="color: #555555">=</span><span style="color: #FF6600">0</span>)
 
 forest<span style="color: #555555">.</span>fit(X, y)
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;done in </span><span style="color: #AA0000">%0.3f</span><span style="color: #CC3300">s&quot;</span> <span style="color: #555555">%</span> (time() <span style="color: #555555">-</span> t0))
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;done in </span><span style="color: #AA0000">%0.3f</span><span style="color: #CC3300">s&quot;</span> <span style="color: #555555">%</span> (time() <span style="color: #555555">-</span> t0))
 importances <span style="color: #555555">=</span> forest<span style="color: #555555">.</span>feature_importances_
 importances <span style="color: #555555">=</span> importances<span style="color: #555555">.</span>reshape(data<span style="color: #555555">.</span>images[<span style="color: #FF6600">0</span>]<span style="color: #555555">.</span>shape)
 </pre></div>
@@ -1147,7 +1147,7 @@ X, y <span style="color: #555555">=</span> make_classification(n_samples<span st
                            n_repeated<span style="color: #555555">=</span><span style="color: #FF6600">0</span>,
                            n_classes<span style="color: #555555">=</span><span style="color: #FF6600">2</span>,
                            random_state<span style="color: #555555">=</span><span style="color: #FF6600">0</span>,
-                           shuffle<span style="color: #555555">=</span><span style="color: #336666">False</span>)
+                           shuffle<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>)
 </pre></div>
 
 
@@ -1170,10 +1170,10 @@ indices <span style="color: #555555">=</span> np<span style="color: #555555">.</
 <li>Feature Ranking</li>
 </ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Print the feature ranking</span>
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;Feature ranking:&quot;</span>)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;Feature ranking:&quot;</span>)
 
 <span style="color: #006699; font-weight: bold">for</span> f <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(X<span style="color: #555555">.</span>shape[<span style="color: #FF6600">1</span>]):
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #AA0000">%d</span><span style="color: #CC3300">. feature </span><span style="color: #AA0000">%d</span><span style="color: #CC3300"> (</span><span style="color: #AA0000">%f</span><span style="color: #CC3300">)&quot;</span> <span style="color: #555555">%</span> (f <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>, indices[f], importances[indices[f]]))
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #AA0000">%d</span><span style="color: #CC3300">. feature </span><span style="color: #AA0000">%d</span><span style="color: #CC3300"> (</span><span style="color: #AA0000">%f</span><span style="color: #CC3300">)&quot;</span> <span style="color: #555555">%</span> (f <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>, indices[f], importances[indices[f]]))
 </pre></div>
 
 
@@ -1765,7 +1765,7 @@ ax<span style="color: #555555">.</span>set_ylim((<span style="color: #FF6600">0.
 ax<span style="color: #555555">.</span>set_xlabel(<span style="color: #CC3300">&#39;n_estimators&#39;</span>)
 ax<span style="color: #555555">.</span>set_ylabel(<span style="color: #CC3300">&#39;error rate&#39;</span>)
 
-leg <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>legend(loc<span style="color: #555555">=</span><span style="color: #CC3300">&#39;upper right&#39;</span>, fancybox<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+leg <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>legend(loc<span style="color: #555555">=</span><span style="color: #CC3300">&#39;upper right&#39;</span>, fancybox<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 leg<span style="color: #555555">.</span>get_frame()<span style="color: #555555">.</span>set_alpha(<span style="color: #FF6600">0.7</span>)
 
 plt<span style="color: #555555">.</span>show()
@@ -1818,7 +1818,7 @@ regr_2<span style="color: #555555">.</span>fit(X, y)
            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
            splitter=&#39;best&#39;),
          learning_rate=1.0, loss=&#39;linear&#39;, n_estimators=300,
-         random_state=&amp;lt;mtrand.RandomState object at 0x114302d90&amp;gt;)
+         random_state=&lt;mtrand.RandomState object at 0x114302d90&gt;)
 </pre></div>
 
 
@@ -1914,7 +1914,7 @@ clf <span style="color: #555555">=</span> ensemble<span style="color: #555555">.
 
 clf<span style="color: #555555">.</span>fit(X_train, y_train)
 acc <span style="color: #555555">=</span> clf<span style="color: #555555">.</span>score(X_test, y_test)
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;Accuracy: {:.4f}&quot;</span><span style="color: #555555">.</span>format(acc))
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;Accuracy: </span><span style="color: #AA0000">{:.4f}</span><span style="color: #CC3300">&quot;</span><span style="color: #555555">.</span>format(acc))
 
 n_estimators <span style="color: #555555">=</span> params[<span style="color: #CC3300">&#39;n_estimators&#39;</span>]
 x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(n_estimators) <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>
@@ -2130,7 +2130,7 @@ clf <span style="color: #555555">=</span> ensemble<span style="color: #555555">.
 
 clf<span style="color: #555555">.</span>fit(X_train, y_train)
 mse <span style="color: #555555">=</span> mean_squared_error(y_test, clf<span style="color: #555555">.</span>predict(X_test))
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;MSE: </span><span style="color: #AA0000">%.4f</span><span style="color: #CC3300">&quot;</span> <span style="color: #555555">%</span> mse)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;MSE: </span><span style="color: #AA0000">%.4f</span><span style="color: #CC3300">&quot;</span> <span style="color: #555555">%</span> mse)
 </pre></div>
 
 
@@ -2212,12 +2212,12 @@ analogous to the random splits in Random Forests
 X <span style="color: #555555">=</span> X<span style="color: #555555">.</span>astype(np<span style="color: #555555">.</span>float32)
 
 <span style="color: #0099FF; font-style: italic"># map labels from {-1, 1} to {0, 1}</span>
-labels, y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>unique(y, return_inverse<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+labels, y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>unique(y, return_inverse<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 
 X_train, X_test <span style="color: #555555">=</span> X[:<span style="color: #FF6600">2000</span>], X[<span style="color: #FF6600">2000</span>:]
 y_train, y_test <span style="color: #555555">=</span> y[:<span style="color: #FF6600">2000</span>], y[<span style="color: #FF6600">2000</span>:]
 
-original_params <span style="color: #555555">=</span> {<span style="color: #CC3300">&#39;n_estimators&#39;</span>: <span style="color: #FF6600">1000</span>, <span style="color: #CC3300">&#39;max_leaf_nodes&#39;</span>: <span style="color: #FF6600">4</span>, <span style="color: #CC3300">&#39;max_depth&#39;</span>: <span style="color: #336666">None</span>, <span style="color: #CC3300">&#39;random_state&#39;</span>: <span style="color: #FF6600">2</span>,
+original_params <span style="color: #555555">=</span> {<span style="color: #CC3300">&#39;n_estimators&#39;</span>: <span style="color: #FF6600">1000</span>, <span style="color: #CC3300">&#39;max_leaf_nodes&#39;</span>: <span style="color: #FF6600">4</span>, <span style="color: #CC3300">&#39;max_depth&#39;</span>: <span style="color: #006699; font-weight: bold">None</span>, <span style="color: #CC3300">&#39;random_state&#39;</span>: <span style="color: #FF6600">2</span>,
                    <span style="color: #CC3300">&#39;min_samples_split&#39;</span>: <span style="color: #FF6600">5</span>}
 </pre></div>
 
@@ -2324,14 +2324,14 @@ on age.</p>
                                                         random_state<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)
     names <span style="color: #555555">=</span> cal_housing<span style="color: #555555">.</span>feature_names
 
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;Training GBRT...&quot;</span>, flush<span style="color: #555555">=</span><span style="color: #336666">True</span>, end<span style="color: #555555">=</span><span style="color: #CC3300">&#39;&#39;</span>)
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;Training GBRT...&quot;</span>, flush<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>, end<span style="color: #555555">=</span><span style="color: #CC3300">&#39;&#39;</span>)
     clf <span style="color: #555555">=</span> GradientBoostingRegressor(n_estimators<span style="color: #555555">=</span><span style="color: #FF6600">100</span>, max_depth<span style="color: #555555">=</span><span style="color: #FF6600">4</span>,
                                     learning_rate<span style="color: #555555">=</span><span style="color: #FF6600">0.1</span>, loss<span style="color: #555555">=</span><span style="color: #CC3300">&#39;huber&#39;</span>,
                                     random_state<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)
     clf<span style="color: #555555">.</span>fit(X_train, y_train)
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot; done.&quot;</span>)
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot; done.&quot;</span>)
 
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&#39;Convenience plot with ``partial_dependence_plots``&#39;</span>)
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&#39;Convenience plot with ``partial_dependence_plots``&#39;</span>)
 
     features <span style="color: #555555">=</span> [<span style="color: #FF6600">0</span>, <span style="color: #FF6600">5</span>, <span style="color: #FF6600">1</span>, <span style="color: #FF6600">2</span>, (<span style="color: #FF6600">5</span>, <span style="color: #FF6600">1</span>)]
     fig, axs <span style="color: #555555">=</span> plot_partial_dependence(clf, X_train, features,
@@ -2341,7 +2341,7 @@ on age.</p>
                  <span style="color: #CC3300">&#39;for the California housing dataset&#39;</span>)
     plt<span style="color: #555555">.</span>subplots_adjust(top<span style="color: #555555">=</span><span style="color: #FF6600">0.9</span>)  <span style="color: #0099FF; font-style: italic"># tight_layout causes overlap with suptitle</span>
 
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&#39;Custom 3d plot via ``partial_dependence``&#39;</span>)
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&#39;Custom 3d plot via ``partial_dependence``&#39;</span>)
     fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure()
 
     target_feature <span style="color: #555555">=</span> (<span style="color: #FF6600">1</span>, <span style="color: #FF6600">5</span>)
@@ -2424,7 +2424,7 @@ y <span style="color: #555555">=</span> iris<span style="color: #555555">.</span
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Training classifiers</span>
 clf1 <span style="color: #555555">=</span> DecisionTreeClassifier(max_depth<span style="color: #555555">=</span><span style="color: #FF6600">4</span>)
 clf2 <span style="color: #555555">=</span> KNeighborsClassifier(n_neighbors<span style="color: #555555">=</span><span style="color: #FF6600">7</span>)
-clf3 <span style="color: #555555">=</span> SVC(kernel<span style="color: #555555">=</span><span style="color: #CC3300">&#39;rbf&#39;</span>, probability<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+clf3 <span style="color: #555555">=</span> SVC(kernel<span style="color: #555555">=</span><span style="color: #CC3300">&#39;rbf&#39;</span>, probability<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 eclf <span style="color: #555555">=</span> VotingClassifier(estimators<span style="color: #555555">=</span>[(<span style="color: #CC3300">&#39;dt&#39;</span>, clf1), (<span style="color: #CC3300">&#39;knn&#39;</span>, clf2),
                                     (<span style="color: #CC3300">&#39;svc&#39;</span>, clf3)],
                         voting<span style="color: #555555">=</span><span style="color: #CC3300">&#39;soft&#39;</span>, weights<span style="color: #555555">=</span>[<span style="color: #FF6600">2</span>, <span style="color: #FF6600">1</span>, <span style="color: #FF6600">2</span>])

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>SVM - TeachMe.Codes (Python)</title>
+  <title>SVM - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -778,7 +778,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -1065,7 +1065,7 @@ clf<span style="color: #555555">.</span>fit(X, Y)
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
   decision_function_shape=&#39;ovr&#39;, degree=3, gamma=&#39;auto&#39;,
-  kernel=&amp;lt;function my_kernel at 0x7f3ae7845620&amp;gt;, max_iter=-1,
+  kernel=&lt;function my_kernel at 0x7f3ae7845620&gt;, max_iter=-1,
   probability=False, random_state=None, shrinking=True, tol=0.001,
   verbose=False)
 </pre></div>
@@ -1270,11 +1270,11 @@ map.</p>
 </ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">MidpointNormalize</span>(Normalize):
 
-    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>, vmin<span style="color: #555555">=</span><span style="color: #336666">None</span>, vmax<span style="color: #555555">=</span><span style="color: #336666">None</span>, midpoint<span style="color: #555555">=</span><span style="color: #336666">None</span>, clip<span style="color: #555555">=</span><span style="color: #336666">False</span>):
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>, vmin<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>, vmax<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>, midpoint<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>, clip<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>):
         <span style="color: #336666">self</span><span style="color: #555555">.</span>midpoint <span style="color: #555555">=</span> midpoint
         Normalize<span style="color: #555555">.</span><span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>, vmin, vmax, clip)
 
-    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__call__</span>(<span style="color: #336666">self</span>, value, clip<span style="color: #555555">=</span><span style="color: #336666">None</span>):
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__call__</span>(<span style="color: #336666">self</span>, value, clip<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>):
         x, y <span style="color: #555555">=</span> [<span style="color: #336666">self</span><span style="color: #555555">.</span>vmin, <span style="color: #336666">self</span><span style="color: #555555">.</span>midpoint, <span style="color: #336666">self</span><span style="color: #555555">.</span>vmax], [<span style="color: #FF6600">0</span>, <span style="color: #FF6600">0.5</span>, <span style="color: #FF6600">1</span>]
         <span style="color: #006699; font-weight: bold">return</span> np<span style="color: #555555">.</span>ma<span style="color: #555555">.</span>masked_array(np<span style="color: #555555">.</span>interp(value, x, y))
 </pre></div>
@@ -1323,7 +1323,7 @@ cv <span style="color: #555555">=</span> StratifiedShuffleSplit(n_splits<span st
 grid <span style="color: #555555">=</span> GridSearchCV(SVC(), param_grid<span style="color: #555555">=</span>param_grid, cv<span style="color: #555555">=</span>cv)
 grid<span style="color: #555555">.</span>fit(X, y)
 
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;The best parameters are </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> with a score of </span><span style="color: #AA0000">%0.2f</span><span style="color: #CC3300">&quot;</span>
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;The best parameters are </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> with a score of </span><span style="color: #AA0000">%0.2f</span><span style="color: #CC3300">&quot;</span>
       <span style="color: #555555">%</span> (grid<span style="color: #555555">.</span>best_params_, grid<span style="color: #555555">.</span>best_score_))
 </pre></div>
 
@@ -1670,7 +1670,7 @@ fignum <span style="color: #555555">=</span> <span style="color: #FF6600">1</spa
     y_min <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">3</span>
     y_max <span style="color: #555555">=</span> <span style="color: #FF6600">3</span>
 
-    XX, YY <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[x_min:x_max:<span style="color: #FF6600">200j</span>, y_min:y_max:<span style="color: #FF6600">200j</span>]
+    XX, YY <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[x_min:x_max:<span style="color: #FF6600">200</span>j, y_min:y_max:<span style="color: #FF6600">200</span>j]
     Z <span style="color: #555555">=</span> clf<span style="color: #555555">.</span>decision_function(np<span style="color: #555555">.</span>c_[XX<span style="color: #555555">.</span>ravel(), YY<span style="color: #555555">.</span>ravel()])
 
     <span style="color: #0099FF; font-style: italic"># Put the result into a color plot</span>
@@ -1760,7 +1760,7 @@ fignum <span style="color: #555555">=</span> <span style="color: #FF6600">1</spa
     y_min <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">6</span>
     y_max <span style="color: #555555">=</span> <span style="color: #FF6600">6</span>
 
-    XX, YY <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[x_min:x_max:<span style="color: #FF6600">200j</span>, y_min:y_max:<span style="color: #FF6600">200j</span>]
+    XX, YY <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[x_min:x_max:<span style="color: #FF6600">200</span>j, y_min:y_max:<span style="color: #FF6600">200</span>j]
     Z <span style="color: #555555">=</span> clf<span style="color: #555555">.</span>predict(np<span style="color: #555555">.</span>c_[XX<span style="color: #555555">.</span>ravel(), YY<span style="color: #555555">.</span>ravel()])
 
     <span style="color: #0099FF; font-style: italic"># Put the result into a color plot</span>
@@ -1983,10 +1983,10 @@ y_2 <span style="color: #555555">=</span> np<span style="color: #555555">.</span
 X_2 <span style="color: #555555">=</span> rnd<span style="color: #555555">.</span>randn(n_samples, n_features <span style="color: #555555">/</span> <span style="color: #FF6600">5</span>) <span style="color: #555555">+</span> y_2[:, np<span style="color: #555555">.</span>newaxis]
 X_2 <span style="color: #555555">+=</span> <span style="color: #FF6600">5</span> <span style="color: #555555">*</span> rnd<span style="color: #555555">.</span>randn(n_samples, n_features <span style="color: #555555">/</span> <span style="color: #FF6600">5</span>)
 
-clf_sets <span style="color: #555555">=</span> [(LinearSVC(penalty<span style="color: #555555">=</span><span style="color: #CC3300">&#39;l1&#39;</span>, loss<span style="color: #555555">=</span><span style="color: #CC3300">&#39;squared_hinge&#39;</span>, dual<span style="color: #555555">=</span><span style="color: #336666">False</span>,
+clf_sets <span style="color: #555555">=</span> [(LinearSVC(penalty<span style="color: #555555">=</span><span style="color: #CC3300">&#39;l1&#39;</span>, loss<span style="color: #555555">=</span><span style="color: #CC3300">&#39;squared_hinge&#39;</span>, dual<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,
                        tol<span style="color: #555555">=</span><span style="color: #FF6600">1e-3</span>),
              np<span style="color: #555555">.</span>logspace(<span style="color: #555555">-</span><span style="color: #FF6600">2.3</span>, <span style="color: #555555">-</span><span style="color: #FF6600">1.3</span>, <span style="color: #FF6600">10</span>), X_1, y_1),
-            (LinearSVC(penalty<span style="color: #555555">=</span><span style="color: #CC3300">&#39;l2&#39;</span>, loss<span style="color: #555555">=</span><span style="color: #CC3300">&#39;squared_hinge&#39;</span>, dual<span style="color: #555555">=</span><span style="color: #336666">True</span>,
+            (LinearSVC(penalty<span style="color: #555555">=</span><span style="color: #CC3300">&#39;l2&#39;</span>, loss<span style="color: #555555">=</span><span style="color: #CC3300">&#39;squared_hinge&#39;</span>, dual<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,
                        tol<span style="color: #555555">=</span><span style="color: #FF6600">1e-4</span>),
              np<span style="color: #555555">.</span>logspace(<span style="color: #555555">-</span><span style="color: #FF6600">4.5</span>, <span style="color: #555555">-</span><span style="color: #FF6600">2</span>, <span style="color: #FF6600">10</span>), X_2, y_2)]
 
@@ -2001,7 +2001,7 @@ lw <span style="color: #555555">=</span> <span style="color: #FF6600">2</span>
         param_grid <span style="color: #555555">=</span> <span style="color: #336666">dict</span>(C<span style="color: #555555">=</span>cs)
         <span style="color: #0099FF; font-style: italic"># To get nice curve, we need a large number of iterations to</span>
         <span style="color: #0099FF; font-style: italic"># reduce the variance</span>
-        grid <span style="color: #555555">=</span> GridSearchCV(clf, refit<span style="color: #555555">=</span><span style="color: #336666">False</span>, param_grid<span style="color: #555555">=</span>param_grid,
+        grid <span style="color: #555555">=</span> GridSearchCV(clf, refit<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>, param_grid<span style="color: #555555">=</span>param_grid,
                             cv<span style="color: #555555">=</span>ShuffleSplit(train_size<span style="color: #555555">=</span>train_size, n_iter<span style="color: #555555">=</span><span style="color: #FF6600">250</span>,
                                             random_state<span style="color: #555555">=</span><span style="color: #FF6600">1</span>))
         grid<span style="color: #555555">.</span>fit(X, y)
@@ -2107,7 +2107,7 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.figure.Figure at 0x114969e80&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.figure.Figure at 0x114969e80&gt;
 </pre></div>
 
 

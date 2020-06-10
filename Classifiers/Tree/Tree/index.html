@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Decision Tree - TeachMe.Codes (Python)</title>
+  <title>Decision Tree - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -446,7 +446,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -552,8 +552,8 @@ dot_data <span style="color: #555555">=</span> StringIO()
 tree<span style="color: #555555">.</span>export_graphviz(clf, out_file<span style="color: #555555">=</span>dot_data,  
                          feature_names<span style="color: #555555">=</span>iris<span style="color: #555555">.</span>feature_names,  
                          class_names<span style="color: #555555">=</span>iris<span style="color: #555555">.</span>target_names,  
-                         filled<span style="color: #555555">=</span><span style="color: #336666">True</span>, rounded<span style="color: #555555">=</span><span style="color: #336666">True</span>,  
-                         special_characters<span style="color: #555555">=</span><span style="color: #336666">True</span>)  
+                         filled<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>, rounded<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,  
+                         special_characters<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)  
 graph <span style="color: #555555">=</span> pydot<span style="color: #555555">.</span>graph_from_dot_data(dot_data<span style="color: #555555">.</span>getvalue())  
 Image(graph<span style="color: #555555">.</span>create_png())  
 </pre></div>
@@ -738,9 +738,9 @@ stack <span style="color: #555555">=</span> [(<span style="color: #FF6600">0</sp
         stack<span style="color: #555555">.</span>append((children_left[node_id], parent_depth <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>))
         stack<span style="color: #555555">.</span>append((children_right[node_id], parent_depth <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>))
     <span style="color: #006699; font-weight: bold">else</span>:
-        is_leaves[node_id] <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+        is_leaves[node_id] <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">True</span>
 
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;The binary tree structure has </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> nodes and has &quot;</span>
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;The binary tree structure has </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> nodes and has &quot;</span>
       <span style="color: #CC3300">&quot;the following tree structure:&quot;</span>
       <span style="color: #555555">%</span> n_nodes)
 </pre></div>
@@ -752,9 +752,9 @@ stack <span style="color: #555555">=</span> [(<span style="color: #FF6600">0</sp
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_nodes):
     <span style="color: #006699; font-weight: bold">if</span> is_leaves[i]:
-        <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">node=</span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> leaf node.&quot;</span> <span style="color: #555555">%</span> (node_depth[i] <span style="color: #555555">*</span> <span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\t</span><span style="color: #CC3300">&quot;</span>, i))
+        <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">node=</span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> leaf node.&quot;</span> <span style="color: #555555">%</span> (node_depth[i] <span style="color: #555555">*</span> <span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\t</span><span style="color: #CC3300">&quot;</span>, i))
     <span style="color: #006699; font-weight: bold">else</span>:
-        <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">node=</span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> test node: go to node </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> if X[:, </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">] &lt;= </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">s else to &quot;</span>
+        <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">node=</span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> test node: go to node </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> if X[:, </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">] &lt;= </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">s else to &quot;</span>
               <span style="color: #CC3300">&quot;node </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">.&quot;</span>
               <span style="color: #555555">%</span> (node_depth[i] <span style="color: #555555">*</span> <span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\t</span><span style="color: #CC3300">&quot;</span>,
                  i,
@@ -763,7 +763,7 @@ stack <span style="color: #555555">=</span> [(<span style="color: #FF6600">0</sp
                  threshold[i],
                  children_right[i],
                  ))
-<span style="color: #006699; font-weight: bold">print</span>()
+<span style="color: #336666">print</span>()
 </pre></div>
 
 
@@ -792,7 +792,7 @@ a group of samples. First, let's make it for the sample.</li>
 node_index <span style="color: #555555">=</span> node_indicator<span style="color: #555555">.</span>indices[node_indicator<span style="color: #555555">.</span>indptr[sample_id]:
                                     node_indicator<span style="color: #555555">.</span>indptr[sample_id <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>]]
 
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&#39;Rules used to predict sample </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">: &#39;</span> <span style="color: #555555">%</span> sample_id)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&#39;Rules used to predict sample </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">: &#39;</span> <span style="color: #555555">%</span> sample_id)
 <span style="color: #006699; font-weight: bold">for</span> node_id <span style="color: #000000; font-weight: bold">in</span> node_index:
     <span style="color: #006699; font-weight: bold">if</span> leave_id[sample_id] <span style="color: #555555">!=</span> node_id:
         <span style="color: #006699; font-weight: bold">continue</span>
@@ -802,7 +802,7 @@ node_index <span style="color: #555555">=</span> node_indicator<span style="colo
     <span style="color: #006699; font-weight: bold">else</span>:
         threshold_sign <span style="color: #555555">=</span> <span style="color: #CC3300">&quot;&gt;&quot;</span>
 
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;decision id node </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> : (X[</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">, </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">] (= </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">) </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">)&quot;</span>
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;decision id node </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> : (X[</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">, </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">] (= </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">) </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">)&quot;</span>
           <span style="color: #555555">%</span> (node_id,
              sample_id,
              feature[node_id],
@@ -817,14 +817,14 @@ common_nodes <span style="color: #555555">=</span> (node_indicator<span style="c
 
 common_node_id <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(n_nodes)[common_nodes]
 
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">The following samples </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> share the node </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> in the tree&quot;</span>
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">The following samples </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> share the node </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> in the tree&quot;</span>
       <span style="color: #555555">%</span> (sample_ids, common_node_id))
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;It is </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> </span><span style="color: #AA0000">%%</span><span style="color: #CC3300"> of all nodes.&quot;</span> <span style="color: #555555">%</span> (<span style="color: #FF6600">100</span> <span style="color: #555555">*</span> <span style="color: #336666">len</span>(common_node_id) <span style="color: #555555">/</span> n_nodes,))
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;It is </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> </span><span style="color: #AA0000">%%</span><span style="color: #CC3300"> of all nodes.&quot;</span> <span style="color: #555555">%</span> (<span style="color: #FF6600">100</span> <span style="color: #555555">*</span> <span style="color: #336666">len</span>(common_node_id) <span style="color: #555555">/</span> n_nodes,))
 </pre></div>
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Rules used to predict sample 0: 
-decision id node 4 : (X[0, -2] (= 1.5) &amp;gt; -2.0)
+decision id node 4 : (X[0, -2] (= 1.5) &gt; -2.0)
 
 The following samples [0, 1] share the node [0 2] in the tree
 It is 40.0 % of all nodes.

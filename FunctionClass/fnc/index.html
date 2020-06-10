@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Functions and Class - TeachMe.Codes (Python)</title>
+  <title>Functions and Class - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -192,6 +192,11 @@
       
         <li class="toctree-l3">
           <a class="toctree-l4" href="#class-gravity">Class Gravity</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#class-dice">Class Dice</a>
         </li>
     
     </ul>
@@ -416,7 +421,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">TeachMe.Codes (Python)</a>
+        <a href="../..">Python</a>
       </nav>
 
       
@@ -443,20 +448,25 @@
             <div class="section">
               
                 <h1 id="functions-and-classes">Functions and Classes</h1>
-<hr />
+<p>Function and Class are required for object oriented programming. Functions, once created, can be implemented multiple times while Class is more useful for both data encaptulation and functions.</p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 </pre></div>
 
 
 <h3 id="class-circle">Class Circle</h3>
-<p>Define a function which will take radious as input and provides area as output for a circle.</p>
+<ul>
+<li>Define a function which will take radious as input and provides area as output for a circle.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">area</span>(r):
     A <span style="color: #555555">=</span> np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>r<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
     <span style="color: #006699; font-weight: bold">return</span> A
 </pre></div>
 
 
-<p>Claculate the area of a sample circle of radius 10.</p>
+<ul>
+<li>Claculate the area of a sample circle of radius 10.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>area(<span style="color: #FF6600">10</span>)
 </pre></div>
 
@@ -465,14 +475,18 @@
 </pre></div>
 
 
-<p>Define a function which will take radious as input and provides circumference as output for a circle.</p>
+<ul>
+<li>Define a function which will take radious as input and provides circumference as output for a circle.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">circumference</span>(r):
     C <span style="color: #555555">=</span> <span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>r
     <span style="color: #006699; font-weight: bold">return</span> C
 </pre></div>
 
 
-<p>Claculate the circumference of a sample circle of radius 10.</p>
+<ul>
+<li>Claculate the circumference of a sample circle of radius 10.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>circumference(<span style="color: #FF6600">10</span>)
 </pre></div>
 
@@ -481,11 +495,12 @@
 </pre></div>
 
 
-<p>Lets build a class implementing above constants and functions</p>
+<ul>
+<li>Lets build a class implementing above constants and functions</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">Circle</span>():
     <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>, r):
         <span style="color: #336666">self</span><span style="color: #555555">.</span>r <span style="color: #555555">=</span> r
-
 
     <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">area</span>(<span style="color: #336666">self</span>):
         A <span style="color: #555555">=</span> np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span><span style="color: #336666">self</span><span style="color: #555555">.</span>r<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
@@ -497,7 +512,9 @@
 </pre></div>
 
 
-<p>Test using examples</p>
+<ul>
+<li>Test using examples. Circle object can be created by calling <code>Circle(5)</code> and function <code>area()</code> can be applied later ot together.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Circle(<span style="color: #FF6600">5</span>)<span style="color: #555555">.</span>area()
 </pre></div>
 
@@ -515,6 +532,9 @@ CC<span style="color: #555555">.</span>area(),CC<span style="color: #555555">.</
 </pre></div>
 
 
+<ul>
+<li>Sililar to the functions, a data can be called from class object.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>CC<span style="color: #555555">.</span>r
 </pre></div>
 
@@ -523,9 +543,12 @@ CC<span style="color: #555555">.</span>area(),CC<span style="color: #555555">.</
 </pre></div>
 
 
+<ul>
+<li>To use class and function object multiple time.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> r <span style="color: #000000; font-weight: bold">in</span> [<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">6</span>,<span style="color: #FF6600">24</span>,<span style="color: #FF6600">25</span>,<span style="color: #FF6600">46</span>,<span style="color: #FF6600">567</span>]:
     CC <span style="color: #555555">=</span> Circle(r)
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;radius: &quot;</span> , r,\
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;radius: &quot;</span> , r,\
           <span style="color: #CC3300">&quot;area : &quot;</span> , CC<span style="color: #555555">.</span>area(),\
           <span style="color: #CC3300">&quot;circumf : &quot;</span> , CC<span style="color: #555555">.</span>circumference())
 </pre></div>
@@ -541,8 +564,10 @@ radius:  567 area :  1009987.480609929 circumf :  3562.5660691708254
 </pre></div>
 
 
-<hr />
 <h3 id="class-gravity">Class Gravity</h3>
+<ul>
+<li>To create a function Gravity</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">gravity</span>(m1,m2,d):
     F <span style="color: #555555">=</span> (m1<span style="color: #555555">*</span>m2)<span style="color: #555555">/</span>d<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
     <span style="color: #006699; font-weight: bold">return</span> F
@@ -557,7 +582,9 @@ radius:  567 area :  1009987.480609929 circumf :  3562.5660691708254
 </pre></div>
 
 
-<p>Lets create a class for Gravity calculation</p>
+<ul>
+<li>Lets create a class <code>Newton</code> for Gravity calculation</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">Newton</span>():
 
     <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>,value_of_G, value_of_g, supplied_info):
@@ -565,24 +592,28 @@ radius:  567 area :  1009987.480609929 circumf :  3562.5660691708254
         <span style="color: #336666">self</span><span style="color: #555555">.</span>info <span style="color: #555555">=</span> supplied_info
         <span style="color: #336666">self</span><span style="color: #555555">.</span>g <span style="color: #555555">=</span> value_of_g
 
-
     <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">gravity</span>(<span style="color: #336666">self</span>,m1,m2,d):
         F <span style="color: #555555">=</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>G<span style="color: #555555">*</span>(m1<span style="color: #555555">*</span>m2)<span style="color: #555555">/</span>d<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
-        <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #336666">self</span><span style="color: #555555">.</span>info)
+        <span style="color: #336666">print</span>(<span style="color: #336666">self</span><span style="color: #555555">.</span>info)
         <span style="color: #006699; font-weight: bold">return</span> F  
-
 
     <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">gravity_pot</span>(<span style="color: #336666">self</span>,m1):
         F <span style="color: #555555">=</span> m1<span style="color: #555555">*</span><span style="color: #336666">self</span><span style="color: #555555">.</span>g
-        <span style="color: #006699; font-weight: bold">return</span> F
+        <span style="color: #006699; font-weight: bold">return</span> F      
 </pre></div>
 
 
+<ul>
+<li>To create a object by calling a class with define inputs.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N1 <span style="color: #555555">=</span> Newton(value_of_G <span style="color: #555555">=</span><span style="color: #FF6600">6.7</span>, value_of_g<span style="color: #555555">=</span> <span style="color: #FF6600">9.8</span>,\
             supplied_info <span style="color: #555555">=</span> <span style="color: #CC3300">&quot;great job&quot;</span>)
 </pre></div>
 
 
+<ul>
+<li>To find constants and output of functions</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N1<span style="color: #555555">.</span>G, N1<span style="color: #555555">.</span>g,N1<span style="color: #555555">.</span>gravity(<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">13</span>),N1<span style="color: #555555">.</span>gravity_pot(<span style="color: #FF6600">12</span>)
 </pre></div>
 
@@ -611,8 +642,94 @@ radius:  567 area :  1009987.480609929 circumf :  3562.5660691708254
 </pre></div>
 
 
-<hr />
-<hr />
+<h3 id="class-dice">Class Dice</h3>
+<ul>
+<li>Lets create a Class called <code>Dice</code> for fun</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">class</span> <span style="color: #00AA88; font-weight: bold">Dice</span>(<span style="color: #336666">object</span>):
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">__init__</span>(<span style="color: #336666">self</span>,A_value,B_value,C_value):
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>pi <span style="color: #555555">=</span> <span style="color: #FF6600">3.14</span>
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>A <span style="color: #555555">=</span> A_value
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>B <span style="color: #555555">=</span> B_value
+        <span style="color: #336666">self</span><span style="color: #555555">.</span>C <span style="color: #555555">=</span> C_value 
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">find_sum</span>(<span style="color: #336666">self</span>,n1,n2):
+        S <span style="color: #555555">=</span> n1<span style="color: #555555">+</span>n2
+        <span style="color: #006699; font-weight: bold">return</span> S
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">find_product</span>(<span style="color: #336666">self</span>,n1,n2):
+        P <span style="color: #555555">=</span> n1<span style="color: #555555">*</span>n2
+        <span style="color: #006699; font-weight: bold">return</span> P
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">poly</span>(<span style="color: #336666">self</span>,x):
+        pl <span style="color: #555555">=</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>A<span style="color: #555555">*</span><span style="color: #336666">self</span><span style="color: #555555">.</span>find_product(x,x) <span style="color: #555555">+</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>B<span style="color: #555555">*</span>x <span style="color: #555555">+</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>C
+        <span style="color: #006699; font-weight: bold">return</span> pl
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">roll_dice</span>(<span style="color: #336666">self</span>):
+        side <span style="color: #555555">=</span> random<span style="color: #555555">.</span>choice([<span style="color: #FF6600">1</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">4</span>,<span style="color: #FF6600">5</span>,<span style="color: #FF6600">6</span>])
+        <span style="color: #006699; font-weight: bold">return</span> side
+
+    <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">roll_two_dices</span>(<span style="color: #336666">self</span>):
+        d1 <span style="color: #555555">=</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>roll_dice()
+        d2 <span style="color: #555555">=</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>roll_dice()
+        p <span style="color: #555555">=</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>find_product(d1,d2)
+        s <span style="color: #555555">=</span> <span style="color: #336666">self</span><span style="color: #555555">.</span>find_sum(d1,d2)
+        <span style="color: #006699; font-weight: bold">return</span> d1,d2,p,s
+</pre></div>
+
+
+<ul>
+<li>To implement object created by class with predefined input</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>A <span style="color: #555555">=</span> <span style="color: #FF6600">2.3</span>; B<span style="color: #555555">=</span><span style="color: #FF6600">4.5</span>; C <span style="color: #555555">=</span><span style="color: #FF6600">8.9</span>
+D <span style="color: #555555">=</span> Dice(A,B,C)
+</pre></div>
+
+
+<ul>
+<li>Can I ask this object for value of A, B and C?</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>D<span style="color: #555555">.</span>A, D<span style="color: #555555">.</span>B, D<span style="color: #555555">.</span>C
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(2.3, 4.5, 8.9)
+</pre></div>
+
+
+<ul>
+<li>To roll a dice to get randum side</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>D<span style="color: #555555">.</span>roll_dice()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>4
+</pre></div>
+
+
+<ul>
+<li>To roll two dice for two randum side. The <code>roll_two_dices</code> function implements <code>find_sum()</code> and <code>find_product</code> functions inside it.</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>D<span style="color: #555555">.</span>roll_two_dices()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(2, 4, 8, 6)
+</pre></div>
+
+
+<ul>
+<li>To roll a single dice and supply the output of single roll of dice to calculate polynomial function  by implementing <code>poly</code> function</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>d <span style="color: #555555">=</span> D<span style="color: #555555">.</span>roll_dice()
+D<span style="color: #555555">.</span>poly(d)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>43.1
+</pre></div>
               
             </div>
           </div>

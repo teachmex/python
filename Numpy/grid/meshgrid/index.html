@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>MeshGrid - TeachMe.Codes (Python)</title>
+  <title>MeshGrid - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -471,7 +471,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -577,7 +577,7 @@ plt<span style="color: #555555">.</span>plot(x,x<span style="color: #555555">**<
          x,x<span style="color: #555555">**</span><span style="color: #FF6600">9</span>,\
          x,x<span style="color: #555555">**</span><span style="color: #FF6600">10</span>)
 
-plt<span style="color: #555555">.</span>grid(<span style="color: #336666">True</span>)
+plt<span style="color: #555555">.</span>grid(<span style="color: #006699; font-weight: bold">True</span>)
 
 plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&#39;x&#39;</span>,fontsize <span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
 plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&#39;x^n&#39;</span>,fontsize <span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
@@ -622,7 +622,7 @@ grid <span style="color: #555555">=</span> np<span style="color: #555555">.</spa
 
 <h5 id="1-example-cost-function">1. Example Cost function</h5>
 <p>$\large{Z = \frac{sin(x^2+y^2).cos(x^2-y^2)}{x^2+y^2}}$</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>xx, yy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x, y, sparse<span style="color: #555555">=</span><span style="color: #336666">True</span>)  <span style="color: #0099FF; font-style: italic">#   &lt;---------------------------------------------</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>xx, yy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x, y, sparse<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)  <span style="color: #0099FF; font-style: italic">#   &lt;---------------------------------------------</span>
 
 z <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sin(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)<span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">-</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>) <span style="color: #555555">/</span> (xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
 plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">15</span>,<span style="color: #FF6600">10</span>])
@@ -632,7 +632,7 @@ plt<span style="color: #555555">.</span>clabel(CS, inline<span style="color: #55
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;a list of 147 text.Text objects&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;a list of 147 text.Text objects&gt;
 </pre></div>
 
 
@@ -657,7 +657,7 @@ xx, yy <span style="color: #555555">=</span> np<span style="color: #555555">.</s
 z <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sin(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)<span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">-</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>) <span style="color: #555555">/</span> (xx<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> yy<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
 
 <span style="color: #0099FF; font-style: italic"># Plot the surface.</span>
-surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(xx, yy, z, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #336666">False</span>)
+surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(xx, yy, z, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>)
 
 <span style="color: #0099FF; font-style: italic"># Customize the z axis.</span>
 <span style="color: #0099FF; font-style: italic">#ax.set_zlim(-1.01, 1.01)</span>
@@ -735,7 +735,7 @@ z <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</span> 
 
 
 <span style="color: #0099FF; font-style: italic"># Plot the surface.</span>
-surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(xx, yy, z, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #336666">False</span>)
+surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(xx, yy, z, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>)
 
 <span style="color: #0099FF; font-style: italic"># Customize the z axis.</span>
 <span style="color: #0099FF; font-style: italic">#ax.set_zlim(-1.01, 1.01)</span>

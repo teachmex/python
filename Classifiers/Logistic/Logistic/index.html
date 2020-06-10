@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Logistic - TeachMe.Codes (Python)</title>
+  <title>Logistic - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -551,7 +551,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -622,7 +622,7 @@ kernel <span style="color: #555555">=</span> <span style="color: #FF6600">1.0</s
 
 classifiers <span style="color: #555555">=</span> {<span style="color: #CC3300">&#39;L1 logistic&#39;</span>: LogisticRegression(C<span style="color: #555555">=</span>C, penalty<span style="color: #555555">=</span><span style="color: #CC3300">&#39;l1&#39;</span>),
                <span style="color: #CC3300">&#39;L2 logistic (OvR)&#39;</span>: LogisticRegression(C<span style="color: #555555">=</span>C, penalty<span style="color: #555555">=</span><span style="color: #CC3300">&#39;l2&#39;</span>),
-               <span style="color: #CC3300">&#39;Linear SVC&#39;</span>: SVC(kernel<span style="color: #555555">=</span><span style="color: #CC3300">&#39;linear&#39;</span>, C<span style="color: #555555">=</span>C, probability<span style="color: #555555">=</span><span style="color: #336666">True</span>,
+               <span style="color: #CC3300">&#39;Linear SVC&#39;</span>: SVC(kernel<span style="color: #555555">=</span><span style="color: #CC3300">&#39;linear&#39;</span>, C<span style="color: #555555">=</span>C, probability<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,
                                  random_state<span style="color: #555555">=</span><span style="color: #FF6600">0</span>),
                <span style="color: #CC3300">&#39;L2 logistic (Multinomial)&#39;</span>: LogisticRegression(
                 C<span style="color: #555555">=</span>C, solver<span style="color: #555555">=</span><span style="color: #CC3300">&#39;lbfgs&#39;</span>, multi_class<span style="color: #555555">=</span><span style="color: #CC3300">&#39;multinomial&#39;</span>),
@@ -646,7 +646,7 @@ Xfull <span style="color: #555555">=</span> np<span style="color: #555555">.</sp
 
     y_pred <span style="color: #555555">=</span> classifier<span style="color: #555555">.</span>predict(X)
     classif_rate <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mean(y_pred<span style="color: #555555">.</span>ravel() <span style="color: #555555">==</span> y<span style="color: #555555">.</span>ravel()) <span style="color: #555555">*</span> <span style="color: #FF6600">100</span>
-    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;classif_rate for </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> : </span><span style="color: #AA0000">%f</span><span style="color: #CC3300"> &quot;</span> <span style="color: #555555">%</span> (name, classif_rate))
+    <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;classif_rate for </span><span style="color: #AA0000">%s</span><span style="color: #CC3300"> : </span><span style="color: #AA0000">%f</span><span style="color: #CC3300"> &quot;</span> <span style="color: #555555">%</span> (name, classif_rate))
 
     <span style="color: #0099FF; font-style: italic"># View probabilities=</span>
     probas <span style="color: #555555">=</span> classifier<span style="color: #555555">.</span>predict_proba(Xfull)
@@ -759,7 +759,7 @@ classifiers <span style="color: #555555">=</span> [
     KNeighborsClassifier(<span style="color: #FF6600">3</span>),
     SVC(kernel<span style="color: #555555">=</span><span style="color: #CC3300">&quot;linear&quot;</span>, C<span style="color: #555555">=</span><span style="color: #FF6600">0.025</span>),
     SVC(gamma<span style="color: #555555">=</span><span style="color: #FF6600">2</span>, C<span style="color: #555555">=</span><span style="color: #FF6600">1</span>),
-    GaussianProcessClassifier(<span style="color: #FF6600">1.0</span> <span style="color: #555555">*</span> RBF(<span style="color: #FF6600">1.0</span>), warm_start<span style="color: #555555">=</span><span style="color: #336666">True</span>),
+    GaussianProcessClassifier(<span style="color: #FF6600">1.0</span> <span style="color: #555555">*</span> RBF(<span style="color: #FF6600">1.0</span>), warm_start<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>),
     DecisionTreeClassifier(max_depth<span style="color: #555555">=</span><span style="color: #FF6600">5</span>),
     RandomForestClassifier(max_depth<span style="color: #555555">=</span><span style="color: #FF6600">5</span>, n_estimators<span style="color: #555555">=</span><span style="color: #FF6600">10</span>, max_features<span style="color: #555555">=</span><span style="color: #FF6600">1</span>),
     MLPClassifier(alpha<span style="color: #555555">=</span><span style="color: #FF6600">1</span>),
@@ -905,9 +905,9 @@ predicted <span style="color: #555555">=</span> classifier<span style="color: #5
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;Classification report for classifier </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #AA0000">%s</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;Classification report for classifier </span><span style="color: #AA0000">%s</span><span style="color: #CC3300">:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #AA0000">%s</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>
       <span style="color: #555555">%</span> (classifier, metrics<span style="color: #555555">.</span>classification_report(expected, predicted)))
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;Confusion matrix:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">&quot;</span> <span style="color: #555555">%</span> metrics<span style="color: #555555">.</span>confusion_matrix(expected, predicted))
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;Confusion matrix:</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #AA0000">%s</span><span style="color: #CC3300">&quot;</span> <span style="color: #555555">%</span> metrics<span style="color: #555555">.</span>confusion_matrix(expected, predicted))
 </pre></div>
 
 
@@ -1011,7 +1011,7 @@ n_features_range <span style="color: #555555">=</span> <span style="color: #3366
         X, y <span style="color: #555555">=</span> generate_data(n_train, n_features)
 
         clf1 <span style="color: #555555">=</span> LinearDiscriminantAnalysis(solver<span style="color: #555555">=</span><span style="color: #CC3300">&#39;lsqr&#39;</span>, shrinkage<span style="color: #555555">=</span><span style="color: #CC3300">&#39;auto&#39;</span>)<span style="color: #555555">.</span>fit(X, y)
-        clf2 <span style="color: #555555">=</span> LinearDiscriminantAnalysis(solver<span style="color: #555555">=</span><span style="color: #CC3300">&#39;lsqr&#39;</span>, shrinkage<span style="color: #555555">=</span><span style="color: #336666">None</span>)<span style="color: #555555">.</span>fit(X, y)
+        clf2 <span style="color: #555555">=</span> LinearDiscriminantAnalysis(solver<span style="color: #555555">=</span><span style="color: #CC3300">&#39;lsqr&#39;</span>, shrinkage<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>)<span style="color: #555555">.</span>fit(X, y)
 
         X, y <span style="color: #555555">=</span> generate_data(n_test, n_features)
         score_clf1 <span style="color: #555555">+=</span> clf1<span style="color: #555555">.</span>score(X, y)
@@ -1183,14 +1183,14 @@ plt<span style="color: #555555">.</span>cm<span style="color: #555555">.</span>r
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> i, (X, y) <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">enumerate</span>([dataset_fixed_cov(), dataset_cov()]):
     <span style="color: #0099FF; font-style: italic"># Linear Discriminant Analysis</span>
-    lda <span style="color: #555555">=</span> LinearDiscriminantAnalysis(solver<span style="color: #555555">=</span><span style="color: #CC3300">&quot;svd&quot;</span>, store_covariance<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+    lda <span style="color: #555555">=</span> LinearDiscriminantAnalysis(solver<span style="color: #555555">=</span><span style="color: #CC3300">&quot;svd&quot;</span>, store_covariance<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
     y_pred <span style="color: #555555">=</span> lda<span style="color: #555555">.</span>fit(X, y)<span style="color: #555555">.</span>predict(X)
     splot <span style="color: #555555">=</span> plot_data(lda, X, y, y_pred, fig_index<span style="color: #555555">=</span><span style="color: #FF6600">2</span> <span style="color: #555555">*</span> i <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>)
     plot_lda_cov(lda, splot)
     plt<span style="color: #555555">.</span>axis(<span style="color: #CC3300">&#39;tight&#39;</span>)
 
     <span style="color: #0099FF; font-style: italic"># Quadratic Discriminant Analysis</span>
-    qda <span style="color: #555555">=</span> QuadraticDiscriminantAnalysis(store_covariances<span style="color: #555555">=</span><span style="color: #336666">True</span>)
+    qda <span style="color: #555555">=</span> QuadraticDiscriminantAnalysis(store_covariances<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
     y_pred <span style="color: #555555">=</span> qda<span style="color: #555555">.</span>fit(X, y)<span style="color: #555555">.</span>predict(X)
     splot <span style="color: #555555">=</span> plot_data(qda, X, y, y_pred, fig_index<span style="color: #555555">=</span><span style="color: #FF6600">2</span> <span style="color: #555555">*</span> i <span style="color: #555555">+</span> <span style="color: #FF6600">2</span>)
     plot_qda_cov(qda, splot)

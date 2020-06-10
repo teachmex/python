@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Indexing - TeachMe.Codes (Python)</title>
+  <title>Indexing - Python</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> TeachMe.Codes (Python)</a>
+        <a href="../../.." class="icon icon-home"> Python</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -491,7 +491,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">TeachMe.Codes (Python)</a>
+        <a href="../../..">Python</a>
       </nav>
 
       
@@ -649,7 +649,7 @@
 
 <hr />
 <h3 id="setting-name-column-as-index">Setting Name column as index</h3>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>copy(deep <span style="color: #555555">=</span><span style="color: #336666">True</span>)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>titanic_df1 <span style="color: #555555">=</span> titanic<span style="color: #555555">.</span>copy(deep <span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>)
 </pre></div>
 
 
@@ -787,7 +787,7 @@ titanic_df1<span style="color: #555555">.</span>head(<span style="color: #FF6600
 
 <h5 id="iterrows"><code>iterrows</code></h5>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> index,row <span style="color: #000000; font-weight: bold">in</span> sample<span style="color: #555555">.</span>iterrows():
-    <span style="color: #006699; font-weight: bold">print</span>(index,<span style="color: #336666">list</span>(row))
+    <span style="color: #336666">print</span>(index,<span style="color: #336666">list</span>(row))
 </pre></div>
 
 
@@ -800,7 +800,7 @@ Allen, Mr. William Henry [5, 0, 3, &#39;male&#39;, 35.0, 0, 0, &#39;373450&#39;,
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> index,row <span style="color: #000000; font-weight: bold">in</span> sample<span style="color: #555555">.</span>iterrows():
-    <span style="color: #006699; font-weight: bold">print</span>(index,row[<span style="color: #CC3300">&#39;Sex&#39;</span>],row[<span style="color: #CC3300">&#39;Age&#39;</span>])
+    <span style="color: #336666">print</span>(index,row[<span style="color: #CC3300">&#39;Sex&#39;</span>],row[<span style="color: #CC3300">&#39;Age&#39;</span>])
 </pre></div>
 
 
@@ -814,7 +814,7 @@ Allen, Mr. William Henry male 35.0
 
 <h4 id="iteritems"><code>iteritems</code></h4>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> index,row <span style="color: #000000; font-weight: bold">in</span> sample<span style="color: #555555">.</span>T<span style="color: #555555">.</span>iteritems():
-    <span style="color: #006699; font-weight: bold">print</span>(index,<span style="color: #336666">list</span>(row))
+    <span style="color: #336666">print</span>(index,<span style="color: #336666">list</span>(row))
 </pre></div>
 
 
@@ -827,7 +827,7 @@ Allen, Mr. William Henry [5, 0, 3, &#39;male&#39;, 35.0, 0, 0, &#39;373450&#39;,
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> index,row <span style="color: #000000; font-weight: bold">in</span> sample<span style="color: #555555">.</span>iteritems():
-    <span style="color: #006699; font-weight: bold">print</span>(index,row[<span style="color: #FF6600">0</span>],row[<span style="color: #FF6600">1</span>],row[<span style="color: #FF6600">2</span>])
+    <span style="color: #336666">print</span>(index,row[<span style="color: #FF6600">0</span>],row[<span style="color: #FF6600">1</span>],row[<span style="color: #FF6600">2</span>])
 </pre></div>
 
 
