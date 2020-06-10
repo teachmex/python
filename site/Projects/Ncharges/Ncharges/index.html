@@ -114,7 +114,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Python Programming</p>
+    <p class="caption">Introduction to Python</p>
   </li>
 
 
@@ -148,6 +148,27 @@
 
 
   <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Projects</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
     <a class="" href="../../Fern/fern/">Project Fern</a>
   </li>
         
@@ -155,14 +176,7 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Diffusion/Diffusion/">Project Diffusion</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+    <a class="" href="../../Rwalk/Rwalk/">Project Random Walk</a>
   </li>
         
           
@@ -208,7 +222,27 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#lattice-of-charges">Lattice of charges</a>
+          <a class="toctree-l4" href="#lattice-of-charges-scatter">Lattice of charges (scatter)</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#electric-potential-heatmap">Electric Potential (heatmap)</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#electric-field-meshgrid">Electric Field (meshgrid)</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#vector-field-quiver">Vector Field (quiver)</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#vector-field-quiver-and-quiverkey">Vector Field (quiver and quiverkey)</a>
         </li>
     
     </ul>
@@ -221,7 +255,7 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Rwalk/Rwalk/">Project Random Walk</a>
+    <a class="" href="../../Diffusion/Diffusion/">Project Diffusion</a>
   </li>
         
       </ul>
@@ -438,7 +472,7 @@
     
       
         
-          <li>Python Programming &raquo;</li>
+          <li>Projects &raquo;</li>
         
       
     
@@ -551,7 +585,7 @@ V_total(x<span style="color: #555555">=</span><span style="color: #FF6600">4</sp
 </pre></div>
 
 
-<h3 id="lattice-of-charges">Lattice of charges</h3>
+<h4 id="lattice-of-charges-scatter">Lattice of charges (<code>scatter</code>)</h4>
 <p>Now, we are going to implement <code>Charge</code> class to define charge distribution and calculate electric potential at several places.</p>
 <ul>
 <li>To create a lattice of charges.</li>
@@ -607,6 +641,7 @@ plt<span style="color: #555555">.</span>show()
 
 
 <p><img alt="png" src="../output_15_0.png" /></p>
+<h4 id="electric-potential-heatmap">Electric Potential (<code>heatmap</code>)</h4>
 <ul>
 <li>To find Electric Potential at several points due to lattice of charges</li>
 </ul>
@@ -630,9 +665,9 @@ V <span style="color: #555555">=</span> [[<span style="color: #FF6600">0.0</span
 
 
 <ul>
-<li>To plot Electric potential</li>
+<li>To plot Electric potential </li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">10</span>,<span style="color: #FF6600">6</span>])
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">10</span>])
 sns<span style="color: #555555">.</span>heatmap(VV,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGnBu&#39;</span>)
 plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&quot;X-axis&quot;</span>)
 plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&quot;Y-axis&quot;</span>)
@@ -641,9 +676,162 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<p><img alt="png" src="../output_20_0.png" /></p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>
+<p><img alt="png" src="../output_21_0.png" /></p>
+<h4 id="electric-field-meshgrid">Electric Field (<code>meshgrid</code>)</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.patches</span> <span style="color: #006699; font-weight: bold">import</span> Circle
 </pre></div>
+
+
+<ul>
+<li>To calculate Electric Field at at point <code>x,y</code> due to charge <code>q</code> at <code>r0</code></li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">E</span>(q, r0, x, y):
+    <span style="color: #CC3300; font-style: italic">&quot;&quot;&quot;Return the electric field vector E=(Ex,Ey) due to charge q at r0.&quot;&quot;&quot;</span>
+    den <span style="color: #555555">=</span> np<span style="color: #555555">.</span>hypot(x<span style="color: #555555">-</span>r0[<span style="color: #FF6600">0</span>], y<span style="color: #555555">-</span>r0[<span style="color: #FF6600">1</span>])<span style="color: #555555">**</span><span style="color: #FF6600">3</span>
+    <span style="color: #006699; font-weight: bold">return</span> q <span style="color: #555555">*</span> (x <span style="color: #555555">-</span> r0[<span style="color: #FF6600">0</span>]) <span style="color: #555555">/</span> den, q <span style="color: #555555">*</span> (y <span style="color: #555555">-</span> r0[<span style="color: #FF6600">1</span>]) <span style="color: #555555">/</span> den
+</pre></div>
+
+
+<ul>
+<li>To define the number charge in the system</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>nq <span style="color: #555555">=</span> <span style="color: #FF6600">2</span><span style="color: #555555">**</span><span style="color: #336666">int</span>(<span style="color: #FF6600">2</span>)
+</pre></div>
+
+
+<ul>
+<li>To create the <code>meshgrid</code> to make a plot</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Grid of x, y points</span>
+nx, ny <span style="color: #555555">=</span> <span style="color: #FF6600">16</span>, <span style="color: #FF6600">16</span>
+x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>linspace(<span style="color: #555555">-</span><span style="color: #FF6600">2</span>, <span style="color: #FF6600">2</span>, nx)
+y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>linspace(<span style="color: #555555">-</span><span style="color: #FF6600">2</span>, <span style="color: #FF6600">2</span>, ny)
+X, Y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x, y)
+</pre></div>
+
+
+<ul>
+<li>To define charge touples <code>(q,x0,y0)</code></li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>charges <span style="color: #555555">=</span> []
+<span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(nq):
+    q <span style="color: #555555">=</span> i<span style="color: #555555">%</span><span style="color: #FF6600">2</span> <span style="color: #555555">*</span> <span style="color: #FF6600">2</span> <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>
+    charges<span style="color: #555555">.</span>append((q, (np<span style="color: #555555">.</span>cos(<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>i<span style="color: #555555">/</span>nq), np<span style="color: #555555">.</span>sin(<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span>i<span style="color: #555555">/</span>nq))))
+</pre></div>
+
+
+<ul>
+<li>To calculate Electric Field at point <code>x,y</code> due to predefined charge distribution</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Electric field vector, E=(Ex, Ey), as separate components</span>
+Ex, Ey <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros((ny, nx)), np<span style="color: #555555">.</span>zeros((ny, nx))
+<span style="color: #006699; font-weight: bold">for</span> charge <span style="color: #000000; font-weight: bold">in</span> charges:
+    ex, ey <span style="color: #555555">=</span> E(<span style="color: #555555">*</span>charge, x<span style="color: #555555">=</span>X, y<span style="color: #555555">=</span>Y)
+    Ex <span style="color: #555555">+=</span> ex
+    Ey <span style="color: #555555">+=</span> ey
+</pre></div>
+
+
+<ul>
+<li>To plot Vector Field for Electric Field using <code>streamplot</code>.</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">10</span>])
+ax <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>add_subplot(<span style="color: #FF6600">111</span>)
+
+<span style="color: #0099FF; font-style: italic"># Plot the streamlines with an appropriate colormap and arrow style</span>
+color <span style="color: #555555">=</span> <span style="color: #FF6600">2</span> <span style="color: #555555">*</span> np<span style="color: #555555">.</span>log(np<span style="color: #555555">.</span>hypot(Ex, Ey))
+ax<span style="color: #555555">.</span>streamplot(x, y, Ex, Ey, color<span style="color: #555555">=</span>color, linewidth<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, cmap<span style="color: #555555">=</span>plt<span style="color: #555555">.</span>cm<span style="color: #555555">.</span>inferno,
+              density<span style="color: #555555">=</span><span style="color: #FF6600">2</span>, arrowstyle<span style="color: #555555">=</span><span style="color: #CC3300">&#39;-&gt;&#39;</span>, arrowsize<span style="color: #555555">=</span><span style="color: #FF6600">1.5</span>)
+
+<span style="color: #0099FF; font-style: italic"># Add filled circles for the charges themselves</span>
+charge_colors <span style="color: #555555">=</span> {<span style="color: #006699; font-weight: bold">True</span>: <span style="color: #CC3300">&#39;#aa0000&#39;</span>, <span style="color: #006699; font-weight: bold">False</span>: <span style="color: #CC3300">&#39;#0000aa&#39;</span>}
+<span style="color: #006699; font-weight: bold">for</span> q, pos <span style="color: #000000; font-weight: bold">in</span> charges:
+    ax<span style="color: #555555">.</span>add_artist(Circle(pos, <span style="color: #FF6600">0.05</span>, color<span style="color: #555555">=</span>charge_colors[q<span style="color: #555555">&gt;</span><span style="color: #FF6600">0</span>]))
+
+ax<span style="color: #555555">.</span>set_xlabel(<span style="color: #CC3300">&#39;$x-axis$&#39;</span>)
+ax<span style="color: #555555">.</span>set_ylabel(<span style="color: #CC3300">&#39;$y-axis$&#39;</span>)
+ax<span style="color: #555555">.</span>set_xlim(<span style="color: #555555">-</span><span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>)
+ax<span style="color: #555555">.</span>set_ylim(<span style="color: #555555">-</span><span style="color: #FF6600">2</span>,<span style="color: #FF6600">2</span>)
+ax<span style="color: #555555">.</span>set_aspect(<span style="color: #CC3300">&#39;equal&#39;</span>)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_35_0.png" /></p>
+<h4 id="vector-field-quiver">Vector Field (<code>quiver</code>)</h4>
+<ul>
+<li>To create a meshgrid for plot</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>x,y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(np<span style="color: #555555">.</span>linspace(<span style="color: #555555">-</span><span style="color: #FF6600">10</span>,<span style="color: #FF6600">10</span>,<span style="color: #FF6600">20</span>),np<span style="color: #555555">.</span>linspace(<span style="color: #555555">-</span><span style="color: #FF6600">10</span>,<span style="color: #FF6600">10</span>,<span style="color: #FF6600">20</span>))
+</pre></div>
+
+
+<ul>
+<li>To set up parametric variables for vector field</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>u <span style="color: #555555">=</span> <span style="color: #555555">-</span>y<span style="color: #555555">/</span>np<span style="color: #555555">.</span>sqrt(x<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> y<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
+v <span style="color: #555555">=</span> x<span style="color: #555555">/</span>np<span style="color: #555555">.</span>sqrt(x<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> y<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
+</pre></div>
+
+
+<ul>
+<li>To visualize vector field</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">10</span>])
+plt<span style="color: #555555">.</span>quiver(x,y,u,v)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<h4 id="vector-field-quiver-and-quiverkey">Vector Field (<code>quiver</code> and <code>quiverkey</code>)</h4>
+<ul>
+<li>To  set number of points and create space of <code>x,y</code> for vector field</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N <span style="color: #555555">=</span> <span style="color: #FF6600">25</span>
+x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">+</span><span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">/</span><span style="color: #FF6600">20</span>,<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">/</span>N)
+y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">+</span><span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">/</span><span style="color: #FF6600">20</span>,<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">/</span>N)
+</pre></div>
+
+
+<ul>
+<li>To create <code>meshgrid</code> for plot</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>X,Y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(x,y)
+</pre></div>
+
+
+<ul>
+<li>To create parametric variables for vector field</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>U <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sin(X)<span style="color: #555555">*</span>np<span style="color: #555555">.</span>cos(Y)
+V <span style="color: #555555">=</span> <span style="color: #555555">-</span>np<span style="color: #555555">.</span>cos(X)<span style="color: #555555">*</span>np<span style="color: #555555">.</span>sin(Y)
+</pre></div>
+
+
+<ul>
+<li>To create Plot</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>fig3, ax3 <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>subplots(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">10</span>])
+ax3<span style="color: #555555">.</span>set_title(<span style="color: #CC3300">&quot;pivot=&#39;tip&#39;; scales with x view&quot;</span>)
+
+M <span style="color: #555555">=</span> np<span style="color: #555555">.</span>hypot(U, V)
+Q <span style="color: #555555">=</span> ax3<span style="color: #555555">.</span>quiver(X, Y, U, V, M,\
+               units<span style="color: #555555">=</span><span style="color: #CC3300">&#39;x&#39;</span>,\
+               pivot<span style="color: #555555">=</span><span style="color: #CC3300">&#39;tip&#39;</span>,
+               width<span style="color: #555555">=</span><span style="color: #FF6600">0.022</span>,
+               scale<span style="color: #555555">=</span><span style="color: #FF6600">1</span><span style="color: #555555">/</span><span style="color: #FF6600">0.20</span>)
+
+qk <span style="color: #555555">=</span> ax3<span style="color: #555555">.</span>quiverkey(Q, <span style="color: #FF6600">0.9</span>, <span style="color: #FF6600">0.9</span>, <span style="color: #FF6600">1</span>,\
+                   <span style="color: #CC3300">r&#39;$1 \frac</span><span style="color: #AA0000">{m}{s}</span><span style="color: #CC3300">$&#39;</span>,\
+                   labelpos<span style="color: #555555">=</span><span style="color: #CC3300">&#39;E&#39;</span>,
+                   coordinates<span style="color: #555555">=</span><span style="color: #CC3300">&#39;figure&#39;</span>)
+
+ax3<span style="color: #555555">.</span>scatter(X, Y, color<span style="color: #555555">=</span><span style="color: #CC3300">&#39;0.5&#39;</span>, s<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_51_0.png" /></p>
               
             </div>
           </div>
@@ -651,10 +839,10 @@ plt<span style="color: #555555">.</span>show()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../Rwalk/Rwalk/" class="btn btn-neutral float-right" title="Project Random Walk">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Diffusion/Diffusion/" class="btn btn-neutral float-right" title="Project Diffusion">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../../FunctionClass/fnc/" class="btn btn-neutral" title="Functions and Class"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Rwalk/Rwalk/" class="btn btn-neutral" title="Project Random Walk"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -680,10 +868,10 @@ plt<span style="color: #555555">.</span>show()
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../../FunctionClass/fnc/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../Rwalk/Rwalk/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../Rwalk/Rwalk/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Diffusion/Diffusion/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

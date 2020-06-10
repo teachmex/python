@@ -114,7 +114,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Python Programming</p>
+    <p class="caption">Introduction to Python</p>
   </li>
 
 
@@ -148,7 +148,42 @@
 
 
   <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Projects</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
     <a class="" href="../../Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Ncharges/Ncharges/">Project N-charges</a>
   </li>
         
           
@@ -179,36 +214,6 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#consider-a-2d-lattice-of-length-l">Consider a 2D lattice of length L</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#create-initial-configuration">Create initial configuration:</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#make-a-plot-of-the-lattice">Make a plot of the lattice.</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#create-a-function-to-diffuse-a-particle">Create a function to diffuse a particle:</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#set-boundary-conditons">Set boundary conditons</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#run-the-diffusion-step-with-desire-no-of-running-steps">Run the diffusion step with desire no of running steps</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
           <a class="toctree-l4" href="#much-finner">Much Finner</a>
         </li>
     
@@ -217,27 +222,6 @@
 
 
   
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Ncharges/Ncharges/">Project N-charges</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Rwalk/Rwalk/">Project Random Walk</a>
-  </li>
         
       </ul>
     </li>
@@ -453,7 +437,7 @@
     
       
         
-          <li>Python Programming &raquo;</li>
+          <li>Projects &raquo;</li>
         
       
     
@@ -467,10 +451,11 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="diffusion-patterns">Diffusion Patterns</h1>
-<p>Read more about diffusion <a href="https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/">here</a></p>
+                <h2 id="diffusion-patterns">Diffusion Patterns</h2>
+<p>The 2D Diffusion problem is :</p>
+<p>\( \large{  \frac{\partial U}{\partial t} = D\left(\frac{\partial^2U}{\partial x^2} + \frac{\partial^2U}{\partial y^2}\right)} \)</p>
+<p><a href="https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/">Source</a></p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
-<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">json</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
@@ -479,13 +464,16 @@ sns<span style="color: #555555">.</span>set()
 </pre></div>
 
 
-<h4 id="consider-a-2d-lattice-of-length-l">Consider a 2D lattice of length L</h4>
+<ul>
+<li>Consider a 2D lattice of length L</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>L <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
 </pre></div>
 
 
-<h4 id="create-initial-configuration">Create initial configuration:</h4>
-<p>We can use a vacant list to create initial configuration where initially particle is at middle of the lattice.</p>
+<ul>
+<li>Create initial configuration: We can use a vacant list to create initial configuration where initially particle is at middle of the lattice.</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">start</span>(L):
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;create a vacant list of list &#39;&#39;&#39;</span>
     P <span style="color: #555555">=</span>  [[<span style="color: #FF6600">0</span> <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(L)]<span style="color: #006699; font-weight: bold">for</span> j <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(L)]
@@ -515,19 +503,23 @@ P
 </pre></div>
 
 
-<h4 id="make-a-plot-of-the-lattice">Make a plot of the lattice.</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">8</span>,<span style="color: #FF6600">6</span>])
+<ul>
+<li>Make a plot of the lattice.</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">4</span>,<span style="color: #FF6600">3</span>])
 sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a1dafde48&gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fc8fdae7790&gt;
 </pre></div>
 
 
 <p><img alt="png" src="../output_9_1.png" /></p>
-<h4 id="create-a-function-to-diffuse-a-particle">Create a function to diffuse a particle:</h4>
-<p>$$ P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1]$$</p>
+<ul>
+<li>Create a function to diffuse a particle:</li>
+</ul>
+<p>\( P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1] \)</p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">diffuse_primitive</span>(P,L):
 
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;create vacant list of list&#39;&#39;&#39;</span>
@@ -547,21 +539,24 @@ sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #5555
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>L <span style="color: #555555">=</span><span style="color: #FF6600">10</span>
 P <span style="color: #555555">=</span>start(L)
-<span style="color: #0099FF; font-style: italic">#P = diffuse_primitive(P,L)</span>
 </pre></div>
 
 
-<h4 id="set-boundary-conditons">Set boundary conditons</h4>
-<ol>
-<li>Lower limit</li>
-</ol>
+<ul>
+<li>
+<p>Set boundary conditons</p>
+</li>
+<li>
+<p>Lower limit</p>
+</li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>P[0-1,j] = P[L,j]
 P[I,0-1] = P[i,L]
 </pre></div>
 
 
 <ol>
-<li>Upper Limit</li>
+<li>Upper limit</li>
 </ol>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>P[L+1,j] = P[o,j]
 P[i,L+1] = P[i,0]
@@ -595,16 +590,16 @@ P[i,L+1] = P[i,0]
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>L <span style="color: #555555">=</span><span style="color: #FF6600">10</span>
 P <span style="color: #555555">=</span>start(L)
-plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">20</span>,<span style="color: #FF6600">15</span>])
+plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">10</span>])
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">3</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">1</span>)
 P <span style="color: #555555">=</span> diffuse(P,L)
-sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
+sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">3</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">2</span>)
 P <span style="color: #555555">=</span> diffuse(P,L)
-sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
+sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">3</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">3</span>)
 P <span style="color: #555555">=</span> diffuse(P,L)
-sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
+sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">3</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">4</span>)
 P <span style="color: #555555">=</span> diffuse(P,L)
 sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
@@ -623,14 +618,14 @@ sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #5555
 plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">3</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">9</span>)
 P <span style="color: #555555">=</span> diffuse(P,L)
 sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
-
-plt<span style="color: #555555">.</span>savefig(<span style="color: #CC3300">&#39;plot/diffuse-step.pdf&#39;</span>)  
 plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
 <p><img alt="png" src="../output_15_0.png" /></p>
-<h4 id="run-the-diffusion-step-with-desire-no-of-running-steps">Run the diffusion step with desire no of running steps</h4>
+<ul>
+<li>Run the diffusion step with desire no of running steps </li>
+</ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">run_diffuse</span>(P,nrun,L):
 
     run <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
@@ -643,7 +638,7 @@ plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
-<p>We can make a plot of arbitraty diffusion step by selecting "irun" in function runner.</p>
+<p>We can make a plot of arbitraty diffusion step by selecting <code>irun</code> in function runner.</p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;set parameters&#39;&#39;&#39;</span>
 L <span style="color: #555555">=</span> <span style="color: #FF6600">100</span> ; nrun <span style="color: #555555">=</span> <span style="color: #FF6600">1000</span> ; P <span style="color: #555555">=</span> start(L)
 
@@ -654,7 +649,7 @@ P <span style="color: #555555">=</span> run_diffuse(P,nrun,L)
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">10</span>])
 sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
-plt<span style="color: #555555">.</span>savefig(<span style="color: #CC3300">&#39;plot/diffuse.pdf&#39;</span>)  
+plt<span style="color: #555555">.</span>axis(<span style="color: #006699; font-weight: bold">False</span>)
 plt<span style="color: #555555">.</span>show()
 </pre></div>
 
@@ -672,12 +667,14 @@ P <span style="color: #555555">=</span> run_diffuse(P,nrun,L)
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">12</span>,<span style="color: #FF6600">10</span>])
 sns<span style="color: #555555">.</span>heatmap(P,annot<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>,cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;YlGn&#39;</span>)
-plt<span style="color: #555555">.</span>savefig(<span style="color: #CC3300">&#39;plot/diffuse-finner.pdf&#39;</span>)  
+plt<span style="color: #555555">.</span>axis(<span style="color: #006699; font-weight: bold">False</span>)
 plt<span style="color: #555555">.</span>show()
 </pre></div>
 
 
 <p><img alt="png" src="../output_23_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>
+</pre></div>
               
             </div>
           </div>
@@ -685,10 +682,10 @@ plt<span style="color: #555555">.</span>show()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../FunctionClass/fnc/" class="btn btn-neutral float-right" title="Functions and Class">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../../Numpy/numpy/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../Fern/fern/" class="btn btn-neutral" title="Project Fern"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Ncharges/Ncharges/" class="btn btn-neutral" title="Project N-charges"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -714,10 +711,10 @@ plt<span style="color: #555555">.</span>show()
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../Fern/fern/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../Ncharges/Ncharges/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../../FunctionClass/fnc/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../../Numpy/numpy/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

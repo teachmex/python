@@ -44,15 +44,17 @@ nav:
   - Installing Jupyter Notebook : GettingStarted/jupyter.md
   - How to Git: GettingStarted/git.md
   
-- Python Programming:
+- Introduction to Python:
   - Introduction: prog.md
   - DataStructure: DataStructure/ds.md
   - Loops and Conditions: LoopsConditions/lnc.md
-  - Project Fern: Projects/Fern/fern.md
-  - Project Diffusion: Projects/Diffusion/Diffusion.md
   - Functions and Class : FunctionClass/fnc.md
-  - Project N-charges: Projects/Ncharges/Ncharges.md
+  
+- Projects:
+  - Project Fern: Projects/Fern/fern.md
   - Project Random Walk: Projects/Rwalk/Rwalk.md
+  - Project N-charges: Projects/Ncharges/Ncharges.md
+  - Project Diffusion: Projects/Diffusion/Diffusion.md
          
   
 - Numpy:

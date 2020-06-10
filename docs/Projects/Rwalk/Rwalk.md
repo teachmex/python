@@ -1,4 +1,3 @@
-
 # Random Walk
 
 
@@ -10,9 +9,11 @@ import seaborn as sns
 sns.set()
 ```
 
-### Random walk in one dimension 
+## Random walk in one dimension 
 
-####  Direct Implementation
+To create reandom walk in 1D, we generate random step ```1, -1``` and move in one direction. Since we are taking one direction and time to create a  plot. It is displayed in plot below. Lets try to implement random walk with direct implementation with ```for loop``` and with function ```walk1D```.
+
+####  Random Walk 1D (Direct)
 
 
 ```python
@@ -40,7 +41,7 @@ for t in range(100):
 
 ```python
 '''Make a plot'''    
-plt.figure(figsize = [12,6])
+plt.figure(figsize = [15,4])
 plt.scatter(T,X,marker = '.')
 plt.plot(T,X)
 plt.xlabel("Time")
@@ -53,7 +54,7 @@ plt.show()
 ![png](output_5_0.png)
 
 
-### Implement with function
+#### Random Walk 1D (Function)
 
 
 ```python
@@ -90,7 +91,7 @@ def walk1D(x,N,d):
 '''Implement function to get data'''
 X,T = walk1D(x=0,N=100,d=1)
 '''Make a plot''' 
-plt.figure(figsize = [12,6])
+plt.figure(figsize = [15,4])
 plt.scatter(T,X,marker = '.')
 plt.plot(T,X)
 plt.xlabel("Time")
@@ -103,7 +104,7 @@ plt.show()
 ![png](output_8_0.png)
 
 
-###  Object Oriented Programming
+####  Random Walk 1D (Class)
 
 
 ```python
@@ -140,7 +141,7 @@ class Walker1D(object):
 
 ```
 
-####  Let's generate 4 different random walks of step 1000 each
+- Let's generate 4 different random walks of step 1000 each
 
 
 ```python
@@ -158,11 +159,11 @@ with open ('data/rwalk4.json', 'w')as f4:
     json.dump([X1,X2,X3,X4,T],f4)
 ```
 
-####  Let's visualize them
+- Let's visualize them
 
 
 ```python
-plt.figure(figsize = [20,12])
+plt.figure(figsize = [15,4])
 plt.plot(T,X1)
 plt.plot(T,X2)
 plt.plot(T,X3)
@@ -170,7 +171,6 @@ plt.plot(T,X4)
 plt.xlabel("Time")
 plt.ylabel('Displacement')
 plt.grid(True)
-plt.savefig('plot/rwalk4.pdf') 
 plt.show()
 ```
 
@@ -180,7 +180,10 @@ plt.show()
 
 ###  Random Walk in 2D
 
-#####  Create a function to walk a single step
+Lets repeat the function implementation for 2D Random Walk.
+
+####  Random Walk 2D (Function)
+We will create two functions ```move2D``` to move one step and ```walk2D``` to walk multiple steps.
 
 
 ```python
@@ -201,8 +204,6 @@ def move2D(xi,yi):
         xf = xi
     return xf,yf
 ```
-
-#####  Lets walk in 2D using above function
 
 
 ```python
@@ -239,7 +240,7 @@ def walk2D(N,pos):
     return X,Y
 ```
 
-####  Lets create a 3 different Random walk in 2D
+- Lets create a 3 different Random walk in 2D
 
 
 ```python
@@ -248,26 +249,24 @@ U = walk2D(N,[0,0])
 V = walk2D(N,[0,0])
 W = walk2D(N,[0,0])
 
-
-
-with open ('data/rwalk4.json', 'w')as f:
-    json.dump([U,V,W],f)
-
-
-plt.figure(figsize = [15,12])
-
+plt.figure(figsize = [8,8])
 plt.plot(U[0],U[1],"-")
 plt.plot(V[0],V[1],"-")
 plt.plot(W[0],W[1],"-")
-plt.axis([-100, 100, -100, 100])
+#plt.axis([-100, 100, -100, 100])
 plt.xlabel("x-axis")
 plt.ylabel("y-axis")
 plt.grid(True)
 plt.title("Brownian motion in 2D")
-plt.savefig('plot/rwalk2D.pdf') 
 plt.show()
 ```
 
 
-![png](output_22_0.png)
+![png](output_21_0.png)
 
+
+### Random Walk in 3D
+
+Similarly Random Walk in 3D can be created and visualized with ```.gif``` file as shown below
+
+![img](walk.gif)

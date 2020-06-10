@@ -108,7 +108,7 @@ V_total(x=4, y=4, charges = sample_charges)
 
 
 
-###  Lattice of charges
+####  Lattice of charges (```scatter```)
 Now, we are going to implement ```Charge``` class to define charge distribution and calculate electric potential at several places.
 
  - To create a lattice of charges.
@@ -169,6 +169,8 @@ plt.show()
 ![png](output_15_0.png)
 
 
+#### Electric Potential (```heatmap```)
+
 - To find Electric Potential at several points due to lattice of charges
 
 
@@ -192,11 +194,11 @@ for i,x in enumerate(X):
 VV = np.array(V)
 ```
 
-- To plot Electric potential
+- To plot Electric potential 
 
 
 ```python
-plt.figure(figsize = [10,6])
+plt.figure(figsize = [12,10])
 sns.heatmap(VV,annot=False,cmap='YlGnBu')
 plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
@@ -205,10 +207,170 @@ plt.show()
 ```
 
 
-![png](output_20_0.png)
+![png](output_21_0.png)
 
+
+#### Electric Field (```meshgrid```)
 
 
 ```python
-
+from matplotlib.patches import Circle
 ```
+
+- To calculate Electric Field at at point ```x,y``` due to charge ```q``` at ```r0```
+
+
+```python
+def E(q, r0, x, y):
+    """Return the electric field vector E=(Ex,Ey) due to charge q at r0."""
+    den = np.hypot(x-r0[0], y-r0[1])**3
+    return q * (x - r0[0]) / den, q * (y - r0[1]) / den
+```
+
+- To define the number charge in the system
+
+
+```python
+nq = 2**int(2)
+```
+
+- To create the ```meshgrid``` to make a plot
+
+
+```python
+# Grid of x, y points
+nx, ny = 16, 16
+x = np.linspace(-2, 2, nx)
+y = np.linspace(-2, 2, ny)
+X, Y = np.meshgrid(x, y)
+```
+
+- To define charge touples ```(q,x0,y0)```
+
+
+```python
+charges = []
+for i in range(nq):
+    q = i%2 * 2 - 1
+    charges.append((q, (np.cos(2*np.pi*i/nq), np.sin(2*np.pi*i/nq))))
+```
+
+- To calculate Electric Field at point ```x,y``` due to predefined charge distribution
+
+
+```python
+# Electric field vector, E=(Ex, Ey), as separate components
+Ex, Ey = np.zeros((ny, nx)), np.zeros((ny, nx))
+for charge in charges:
+    ex, ey = E(*charge, x=X, y=Y)
+    Ex += ex
+    Ey += ey
+```
+
+- To plot Vector Field for Electric Field using ```streamplot```.
+
+
+```python
+fig = plt.figure(figsize = [12,10])
+ax = fig.add_subplot(111)
+
+# Plot the streamlines with an appropriate colormap and arrow style
+color = 2 * np.log(np.hypot(Ex, Ey))
+ax.streamplot(x, y, Ex, Ey, color=color, linewidth=1, cmap=plt.cm.inferno,
+              density=2, arrowstyle='->', arrowsize=1.5)
+
+# Add filled circles for the charges themselves
+charge_colors = {True: '#aa0000', False: '#0000aa'}
+for q, pos in charges:
+    ax.add_artist(Circle(pos, 0.05, color=charge_colors[q>0]))
+
+ax.set_xlabel('$x-axis$')
+ax.set_ylabel('$y-axis$')
+ax.set_xlim(-2,2)
+ax.set_ylim(-2,2)
+ax.set_aspect('equal')
+plt.show()
+```
+
+
+![png](output_35_0.png)
+
+
+#### Vector Field (```quiver```)
+
+ - To create a meshgrid for plot
+
+
+```python
+x,y = np.meshgrid(np.linspace(-10,10,20),np.linspace(-10,10,20))
+```
+
+- To set up parametric variables for vector field
+
+
+```python
+u = -y/np.sqrt(x**2 + y**2)
+v = x/np.sqrt(x**2 + y**2)
+```
+
+- To visualize vector field
+
+
+```python
+plt.figure(figsize = [12,10])
+plt.quiver(x,y,u,v)
+plt.show()
+```
+
+#### Vector Field (```quiver``` and ```quiverkey```)
+
+- To  set number of points and create space of ```x,y``` for vector field
+
+
+```python
+N = 25
+x = np.arange(0,2*np.pi+2*np.pi/20,2*np.pi/N)
+y = np.arange(0,2*np.pi+2*np.pi/20,2*np.pi/N)
+```
+
+- To create ```meshgrid``` for plot
+
+
+```python
+X,Y = np.meshgrid(x,y)
+```
+
+- To create parametric variables for vector field
+
+
+```python
+U = np.sin(X)*np.cos(Y)
+V = -np.cos(X)*np.sin(Y)
+```
+
+- To create Plot
+
+
+```python
+fig3, ax3 = plt.subplots(figsize = [12,10])
+ax3.set_title("pivot='tip'; scales with x view")
+
+M = np.hypot(U, V)
+Q = ax3.quiver(X, Y, U, V, M,\
+               units='x',\
+               pivot='tip',
+               width=0.022,
+               scale=1/0.20)
+
+qk = ax3.quiverkey(Q, 0.9, 0.9, 1,\
+                   r'$1 \frac{m}{s}$',\
+                   labelpos='E',
+                   coordinates='figure')
+
+ax3.scatter(X, Y, color='0.5', s=1)
+plt.show()
+```
+
+
+![png](output_51_0.png)
+

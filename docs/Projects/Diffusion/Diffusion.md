@@ -1,12 +1,14 @@
+## Diffusion Patterns
 
-# Diffusion Patterns
+The 2D Diffusion problem is :
 
-Read more about diffusion [here](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/)
+\\( \large{  \frac{\partial U}{\partial t} = D\left(\frac{\partial^2U}{\partial x^2} + \frac{\partial^2U}{\partial y^2}\right)} \\)
+
+[Source](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/)
 
 
 ```python
 import numpy as np
-import json
 import random as random
 import math as math
 import matplotlib.pyplot as plt
@@ -14,15 +16,14 @@ import seaborn as sns
 sns.set()
 ```
 
-####  Consider a 2D lattice of length L
+- Consider a 2D lattice of length L
 
 
 ```python
 L = 10
 ```
 
-####  Create initial configuration:
-We can use a vacant list to create initial configuration where initially particle is at middle of the lattice.
+- Create initial configuration: We can use a vacant list to create initial configuration where initially particle is at middle of the lattice.
 
 
 ```python
@@ -58,18 +59,18 @@ P
 
 
 
-####  Make a plot of the lattice.
+- Make a plot of the lattice.
 
 
 ```python
-plt.figure(figsize = [8,6])
+plt.figure(figsize = [4,3])
 sns.heatmap(P,annot=True,cmap='YlGn')
 ```
 
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a1dafde48>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fc8fdae7790>
 
 
 
@@ -77,9 +78,9 @@ sns.heatmap(P,annot=True,cmap='YlGn')
 ![png](output_9_1.png)
 
 
-####  Create a function to diffuse a particle:
+- Create a function to diffuse a particle:
 
-$$ P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1]$$
+\\( P[i,j] = P[i+1,j] + P[i-1,j] + P[i,j+1] + P[i,j-1] \\)
 
 
 ```python
@@ -103,17 +104,17 @@ def diffuse_primitive(P,L):
 ```python
 L =10
 P =start(L)
-#P = diffuse_primitive(P,L)
 ```
 
-####  Set boundary conditons
+- Set boundary conditons
+
 1. Lower limit
 ```
 P[0-1,j] = P[L,j]
 P[I,0-1] = P[i,L]
 ```
 
-2. Upper Limit
+2. Upper limit
 ```
 P[L+1,j] = P[o,j]
 P[i,L+1] = P[i,0]
@@ -149,16 +150,16 @@ def diffuse(P,L):
 ```python
 L =10
 P =start(L)
-plt.figure(figsize = [20,15])
+plt.figure(figsize = [12,10])
 plt.subplot(3,3,1)
 P = diffuse(P,L)
-sns.heatmap(P,annot=True,cmap='YlGn')
+sns.heatmap(P,annot=False,cmap='YlGn')
 plt.subplot(3,3,2)
 P = diffuse(P,L)
-sns.heatmap(P,annot=True,cmap='YlGn')
+sns.heatmap(P,annot=False,cmap='YlGn')
 plt.subplot(3,3,3)
 P = diffuse(P,L)
-sns.heatmap(P,annot=True,cmap='YlGn')
+sns.heatmap(P,annot=False,cmap='YlGn')
 plt.subplot(3,3,4)
 P = diffuse(P,L)
 sns.heatmap(P,annot=False,cmap='YlGn')
@@ -177,8 +178,6 @@ sns.heatmap(P,annot=False,cmap='YlGn')
 plt.subplot(3,3,9)
 P = diffuse(P,L)
 sns.heatmap(P,annot=False,cmap='YlGn')
-
-plt.savefig('plot/diffuse-step.pdf')  
 plt.show()
 ```
 
@@ -186,7 +185,7 @@ plt.show()
 ![png](output_15_0.png)
 
 
-####  Run the diffusion step with desire no of running steps 
+- Run the diffusion step with desire no of running steps 
 
 
 ```python
@@ -201,7 +200,7 @@ def run_diffuse(P,nrun,L):
     return P
 ```
 
-We can make a plot of arbitraty diffusion step by selecting "irun" in function runner.
+We can make a plot of arbitraty diffusion step by selecting ```irun``` in function runner.
 
 
 ```python
@@ -217,7 +216,7 @@ P = run_diffuse(P,nrun,L)
 ```python
 plt.figure(figsize = [12,10])
 sns.heatmap(P,annot=False,cmap='YlGn')
-plt.savefig('plot/diffuse.pdf')  
+plt.axis(False)
 plt.show()
 ```
 
@@ -241,10 +240,15 @@ P = run_diffuse(P,nrun,L)
 ```python
 plt.figure(figsize = [12,10])
 sns.heatmap(P,annot=False,cmap='YlGn')
-plt.savefig('plot/diffuse-finner.pdf')  
+plt.axis(False)
 plt.show()
 ```
 
 
 ![png](output_23_0.png)
 
+
+
+```python
+
+```
