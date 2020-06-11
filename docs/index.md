@@ -62,7 +62,14 @@ This online document helps the absolute beginners to persue the future direction
       - Bohek
       - Plotly
       
-
+- Machine Learning
+    - Linear Regression
+    - Logistic Regression
+    - Decision Tree
+    - Support Vector Machine
+    - Nearest Neighbours
+    - Perceptron
+    - Clustering
 
   
 

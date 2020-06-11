@@ -64,6 +64,11 @@ nav:
   - Algebra: Numpy/algebra/algebra.md
   - Statistics: Numpy/stat/stat.md
   
+- Scipy:
+  - Introduction : Scipy/intro/Numerical-Methods.md
+  - Spherical Harmonics : Scipy/Harmonics/Harmonics.md
+  - Oscillating Membrane : Scipy/Bessel/Bessel.md
+  - Laplace Equation: Scipy/Laplace/laplace.md
 
 - Pandas:
   - Introduction: Pandas/pandas.md
@@ -74,14 +79,15 @@ nav:
   - Lambda Transform : Pandas/Lambda/lambda.md
 
   
-- Linear Models:
-  - Regression: LinearModels/Linear-models.md
-  
-- Classification:
-  - Logistic: Classifiers/Logistic/Logistic.md
-  - Decision Tree: Classifiers/Tree/Tree.md
-  - Ensamble: Classifiers/Ensamble/ensamble.md
-  - SVM: Classifiers/SVM/svm.md
+- Machine Learning:
+  - Linear Regression: machineLearning/linear.md
+  - Logistic Regression: machineLearning/logistic.md
+  - Decision Tree: machineLearning/tree.md
+  - Support Vector Machine: machineLearning/svm.md
+  - Nearest Neighbours: machineLearning/nnc.md
+  - Perceptron: machineLearning/perceptron.md
+  - Clustering: machineLearning/clustering.md
+
   
 - References:
   - Reference: References/ref.md

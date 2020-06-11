@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Introduction - Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Introduction";
+    var mkdocs_page_input_path = "Scipy/intro/Numerical-Methods.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Introduction to Python</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../prog/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Projects</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/numpy/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/array/array/">Array</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/grid/meshgrid/">MeshGrid</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/algebra/algebra/">Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Scipy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Introduction
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#numerical-methods">
+      Numerical Methods:
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+          
+
+  <li class="toctree-l3 current with-children">
+    <a href="#integration-source">
+      Integration source
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3 current">
+    <ul class="subnav-l3 current">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#bessel-function">Bessel function</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#gaussian-function">Gaussian function</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#ordinary-differential-equations-source">Ordinary Differential Equations Source</a>
+        </li>
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#partial-differential-equations">
+      Partial Differential Equations
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#pde-eliptic-equation-laplace-euation">PDE : Eliptic Equation (Laplace Euation)</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#implementation-of-least-square-methods-to-solve-a-ax-b-problem-as-a-optimization-problem">Implementation of Least square methods to solve a $Ax = b$ problem as a optimization problem</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#prepare-the-lattice">Prepare the lattice</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#prepare-jacobians">Prepare Jacobians</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#optimization-least-square">Optimization: Least Square</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#returned-quantities-after-solution">Returned quantities after solution</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#plot-the-solutions">Plot the solutions</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#references">References:</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Harmonics/Harmonics/">Spherical Harmonics</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Bessel/Bessel/">Oscillating Membrane</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Laplace/laplace/">Laplace Equation</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/pandas/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/DataFrame/dataframe/">Dataframe</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/GroupBy/groupby/">GroupBy</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Machine Learning</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/linear/">Linear Regression</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/logistic/">Logistic Regression</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/svm/">Support Vector Machine</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/nnc/">Nearest Neighbours</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/perceptron/">Perceptron</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/clustering/">Clustering</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Scipy &raquo;</li>
+        
+      
+    
+    <li>Introduction</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="numerical-methods">Numerical Methods:</h2>
+<ol>
+<li>Integration</li>
+<li>Differential Equations</li>
+</ol>
+<h3 id="integration-source">Integration <a href="https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html">source</a></h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">scipy.integrate</span> <span style="color: #006699; font-weight: bold">import</span> quad, dblquad, tplquad
+</pre></div>
+
+
+<p>$$ y = mx +c$$</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">f</span>(x):
+    <span style="color: #006699; font-weight: bold">return</span> <span style="color: #FF6600">5</span><span style="color: #555555">*</span>x <span style="color: #555555">+</span> <span style="color: #FF6600">4</span>
+
+x_lower <span style="color: #555555">=</span> <span style="color: #FF6600">0</span> <span style="color: #0099FF; font-style: italic"># the lower limit of x</span>
+x_upper <span style="color: #555555">=</span> <span style="color: #FF6600">1</span> <span style="color: #0099FF; font-style: italic"># the upper limit of x</span>
+
+val, abserr <span style="color: #555555">=</span> quad(f, x_lower, x_upper)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;integral value =&quot;</span>, val, <span style="color: #CC3300">&quot;, absolute error =&quot;</span>, abserr)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>integral value = 6.499999999999999 , absolute error = 7.216449660063516e-14
+</pre></div>
+
+
+<h5 id="bessel-function">Bessel function</h5>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">scipy.special</span> <span style="color: #006699; font-weight: bold">import</span> jn, yn, jn_zeros, yn_zeros
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">integrand</span>(x, n):
+
+    <span style="color: #CC3300; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #CC3300; font-style: italic">    Bessel function of first kind and order n.</span>
+<span style="color: #CC3300; font-style: italic">    &quot;&quot;&quot;</span>
+    <span style="color: #006699; font-weight: bold">return</span> jn(n, x)
+
+x_lower <span style="color: #555555">=</span> <span style="color: #FF6600">0</span> <span style="color: #0099FF; font-style: italic"># the lower limit of x</span>
+x_upper <span style="color: #555555">=</span> <span style="color: #FF6600">10</span> <span style="color: #0099FF; font-style: italic"># the upper limit of x</span>
+val, abserr <span style="color: #555555">=</span> quad(integrand, x_lower, x_upper, args<span style="color: #555555">=</span>(<span style="color: #FF6600">3</span>,))
+
+<span style="color: #336666">print</span>(val, abserr)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>0.7366751370811073 9.389126882496403e-13
+</pre></div>
+
+
+<h5 id="gaussian-function">Gaussian function</h5>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>val, abserr <span style="color: #555555">=</span> quad(<span style="color: #006699; font-weight: bold">lambda</span> x: np<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>x <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>), <span style="color: #555555">-</span><span style="color: #FF6600">5.0</span>, <span style="color: #FF6600">5.0</span>)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;numerical =&quot;</span>, val, abserr)
+analytical <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sqrt(np<span style="color: #555555">.</span>pi)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;analytical =&quot;</span>, analytical)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>numerical = 1.7724538509027912 4.6261378229003154e-14
+analytical = 1.7724538509055159
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">integrand</span>(x, y):
+    <span style="color: #006699; font-weight: bold">return</span> np<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>x<span style="color: #555555">**</span><span style="color: #FF6600">2</span><span style="color: #555555">-</span>y<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
+
+x_lower <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
+x_upper <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
+y_lower <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
+y_upper <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
+
+val, abserr <span style="color: #555555">=</span> dblquad(integrand, x_lower, x_upper,\
+                      <span style="color: #006699; font-weight: bold">lambda</span> x : y_lower, <span style="color: #006699; font-weight: bold">lambda</span> x: y_upper)
+<span style="color: #336666">print</span>(val, abserr)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>0.7853981633974476 1.3753098510218528e-08
+</pre></div>
+
+
+<h3 id="ordinary-differential-equations-source">Ordinary Differential Equations <a href="https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html">Source</a></h3>
+<p><img alt="img" src="../img/diff.png" /></p>
+<p>Odent <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html#scipy.integrate.odeint">Source</a></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">scipy.integrate</span> <span style="color: #006699; font-weight: bold">import</span> odeint, ode
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">dy</span>(y, t, zeta, w0):
+
+    <span style="color: #CC3300; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #CC3300; font-style: italic">    The right-hand side of the damped oscillator ODE</span>
+<span style="color: #CC3300; font-style: italic">    &quot;&quot;&quot;</span>
+    x, p <span style="color: #555555">=</span> y[<span style="color: #FF6600">0</span>], y[<span style="color: #FF6600">1</span>]
+    dx <span style="color: #555555">=</span> p
+    dp <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">2</span> <span style="color: #555555">*</span> zeta <span style="color: #555555">*</span> w0 <span style="color: #555555">*</span> p <span style="color: #555555">-</span> w0<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">*</span> x
+    <span style="color: #006699; font-weight: bold">return</span> [dx, dp]
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># initial state:</span>
+y0 <span style="color: #555555">=</span> [<span style="color: #FF6600">1.0</span>, <span style="color: #FF6600">0.0</span>]
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># time coodinate to solve the ODE for</span>
+t <span style="color: #555555">=</span> np<span style="color: #555555">.</span>linspace(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">10</span>, <span style="color: #FF6600">1000</span>)
+w0 <span style="color: #555555">=</span> <span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi<span style="color: #555555">*</span><span style="color: #FF6600">1.0</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># solve the ODE problem for three different values of the damping ratio</span>
+y1 <span style="color: #555555">=</span> odeint(dy, y0, t, args<span style="color: #555555">=</span>(<span style="color: #FF6600">0.0</span>, w0)) <span style="color: #0099FF; font-style: italic"># undamped</span>
+y2 <span style="color: #555555">=</span> odeint(dy, y0, t, args<span style="color: #555555">=</span>(<span style="color: #FF6600">0.2</span>, w0)) <span style="color: #0099FF; font-style: italic"># under damped</span>
+y3 <span style="color: #555555">=</span> odeint(dy, y0, t, args<span style="color: #555555">=</span>(<span style="color: #FF6600">1.0</span>, w0)) <span style="color: #0099FF; font-style: italic"># critial damping</span>
+y4 <span style="color: #555555">=</span> odeint(dy, y0, t, args<span style="color: #555555">=</span>(<span style="color: #FF6600">5.0</span>, w0)) <span style="color: #0099FF; font-style: italic"># over damped</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">10</span>,<span style="color: #FF6600">8</span>])
+plt<span style="color: #555555">.</span>plot(t, y1[:,<span style="color: #FF6600">0</span>], <span style="color: #CC3300">&#39;k&#39;</span>, label<span style="color: #555555">=</span><span style="color: #CC3300">&quot;undamped&quot;</span>, linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0.25</span>)
+plt<span style="color: #555555">.</span>plot(t, y2[:,<span style="color: #FF6600">0</span>], <span style="color: #CC3300">&#39;r&#39;</span>, label<span style="color: #555555">=</span><span style="color: #CC3300">&quot;under damped&quot;</span>)
+plt<span style="color: #555555">.</span>plot(t, y3[:,<span style="color: #FF6600">0</span>], <span style="color: #CC3300">&#39;b&#39;</span>, label<span style="color: #555555">=</span><span style="color: #CC3300">r&quot;critical damping&quot;</span>)
+plt<span style="color: #555555">.</span>plot(t, y4[:,<span style="color: #FF6600">0</span>], <span style="color: #CC3300">&#39;g&#39;</span>, label<span style="color: #555555">=</span><span style="color: #CC3300">&quot;over damped&quot;</span>)
+plt<span style="color: #555555">.</span>legend();
+</pre></div>
+
+
+<p><img alt="png" src="../output_20_0.png" /></p>
+<h3 id="partial-differential-equations">Partial Differential Equations</h3>
+<h4 id="pde-eliptic-equation-laplace-euation">PDE : Eliptic Equation (Laplace Euation)</h4>
+<p>$$ \nabla^{2} u  + c f(u) = 0 $$</p>
+<p>$$\frac{\partial^{2}u}{\partial^{2}x} + \frac{\partial^{2}u}{\partial^{2}x} + cf(u) = 0$$</p>
+<p>for $c=1, f(u)=0$ it becomes Laplace Equation</p>
+<p><img alt="img" src="../img/lattice.png" /></p>
+<p>Using Above lattice of finite difference:</p>
+<p><img alt="img" src="../img/eq.png" /></p>
+<p>$$\large{u_{i−1,j}+u_{i+1,j} + u_{i,j−1} + u{i,j+1} − 4u_{i,j}+cf(u_{i,j})=0}$$</p>
+<p>$$u_{i,j}=0;  \forall u \in ∂Ω$$</p>
+<p>for 4 by 4 lattice view matrices here: <a href="http://folk.ntnu.no/leifh/teaching/tkt4140/._main055.html">source</a></p>
+<hr />
+<p>Problem Type : Solve</p>
+<p>$$\large{Ax = b}$$</p>
+<hr />
+<h4 id="implementation-of-least-square-methods-to-solve-a-ax-b-problem-as-a-optimization-problem">Implementation of <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html#scipy.optimize.least_squares">Least square methods</a> to solve a $Ax = b$ problem as a optimization problem</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #555555">%</span>matplotlib inline
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">scipy.optimize</span> <span style="color: #006699; font-weight: bold">import</span> least_squares
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">scipy.sparse</span> <span style="color: #006699; font-weight: bold">import</span> coo_matrix
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">seaborn</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sns</span>
+sns<span style="color: #555555">.</span>set()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>n <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
+c <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">f</span>(u):
+    <span style="color: #006699; font-weight: bold">return</span> u<span style="color: #555555">**</span><span style="color: #FF6600">3</span>
+
+<span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">f_prime</span>(u):
+    <span style="color: #006699; font-weight: bold">return</span> <span style="color: #FF6600">3</span> <span style="color: #555555">*</span> u<span style="color: #555555">**</span><span style="color: #FF6600">2</span>
+</pre></div>
+
+
+<h4 id="prepare-the-lattice">Prepare the lattice</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">fun</span>(u, n,f, f_prime,c, <span style="color: #555555">**</span>kwargs):
+    v <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros((n <span style="color: #555555">+</span> <span style="color: #FF6600">2</span>, n <span style="color: #555555">+</span> <span style="color: #FF6600">2</span>))
+
+    <span style="color: #0099FF; font-style: italic">#buttom value = 1</span>
+    v[n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>,:] <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+    <span style="color: #0099FF; font-style: italic"># top value = 1</span>
+    <span style="color: #0099FF; font-style: italic">#v[0,:] = 1</span>
+    <span style="color: #0099FF; font-style: italic"># center value = 1</span>
+    <span style="color: #0099FF; font-style: italic">#v[int(n/2),int(n/2)] = 1</span>
+
+
+    u <span style="color: #555555">=</span> u<span style="color: #555555">.</span>reshape((n, n))
+    v[<span style="color: #FF6600">1</span>:<span style="color: #555555">-</span><span style="color: #FF6600">1</span>, <span style="color: #FF6600">1</span>:<span style="color: #555555">-</span><span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> u
+    y <span style="color: #555555">=</span> v[:<span style="color: #555555">-</span><span style="color: #FF6600">2</span>, <span style="color: #FF6600">1</span>:<span style="color: #555555">-</span><span style="color: #FF6600">1</span>] <span style="color: #555555">+</span> v[<span style="color: #FF6600">2</span>:, <span style="color: #FF6600">1</span>:<span style="color: #555555">-</span><span style="color: #FF6600">1</span>] <span style="color: #555555">+</span> \
+        v[<span style="color: #FF6600">1</span>:<span style="color: #555555">-</span><span style="color: #FF6600">1</span>, :<span style="color: #555555">-</span><span style="color: #FF6600">2</span>] <span style="color: #555555">+</span> v[<span style="color: #FF6600">1</span>:<span style="color: #555555">-</span><span style="color: #FF6600">1</span>, <span style="color: #FF6600">2</span>:] <span style="color: #555555">-</span> \
+        <span style="color: #FF6600">4</span> <span style="color: #555555">*</span> u <span style="color: #555555">+</span> c <span style="color: #555555">*</span> f(u)
+    <span style="color: #006699; font-weight: bold">return</span> y<span style="color: #555555">.</span>ravel()
+</pre></div>
+
+
+<h4 id="prepare-jacobians">Prepare Jacobians</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">compute_jac_indices</span>(n):
+    i <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(n)
+    jj, ii <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(i, i)
+
+    ii <span style="color: #555555">=</span> ii<span style="color: #555555">.</span>ravel()
+    jj <span style="color: #555555">=</span> jj<span style="color: #555555">.</span>ravel()
+
+    ij <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(n<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
+
+    jac_rows <span style="color: #555555">=</span> [ij]
+    jac_cols <span style="color: #555555">=</span> [ij]
+
+    mask <span style="color: #555555">=</span> ii <span style="color: #555555">&gt;</span> <span style="color: #FF6600">0</span>
+    ij_mask <span style="color: #555555">=</span> ij[mask]
+    jac_rows<span style="color: #555555">.</span>append(ij_mask)
+    jac_cols<span style="color: #555555">.</span>append(ij_mask <span style="color: #555555">-</span> n)
+
+    mask <span style="color: #555555">=</span> ii <span style="color: #555555">&lt;</span> n <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>
+    ij_mask <span style="color: #555555">=</span> ij[mask]
+    jac_rows<span style="color: #555555">.</span>append(ij_mask)
+    jac_cols<span style="color: #555555">.</span>append(ij_mask <span style="color: #555555">+</span> n)
+
+    mask <span style="color: #555555">=</span> jj <span style="color: #555555">&gt;</span> <span style="color: #FF6600">0</span>
+    ij_mask <span style="color: #555555">=</span> ij[mask]
+    jac_rows<span style="color: #555555">.</span>append(ij_mask)
+    jac_cols<span style="color: #555555">.</span>append(ij_mask <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>)
+
+    mask <span style="color: #555555">=</span> jj <span style="color: #555555">&lt;</span> n <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>
+    ij_mask <span style="color: #555555">=</span> ij[mask]
+    jac_rows<span style="color: #555555">.</span>append(ij_mask)
+    jac_cols<span style="color: #555555">.</span>append(ij_mask <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>)
+
+    <span style="color: #006699; font-weight: bold">return</span> np<span style="color: #555555">.</span>hstack(jac_rows), np<span style="color: #555555">.</span>hstack(jac_cols)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>jac_rows, jac_cols <span style="color: #555555">=</span> compute_jac_indices(n)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>jac_rows, jac_cols
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(array([   0,    1,    2, ..., 9996, 9997, 9998]),
+ array([   0,    1,    2, ..., 9997, 9998, 9999]))
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">jac</span>(u, n,f, f_prime,c, jac_rows<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>, jac_cols<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">None</span>):
+    jac_values <span style="color: #555555">=</span> np<span style="color: #555555">.</span>ones_like(jac_cols, dtype<span style="color: #555555">=</span><span style="color: #336666">float</span>)
+    jac_values[:n<span style="color: #555555">**</span><span style="color: #FF6600">2</span>] <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">4</span> <span style="color: #555555">+</span>  c <span style="color: #555555">*</span> f_prime(u)
+    <span style="color: #006699; font-weight: bold">return</span> coo_matrix((jac_values, (jac_rows, jac_cols)), shape<span style="color: #555555">=</span>(n<span style="color: #555555">**</span><span style="color: #FF6600">2</span>, n<span style="color: #555555">**</span><span style="color: #FF6600">2</span>))
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>u0 <span style="color: #555555">=</span> np<span style="color: #555555">.</span>ones(n<span style="color: #555555">**</span><span style="color: #FF6600">2</span>) <span style="color: #555555">*</span> <span style="color: #FF6600">0.5</span>
+</pre></div>
+
+
+<h4 id="optimization-least-square"><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html#scipy.optimize.least_squares">Optimization: Least Square</a></h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>res_1 <span style="color: #555555">=</span> least_squares(fun, u0, jac<span style="color: #555555">=</span>jac, gtol<span style="color: #555555">=</span><span style="color: #FF6600">1e-3</span>, args<span style="color: #555555">=</span>(n,f, f_prime,c),\
+                      kwargs<span style="color: #555555">=</span>{<span style="color: #CC3300">&#39;jac_rows&#39;</span>: jac_rows, <span style="color: #CC3300">&#39;jac_cols&#39;</span>: jac_cols}, verbose<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>`gtol` termination condition is satisfied.
+Function evaluations 738, initial cost 1.1562e+02, final cost 6.4462e-01, first-order optimality 9.38e-04.
+</pre></div>
+
+
+<h4 id="returned-quantities-after-solution">Returned quantities after solution</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>res_1<span style="color: #555555">.</span>x<span style="color: #555555">.</span>shape
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(10000,)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>res_1<span style="color: #555555">.</span>x
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([0.00622038, 0.01236634, 0.01833963, ..., 0.01834064, 0.01236645,
+       0.00622026])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>res_1<span style="color: #555555">.</span>fun
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([-0.00014825, -0.00029118, -0.00041394, ..., -0.000414  ,
+       -0.00029121, -0.00014826])
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>res_1<span style="color: #555555">.</span>fun<span style="color: #555555">.</span>shape
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>(10000,)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>res_1<span style="color: #555555">.</span>jac
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;10000x10000 sparse matrix of type &#39;&lt;class &#39;numpy.float64&#39;&gt;&#39;
+    with 49600 stored elements in Compressed Sparse Row format&gt;
+</pre></div>
+
+
+<h4 id="plot-the-solutions">Plot the solutions</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">16</span>, <span style="color: #FF6600">5</span>))
+
+plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">131</span>)
+plt<span style="color: #555555">.</span>plot(res_1<span style="color: #555555">.</span>x)
+
+
+plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">132</span>)
+plt<span style="color: #555555">.</span>imshow(res_1<span style="color: #555555">.</span>x<span style="color: #555555">.</span>reshape((n, n)),\
+           cmap<span style="color: #555555">=</span><span style="color: #CC3300">&#39;coolwarm&#39;</span>,\
+           vmin<span style="color: #555555">=-</span><span style="color: #336666">max</span>(<span style="color: #336666">abs</span>(res_1<span style="color: #555555">.</span>x)),\
+           vmax<span style="color: #555555">=</span><span style="color: #336666">max</span>(<span style="color: #336666">abs</span>(res_1<span style="color: #555555">.</span>x)))
+
+plt<span style="color: #555555">.</span>colorbar(use_gridspec<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">True</span>,\
+             fraction<span style="color: #555555">=</span><span style="color: #FF6600">0.046</span>,\
+             pad<span style="color: #555555">=</span><span style="color: #FF6600">0.04</span>)
+
+
+
+plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">133</span>)
+plt<span style="color: #555555">.</span>plot(res_1<span style="color: #555555">.</span>fun)
+
+
+plt<span style="color: #555555">.</span>tight_layout()
+</pre></div>
+
+
+<p><img alt="png" src="../output_57_0.png" /></p>
+<h3 id="references">References:</h3>
+<ol>
+<li>http://folk.ntnu.no/leifh/teaching/tkt4140/._main000.html</li>
+<li>http://folk.ntnu.no/leifh/teaching/tkt4140/._main055.html</li>
+<li>https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html#scipy.optimize.least_squares</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Harmonics/Harmonics/" class="btn btn-neutral float-right" title="Spherical Harmonics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../../Numpy/stat/stat/" class="btn btn-neutral" title="Statistics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../../Numpy/stat/stat/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Harmonics/Harmonics/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
