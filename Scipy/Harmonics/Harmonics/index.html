@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Spherical Harmonics - Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Spherical Harmonics";
+    var mkdocs_page_input_path = "Scipy/Harmonics/Harmonics.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Introduction to Python</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../prog/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Projects</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/numpy/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/array/array/">Array</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/grid/meshgrid/">MeshGrid</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/algebra/algebra/">Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Numpy/stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Scipy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../intro/Numerical-Methods/">Introduction</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Spherical Harmonics
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+          
+
+  <li class="toctree-l3 current with-children">
+    <a href="#spherical-harmonics_1">
+      Spherical Harmonics
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3 current">
+    <ul class="subnav-l3 current">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#spherical-harmonics-y10">Spherical Harmonics : Y(1,0)</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#spherical-harmonics-y20-and-y21">Spherical Harmonics :  Y(2,0) and Y(2,1)</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#spherical-harmonics-y42">Spherical Harmonics :  Y(4,2)</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#references">References</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Bessel/Bessel/">Oscillating Membrane</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Laplace/laplace/">Laplace Equation</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/pandas/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/DataFrame/dataframe/">Dataframe</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/GroupBy/groupby/">GroupBy</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Pandas/Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Machine Learning</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/linear/">Linear Regression</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/logistic/">Logistic Regression</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/svm/">Support Vector Machine</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/nnc/">Nearest Neighbours</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/perceptron/">Perceptron</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../machineLearning/clustering/">Clustering</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Scipy &raquo;</li>
+        
+      
+    
+    <li>Spherical Harmonics</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="spherical-harmonics">Spherical Harmonics</h2>
+<ul>
+<li>Scipy Library:<a href="https://docs.scipy.org/doc/scipy/reference/special.html">Source</a></li>
+</ul>
+<p>In this notebook we are going to make some fun with Spherical Harmonics.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">scipy.special</span> <span style="color: #006699; font-weight: bold">import</span> jn, yn, jn_zeros, yn_zeros
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">scipy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sci</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">scipy.special</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sp</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">__future__</span> <span style="color: #006699; font-weight: bold">import</span> division
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">mpl_toolkits.mplot3d</span> <span style="color: #006699; font-weight: bold">import</span> Axes3D
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span> <span style="color: #006699; font-weight: bold">import</span> cm, colors
+<span style="color: #555555">%</span>matplotlib inline
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">seaborn</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">sns</span>
+sns<span style="color: #555555">.</span>set()
+</pre></div>
+
+
+<h3 id="spherical-harmonics_1">Spherical Harmonics</h3>
+<p>\( Y^m_n(\theta,\phi) = \sqrt{\frac{2n+1}{4\pi} \frac{(n-m)!}{(n+m)!}}
+  e^{i m \theta} P^m_n(\cos(\phi)) \)</p>
+<p>Some Examples</p>
+<p>\( Y_0^0(\theta, \phi) = \frac{1}{2} \sqrt{\frac{1}{\pi}} \)</p>
+<p>\( Y_1^{-1}(\theta, \phi) = \frac{1}{2} \sqrt{\frac{3}{2\pi}}
+                            e^{-i\theta} \sin(\phi) \)</p>
+<p>\( Y_1^0(\theta, \phi) = \frac{1}{2} \sqrt{\frac{3}{\pi}}
+                         \cos(\phi) \)</p>
+<p>\( Y_1^1(\theta, \phi) = -\frac{1}{2} \sqrt{\frac{3}{2\pi}}
+                         e^{i\theta} \sin(\phi) \)</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>PHI, THETA <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">200</span>j, <span style="color: #FF6600">0</span>:np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">100</span>j] <span style="color: #0099FF; font-style: italic">#arrays of angular variables</span>
+</pre></div>
+
+
+<h4 id="spherical-harmonics-y10">Spherical Harmonics : Y(1,0)</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>l <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>    <span style="color: #0099FF; font-style: italic">#degree</span>
+m <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>   <span style="color: #0099FF; font-style: italic">#order</span>
+R <span style="color: #555555">=</span> np<span style="color: #555555">.</span>abs(sp<span style="color: #555555">.</span>sph_harm(m, l, PHI, THETA)) 
+
+<span style="color: #0099FF; font-style: italic">#Array with the absolute values of Ylm</span>
+<span style="color: #0099FF; font-style: italic">#Now we convert to cartesian coordinates</span>
+<span style="color: #0099FF; font-style: italic"># for the 3D representation</span>
+X <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(PHI)
+Y <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(PHI)
+Z <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(THETA)
+
+<span style="color: #0099FF; font-style: italic"># Normalize R for the plot colors to cover the entire range of colormap.</span>
+N <span style="color: #555555">=</span> R<span style="color: #555555">/</span>R<span style="color: #555555">.</span>max()    
+fig, ax <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>subplots(subplot_kw<span style="color: #555555">=</span><span style="color: #336666">dict</span>(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>),\
+                       figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>,<span style="color: #FF6600">8</span>))
+
+im <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(X, Y, Z, rstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>,\
+                     cstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, facecolors<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet(N))
+
+ax<span style="color: #555555">.</span>set_title(<span style="color: #CC3300">r&#39;$|Y^1_ 0|$&#39;</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
+m <span style="color: #555555">=</span> cm<span style="color: #555555">.</span>ScalarMappable(cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet)
+m<span style="color: #555555">.</span>set_array(R)    
+
+
+<span style="color: #0099FF; font-style: italic"># Assign the unnormalized data array to the mappable</span>
+<span style="color: #0099FF; font-style: italic">#so that the scale corresponds to the values of R</span>
+fig<span style="color: #555555">.</span>colorbar(m, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.8</span>);
+</pre></div>
+
+
+<p><img alt="png" src="../output_10_0.png" /></p>
+<hr />
+<h4 id="spherical-harmonics-y20-and-y21">Spherical Harmonics :  Y(2,0) and Y(2,1)</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>l <span style="color: #555555">=</span> <span style="color: #FF6600">2</span>   <span style="color: #0099FF; font-style: italic">#degree</span>
+m <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>  <span style="color: #0099FF; font-style: italic"># order</span>
+PHI, THETA <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">200</span>j, <span style="color: #FF6600">0</span>:np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">100</span>j] 
+<span style="color: #0099FF; font-style: italic">#arrays of angular variables</span>
+R <span style="color: #555555">=</span> np<span style="color: #555555">.</span>abs(sp<span style="color: #555555">.</span>sph_harm(m, l, PHI, THETA)) 
+<span style="color: #0099FF; font-style: italic">#Array with the absolute values of Ylm</span>
+<span style="color: #0099FF; font-style: italic">#Now we convert to cartesian coordinates</span>
+<span style="color: #0099FF; font-style: italic"># for the 3D representation</span>
+X <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(PHI)
+Y <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(PHI)
+Z <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(THETA)
+
+N <span style="color: #555555">=</span> R<span style="color: #555555">/</span>R<span style="color: #555555">.</span>max()    
+<span style="color: #0099FF; font-style: italic"># Normalize R for the plot colors to cover the entire range of colormap.</span>
+fig, ax <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>subplots(subplot_kw<span style="color: #555555">=</span><span style="color: #336666">dict</span>(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>),\
+                       figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>,<span style="color: #FF6600">8</span>))
+
+im <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(X, Y, Z, rstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>,\
+                     cstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, facecolors<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet(N))
+
+ax<span style="color: #555555">.</span>set_title(<span style="color: #CC3300">r&#39;$|Y^2_ 0|$&#39;</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
+m <span style="color: #555555">=</span> cm<span style="color: #555555">.</span>ScalarMappable(cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet)
+m<span style="color: #555555">.</span>set_array(R)
+
+<span style="color: #0099FF; font-style: italic"># Assign the unnormalized data array to the mappable</span>
+<span style="color: #0099FF; font-style: italic">#so that the scale corresponds to the values of R</span>
+fig<span style="color: #555555">.</span>colorbar(m, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.8</span>);
+</pre></div>
+
+
+<p><img alt="png" src="../output_13_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>l <span style="color: #555555">=</span> <span style="color: #FF6600">2</span>    <span style="color: #0099FF; font-style: italic"># degree</span>
+m <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>    <span style="color: #0099FF; font-style: italic"># order</span>
+PHI, THETA <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">200</span>j, <span style="color: #FF6600">0</span>:np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">100</span>j]
+R <span style="color: #555555">=</span> sp<span style="color: #555555">.</span>sph_harm(m, l, PHI, THETA)<span style="color: #555555">.</span>real
+
+X <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(PHI)
+Y <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(PHI)
+Z <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(THETA)
+
+<span style="color: #0099FF; font-style: italic">#As R has negative values, we&#39;ll use an instance of Normalize</span>
+<span style="color: #0099FF; font-style: italic">#see http://stackoverflow.com/questions/25023075/\</span>
+<span style="color: #0099FF; font-style: italic">#normalizing-colormap-used-by-facecolors-in-matplotlib</span>
+norm <span style="color: #555555">=</span> colors<span style="color: #555555">.</span>Normalize()
+fig, ax <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>subplots(subplot_kw<span style="color: #555555">=</span><span style="color: #336666">dict</span>(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>), figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>,<span style="color: #FF6600">8</span>))
+m <span style="color: #555555">=</span> cm<span style="color: #555555">.</span>ScalarMappable(cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet)
+ax<span style="color: #555555">.</span>plot_surface(X, Y, Z, rstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, cstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, facecolors<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet(norm(R)))
+ax<span style="color: #555555">.</span>set_title(<span style="color: #CC3300">&#39;real$(Y^2_ 1)$&#39;</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
+m<span style="color: #555555">.</span>set_array(R)
+fig<span style="color: #555555">.</span>colorbar(m, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.8</span>);
+</pre></div>
+
+
+<p><img alt="png" src="../output_14_0.png" /></p>
+<hr />
+<h4 id="spherical-harmonics-y42">Spherical Harmonics :  Y(4,2)</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>l <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>   <span style="color: #0099FF; font-style: italic">#degree</span>
+m <span style="color: #555555">=</span> <span style="color: #FF6600">2</span>  <span style="color: #0099FF; font-style: italic"># order</span>
+PHI, THETA <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">200</span>j, <span style="color: #FF6600">0</span>:np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">100</span>j] 
+<span style="color: #0099FF; font-style: italic">#arrays of angular variables</span>
+R <span style="color: #555555">=</span> np<span style="color: #555555">.</span>abs(sp<span style="color: #555555">.</span>sph_harm(m, l, PHI, THETA)) 
+<span style="color: #0099FF; font-style: italic">#Array with the absolute values of Ylm</span>
+<span style="color: #0099FF; font-style: italic">#Now we convert to cartesian coordinates</span>
+<span style="color: #0099FF; font-style: italic"># for the 3D representation</span>
+X <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(PHI)
+Y <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(PHI)
+Z <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(THETA)
+
+N <span style="color: #555555">=</span> R<span style="color: #555555">/</span>R<span style="color: #555555">.</span>max()    
+<span style="color: #0099FF; font-style: italic"># Normalize R for the plot colors to cover </span>
+<span style="color: #0099FF; font-style: italic"># the entire range of colormap.</span>
+fig, ax <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>subplots(subplot_kw<span style="color: #555555">=</span><span style="color: #336666">dict</span>(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>),\
+                       figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>,<span style="color: #FF6600">8</span>))
+
+im <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(X, Y, Z, rstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>,\
+                     cstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>,\
+                     facecolors<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet(N))
+
+ax<span style="color: #555555">.</span>set_title(<span style="color: #CC3300">r&#39;$|Y^4_ 2|$&#39;</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
+
+m <span style="color: #555555">=</span> cm<span style="color: #555555">.</span>ScalarMappable(cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet)
+m<span style="color: #555555">.</span>set_array(R)    
+<span style="color: #0099FF; font-style: italic"># Assign the unnormalized data array to the mappable</span>
+<span style="color: #0099FF; font-style: italic">#so that the scale corresponds to the values of R</span>
+fig<span style="color: #555555">.</span>colorbar(m, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.8</span>);
+</pre></div>
+
+
+<p><img alt="png" src="../output_17_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>l <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>    <span style="color: #0099FF; font-style: italic"># degree</span>
+m <span style="color: #555555">=</span> <span style="color: #FF6600">2</span>    <span style="color: #0099FF; font-style: italic"># order</span>
+PHI, THETA <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">2</span><span style="color: #555555">*</span>np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">200</span>j, <span style="color: #FF6600">0</span>:np<span style="color: #555555">.</span>pi:<span style="color: #FF6600">100</span>j]
+R <span style="color: #555555">=</span> sp<span style="color: #555555">.</span>sph_harm(m, l, PHI, THETA)<span style="color: #555555">.</span>real
+
+X <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(PHI)
+Y <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(THETA) <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(PHI)
+Z <span style="color: #555555">=</span> R <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(THETA)
+
+<span style="color: #0099FF; font-style: italic">#As R has negative values, we&#39;ll use an instance of Normalize</span>
+<span style="color: #0099FF; font-style: italic">#see http://stackoverflow.com/questions/25023075/\</span>
+<span style="color: #0099FF; font-style: italic">#normalizing-colormap-used-by-facecolors-in-matplotlib</span>
+norm <span style="color: #555555">=</span> colors<span style="color: #555555">.</span>Normalize()
+fig, ax <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>subplots(subplot_kw<span style="color: #555555">=</span><span style="color: #336666">dict</span>(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>),\
+                       figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>,<span style="color: #FF6600">8</span>))
+
+m <span style="color: #555555">=</span> cm<span style="color: #555555">.</span>ScalarMappable(cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet)
+ax<span style="color: #555555">.</span>plot_surface(X, Y, Z, rstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>,\
+                cstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>,\
+                facecolors<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>jet(norm(R)))
+
+ax<span style="color: #555555">.</span>set_title(<span style="color: #CC3300">&#39;real$(Y^4_ 2)$&#39;</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">20</span>)
+
+m<span style="color: #555555">.</span>set_array(R)
+fig<span style="color: #555555">.</span>colorbar(m, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.8</span>);
+</pre></div>
+
+
+<p><img alt="png" src="../output_18_0.png" /></p>
+<h4 id="references">References</h4>
+<ol>
+<li>https://en.wikipedia.org/wiki/Vibrations_of_a_circular_membrane</li>
+<li>https://www.exoruskoh.me/single-post/2017/05/24/Vibrating-Membranes-and-Fancy-Animations</li>
+<li>https://www.acs.psu.edu/drussell/Demos/MembraneCircle/Circle.html</li>
+<li>http://balbuceosastropy.blogspot.com/2015/06/spherical-harmonics-in-python.html</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Bessel/Bessel/" class="btn btn-neutral float-right" title="Oscillating Membrane">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../intro/Numerical-Methods/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../intro/Numerical-Methods/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Bessel/Bessel/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

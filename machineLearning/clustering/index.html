@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Clustering - Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Clustering";
+    var mkdocs_page_input_path = "machineLearning/clustering.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../WhyCodes/">Why Codes?</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Introduction to Python</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../prog/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../DataStructure/ds/">DataStructure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../LoopsConditions/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Projects</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Fern/fern/">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Rwalk/Rwalk/">Project Random Walk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Projects/Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numpy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/numpy/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/array/array/">Array</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/grid/meshgrid/">MeshGrid</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/algebra/algebra/">Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Numpy/stat/stat/">Statistics</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Scipy</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Scipy/intro/Numerical-Methods/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Scipy/Harmonics/Harmonics/">Spherical Harmonics</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Scipy/Bessel/Bessel/">Oscillating Membrane</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Scipy/Laplace/laplace/">Laplace Equation</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Pandas</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/pandas/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/DataFrame/dataframe/">Dataframe</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/Indexing/Indexing/">Indexing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/Explor/explor/">Data Exploration</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/GroupBy/groupby/">GroupBy</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Pandas/Lambda/lambda/">Lambda Transform</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Machine Learning</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../linear/">Linear Regression</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../logistic/">Logistic Regression</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../tree/">Decision Tree</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../svm/">Support Vector Machine</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../nnc/">Nearest Neighbours</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../perceptron/">Perceptron</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Clustering
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#clustering">
+      Clustering:
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+
+  
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">References</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../References/ref/">Reference</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Machine Learning &raquo;</li>
+        
+      
+    
+    <li>Clustering</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="clustering">Clustering:</h3>
+<ul>
+<li>Agglomerative clustering with and without structure (<a href="https://github.com/teachmex/scikit-learn/blob/master/examples/cluster/plot_agglomerative_clustering.py">Source</a>)</li>
+</ul>
+<p>This example shows the effect of imposing a connectivity graph to capture
+local structure in the data. The graph is simply the graph of 20 nearest
+neighbors.
+Two consequences of imposing a connectivity can be seen. First clustering
+with a connectivity matrix is much faster.
+Second, when using a connectivity matrix, single, average and complete
+linkage are unstable and tend to create a few clusters that grow very
+quickly. Indeed, average and complete linkage fight this percolation behavior
+by considering all the distances between two clusters when merging them (
+while single linkage exaggerates the behaviour by considering only the
+shortest distance between clusters). The connectivity graph breaks this
+mechanism for average and complete linkage, making them resemble the more
+brittle single linkage. This effect is more pronounced for very sparse graphs
+(try decreasing the number of neighbors in kneighbors_graph) and with
+complete linkage. In particular, having a very small number of neighbors in
+the graph, imposes a geometry that is close to that of single linkage,
+which is well known to have this percolation instability. """</p>
+<p><code>Authors: Gael Varoquaux, Nelle Varoquaux</code></p>
+<p><code>License: BSD 3 clause</code></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">time</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">sklearn.cluster</span> <span style="color: #006699; font-weight: bold">import</span> AgglomerativeClustering
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">sklearn.neighbors</span> <span style="color: #006699; font-weight: bold">import</span> kneighbors_graph
+
+<span style="color: #0099FF; font-style: italic"># Generate sample data</span>
+n_samples <span style="color: #555555">=</span> <span style="color: #FF6600">1500</span>
+np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>seed(<span style="color: #FF6600">0</span>)
+t <span style="color: #555555">=</span> <span style="color: #FF6600">1.5</span> <span style="color: #555555">*</span> np<span style="color: #555555">.</span>pi <span style="color: #555555">*</span> (<span style="color: #FF6600">1</span> <span style="color: #555555">+</span> <span style="color: #FF6600">3</span> <span style="color: #555555">*</span> np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>rand(<span style="color: #FF6600">1</span>, n_samples))
+x <span style="color: #555555">=</span> t <span style="color: #555555">*</span> np<span style="color: #555555">.</span>cos(t)
+y <span style="color: #555555">=</span> t <span style="color: #555555">*</span> np<span style="color: #555555">.</span>sin(t)
+
+
+X <span style="color: #555555">=</span> np<span style="color: #555555">.</span>concatenate((x, y))
+X <span style="color: #555555">+=</span> <span style="color: #555555">.</span><span style="color: #FF6600">7</span> <span style="color: #555555">*</span> np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>randn(<span style="color: #FF6600">2</span>, n_samples)
+X <span style="color: #555555">=</span> X<span style="color: #555555">.</span>T
+
+<span style="color: #0099FF; font-style: italic"># Create a graph capturing local connectivity. Larger number of neighbors</span>
+<span style="color: #0099FF; font-style: italic"># will give more homogeneous clusters to the cost of computation</span>
+<span style="color: #0099FF; font-style: italic"># time. A very large number of neighbors gives more evenly distributed</span>
+<span style="color: #0099FF; font-style: italic"># cluster sizes, but may not impose the local manifold structure of</span>
+<span style="color: #0099FF; font-style: italic"># the data</span>
+knn_graph <span style="color: #555555">=</span> kneighbors_graph(X, <span style="color: #FF6600">30</span>, include_self<span style="color: #555555">=</span><span style="color: #006699; font-weight: bold">False</span>)
+
+<span style="color: #006699; font-weight: bold">for</span> connectivity <span style="color: #000000; font-weight: bold">in</span> (<span style="color: #006699; font-weight: bold">None</span>, knn_graph):
+    <span style="color: #006699; font-weight: bold">for</span> n_clusters <span style="color: #000000; font-weight: bold">in</span> (<span style="color: #FF6600">30</span>, <span style="color: #FF6600">3</span>):
+        plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>, <span style="color: #FF6600">4</span>))
+        <span style="color: #006699; font-weight: bold">for</span> index, linkage <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">enumerate</span>((<span style="color: #CC3300">&#39;average&#39;</span>,
+                                         <span style="color: #CC3300">&#39;complete&#39;</span>,
+                                         <span style="color: #CC3300">&#39;ward&#39;</span>,
+                                         <span style="color: #CC3300">&#39;single&#39;</span>)):
+            plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">1</span>, <span style="color: #FF6600">4</span>, index <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>)
+            model <span style="color: #555555">=</span> AgglomerativeClustering(linkage<span style="color: #555555">=</span>linkage,
+                                            connectivity<span style="color: #555555">=</span>connectivity,
+                                            n_clusters<span style="color: #555555">=</span>n_clusters)
+            t0 <span style="color: #555555">=</span> time<span style="color: #555555">.</span>time()
+            model<span style="color: #555555">.</span>fit(X)
+            elapsed_time <span style="color: #555555">=</span> time<span style="color: #555555">.</span>time() <span style="color: #555555">-</span> t0
+            plt<span style="color: #555555">.</span>scatter(X[:, <span style="color: #FF6600">0</span>], X[:, <span style="color: #FF6600">1</span>], c<span style="color: #555555">=</span>model<span style="color: #555555">.</span>labels_,
+                        cmap<span style="color: #555555">=</span>plt<span style="color: #555555">.</span>cm<span style="color: #555555">.</span>nipy_spectral)
+            plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&#39;linkage=</span><span style="color: #AA0000">%s</span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">(time </span><span style="color: #AA0000">%.2f</span><span style="color: #CC3300">s)&#39;</span> <span style="color: #555555">%</span> (linkage, elapsed_time),
+                      fontdict<span style="color: #555555">=</span><span style="color: #336666">dict</span>(verticalalignment<span style="color: #555555">=</span><span style="color: #CC3300">&#39;top&#39;</span>))
+            plt<span style="color: #555555">.</span>axis(<span style="color: #CC3300">&#39;equal&#39;</span>)
+            plt<span style="color: #555555">.</span>axis(<span style="color: #CC3300">&#39;off&#39;</span>)
+
+            plt<span style="color: #555555">.</span>subplots_adjust(bottom<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, top<span style="color: #555555">=.</span><span style="color: #FF6600">83</span>, wspace<span style="color: #555555">=</span><span style="color: #FF6600">0</span>,
+                                left<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, right<span style="color: #555555">=</span><span style="color: #FF6600">1</span>)
+            plt<span style="color: #555555">.</span>suptitle(<span style="color: #CC3300">&#39;n_cluster=</span><span style="color: #AA0000">%i</span><span style="color: #CC3300">, connectivity=</span><span style="color: #AA0000">%r</span><span style="color: #CC3300">&#39;</span> <span style="color: #555555">%</span>
+                         (n_clusters, connectivity <span style="color: #000000; font-weight: bold">is</span> <span style="color: #000000; font-weight: bold">not</span> <span style="color: #006699; font-weight: bold">None</span>), size<span style="color: #555555">=</span><span style="color: #FF6600">17</span>)
+
+
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_26_0.png" /></p>
+<p><img alt="png" src="../output_26_1.png" /></p>
+<p><img alt="png" src="../output_26_2.png" /></p>
+<p><img alt="png" src="../output_26_3.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../References/ref/" class="btn btn-neutral float-right" title="Reference">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../perceptron/" class="btn btn-neutral" title="Perceptron"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../perceptron/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../References/ref/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
