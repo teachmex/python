@@ -2,7 +2,7 @@
 
 Loops provide the method of iteration while condition allows or blocks the code execution  when specified condition is meet.
 
-### For loop and While Loop
+### For llop and While Loop
 
 - To iterate over the List. Lets prin the items in the list
 
@@ -65,12 +65,7 @@ for i in range(5):
 print(D)
 ```
 
-    {(0, 0): 0, (0, 1): 1, (0, 2): 2, (0, 3): 3, (0, 4): 4, 
-    (1, 0): 100, (1, 1): 11, (1, 2): 102, (1, 3): 103, (1, 4):
-    104, (2, 0): 200, (2, 1): 201, (2, 2): 22, (2, 3): 203, 
-    (2, 4): 204, (3, 0): 300, (3, 1): 301, (3, 2): 302, 
-    (3, 3): 33, (3, 4): 304, (4, 0): 400, (4, 1): 401, (4, 2):
-    402, (4, 3): 403, (4, 4): 44}
+    {(0, 0): 0, (0, 1): 1, (0, 2): 2, (0, 3): 3, (0, 4): 4, (1, 0): 100, (1, 1): 11, (1, 2): 102, (1, 3): 103, (1, 4): 104, (2, 0): 200, (2, 1): 201, (2, 2): 22, (2, 3): 203, (2, 4): 204, (3, 0): 300, (3, 1): 301, (3, 2): 302, (3, 3): 33, (3, 4): 304, (4, 0): 400, (4, 1): 401, (4, 2): 402, (4, 3): 403, (4, 4): 44}
 
 
 - To iterate two elements from two seperate Lists. It is not like nested for loop.
@@ -244,5 +239,8 @@ s, sum(LE)
     (250500, 250500)
 
 
+
+### References:
+1. https://docs.python.org/3/tutorial/index.html
 
 --------

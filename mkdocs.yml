@@ -1,5 +1,5 @@
 
-site_name: Python
+site_name: Python Fundamentals
 
 
 extra_javascript: 
@@ -11,9 +11,9 @@ markdown_extensions:
 
 
 theme:
-  name: 'rtd-dropdown'
+  name: 'material'
   highlightjs: true
-  hljs_languages: []
+  hljs_languages: [python]
   include_homepage_in_sidebar: true
   prev_next_buttons_location: bottom
   navigation_depth: 4
@@ -21,9 +21,9 @@ theme:
   sticky_navigation: true
   collapse_navigation: true
  
- 
+
   
-      
+  
 markdown_extensions:
   - codehilite:
       linenums: false
@@ -31,66 +31,27 @@ markdown_extensions:
       use_pygments: true
       noclasses: true
       pygments_style: manni
+      
 
 
 nav:
 - Home: index.md
-- Why Codes?: WhyCodes.md
-
-- Getting started:
-  - Guide to starting Python: GettingStarted/anaconda.md
-  - Guide to Python Libraries: GettingStarted/lib.md
-  - Setting up Python Environment: GettingStarted/env.md
-  - Installing Jupyter Notebook : GettingStarted/jupyter.md
-  - How to Git: GettingStarted/git.md
-  
-- Introduction to Python:
-  - Introduction: prog.md
-  - DataStructure: DataStructure/ds.md
-  - Loops and Conditions: LoopsConditions/lnc.md
-  - Functions and Class : FunctionClass/fnc.md
-  
-- Projects:
-  - Project Fern: Projects/Fern/fern.md
-  - Project Random Walk: Projects/Rwalk/Rwalk.md
-  - Project N-charges: Projects/Ncharges/Ncharges.md
-  - Project Diffusion: Projects/Diffusion/Diffusion.md
-         
-  
-- Numpy:
-  - Introduction: Numpy/numpy.md
-  - Array: Numpy/array/array.md
-  - MeshGrid: Numpy/grid/meshgrid.md
-  - Algebra: Numpy/algebra/algebra.md
-  - Statistics: Numpy/stat/stat.md
-  
-- Scipy:
-  - Introduction : Scipy/intro/Numerical-Methods.md
-  - Spherical Harmonics : Scipy/Harmonics/Harmonics.md
-  - Oscillating Membrane : Scipy/Bessel/Bessel.md
-  - Laplace Equation: Scipy/Laplace/laplace.md
-
-- Pandas:
-  - Introduction: Pandas/pandas.md
-  - Dataframe: Pandas/DataFrame/dataframe.md
-  - Indexing: Pandas/Indexing/Indexing.md
-  - Data Exploration: Pandas/Explor/explor.md
-  - GroupBy: Pandas/GroupBy/groupby.md
-  - Lambda Transform : Pandas/Lambda/lambda.md
-
-  
-- Machine Learning:
-  - Linear Regression: machineLearning/linear.md
-  - Logistic Regression: machineLearning/logistic.md
-  - Decision Tree: machineLearning/tree.md
-  - Support Vector Machine: machineLearning/svm.md
-  - Nearest Neighbours: machineLearning/nnc.md
-  - Perceptron: machineLearning/perceptron.md
-  - Clustering: machineLearning/clustering.md
-
-  
-- References:
-  - Reference: References/ref.md
+- Guide to Installing Python: GettingStarted/anaconda.md
+- Guide to Python Libraries: GettingStarted/lib.md
+- Setting up Python Environment: GettingStarted/env.md
+- Installing Jupyter Notebook : GettingStarted/jupyter.md
+- How to Git: GettingStarted/git.md
+- DataStructure: DataStructure/ds.md
+- Loops and Conditions: LoopsConditions/lnc.md
+- Functions and Class : FunctionClass/fnc.md
+- Handeling Errors: Errors/lfr.md
+- Input Output: IO/io.md
+- Python Standard Library: StandardLibrary/psl.md
+- Project Fern: Projects/Fern/fern.md
+- Project Random Walk: Projects/Rwalk/Rwalk.md
+- Project N-charges: Projects/Ncharges/Ncharges.md
+- Project Diffusion: Projects/Diffusion/Diffusion.md
+- Reference: References/ref.md
  
  
  

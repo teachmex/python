@@ -1,81 +1,19 @@
 
 
-## TeachMe.Codes
+## Python Fundamentals
 
 
 
-This online document helps the absolute beginners to persue the future direction in coding and machine learning. The lesson starts with how to write code in Python along with fundamental ideas in data structure, function and class, Numpy, Pandas and some projects in Machine Learning (Linear Model, Classifiers e.g., Logistic regression, trees, svm, ensamble).
+This online document helps the absolute beginners to persue the future direction in coding and machine learning. The lesson starts with how to write code in Python along with fundamental ideas in data structure, function and class, input output, error handling, Python Standard Library and associated projects.
+
+<img src = "img/computing.png" width="650" height="800" /> 
+
+Current days scenarios in computing resources in Python.
 
 
-<img src = "img/teachme.png" width="500" height="500" /> 
+## Why Codes?
 
-        
-### Index 
+Codes are apparently the language for Human-Machine interface. Coding is the most fundamental skill required for growing with modern days technology. Sicen our computers are built up based on logic and algorithm, our coding languages are also higher lavel of logical steps made undersatndable for human. By typing a line of code, we are speaking the laguage of the machine.
 
-- Why Codes?
+Fundamentally, each programming language has it's inner working principle with underlying datastructure and functions. Computer while running a piece of code maintains the data in the memory ( temporary at RAM or permanent at Hard Disk). Whil code is live in the machine, it has time and space complexicities with the underlying datastructure and algotihm excuting the task.
 
-- Getting started
-      - Guide to starting Python
-      - Guide to Python Libraries
-
-
-- Introduction to Programming
-    - [Fundamental DataStructure](www.teachmex.github.io/docs/DataStructure/ds/) 
-    - [Loops and Condition](www.teachmex.github.io/docs/LoopsConditions/lnc/)
-    - [Function and Class](www.teachmex.github.io/docs//FunctionClass/fnc/)
-    - Input-Output
-    
-
-- Projects
-    - [Project Fern](www.teachmex.github.io/docs/Projects/Fern/fern/)
-    - [Project Random Walk](www.teachmex.github.io/docs/Projects/Rwalk/Rwalk/)
-    - [Project N-charges](www.teachmex.github.io/docs/Projects/Ncharges/Ncharges/)
-    - [Project Diffusion](www.teachmex.github.io/docs/Projects/Diffusion/Diffusion/)
-
-
-- Numpy
-      - Array and ND Array
-      - Product and Tensor Product
-      - Grid and MeshGrid
-      - Linear Algebra
-      - Statistics
- 
-- Scipy
-      - Integration
-      - Differential Equations
-      - Optimization
-      - Roots
-      - Interpolation
-      - Fitting
-      
-- Pandas
-      - Dataframe
-      - Indexing
-      - Data Exploration
-      - GroupBy
-      - Lambda Transform      
-      
-- Basic Visualization
-      - Matplotlib
-      - Seaborn
-      - Pandas
-      - Bohek
-      - Plotly
-      
-- Machine Learning
-    - Linear Regression
-    - Logistic Regression
-    - Decision Tree
-    - Support Vector Machine
-    - Nearest Neighbours
-    - Perceptron
-    - Clustering
-
-  
-
------------
-
-Prepared by: [TeachMe.Codes](www.teachme.codes)
-
-------
-  
