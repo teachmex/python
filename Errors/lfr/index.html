@@ -1,0 +1,1029 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+    
+    
+      
+        <title>Handeling Errors - Python Fundamentals</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#learning-from-errors" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Python Fundamentals" class="md-header-nav__button md-logo" aria-label="Python Fundamentals">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Python Fundamentals
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Handeling Errors
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Fundamentals" class="md-nav__button md-logo" aria-label="Python Fundamentals">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Python Fundamentals
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/anaconda/" class="md-nav__link">
+      Guide to Installing Python
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/lib/" class="md-nav__link">
+      Guide to Python Libraries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/env/" class="md-nav__link">
+      Setting up Python Environment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/jupyter/" class="md-nav__link">
+      Installing Jupyter Notebook
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/git/" class="md-nav__link">
+      How to Git
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../prog.md" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../DataStructure/ds/" class="md-nav__link">
+      DataStructure
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../LoopsConditions/lnc/" class="md-nav__link">
+      Loops and Conditions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../FunctionClass/fnc/" class="md-nav__link">
+      Functions and Class
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Handeling Errors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Handeling Errors
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-from-errors" class="md-nav__link">
+    Learning from Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning from Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-error" class="md-nav__link">
+    Types of Error:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exception-handeling" class="md-nav__link">
+    Exception Handeling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../IO/io/" class="md-nav__link">
+      Input Output
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../StandardLibrary/psl/" class="md-nav__link">
+      Python Standard Library
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Fern/fern/" class="md-nav__link">
+      Project Fern
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Rwalk/Rwalk/" class="md-nav__link">
+      Project Random Walk
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Ncharges/Ncharges/" class="md-nav__link">
+      Project N-charges
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Diffusion/Diffusion/" class="md-nav__link">
+      Project Diffusion
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../References/ref/" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-from-errors" class="md-nav__link">
+    Learning from Errors
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning from Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-error" class="md-nav__link">
+    Types of Error:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exception-handeling" class="md-nav__link">
+    Exception Handeling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Handeling Errors</h1>
+                
+                <h2 id="learning-from-errors">Learning from Errors</h2>
+<ul>
+<li>
+<ol>
+<li>What is wrong here?</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #0099FF; font-style: italic"># This is title</span>
+
+This <span style="color: #000000; font-weight: bold">is</span> paragraph
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-1-9784fba40ee2&gt; in &lt;module&gt;
+      1 # This is title
+      2 
+----&gt; 3 This is paragraph
+
+
+NameError: name &#39;This&#39; is not defined
+</code></pre></div>
+
+
+<p>Note: <a href="https://jupyter-notebook.readthedocs.io/en/stable/index.html">Learn more about Jupyter notebook functionalities</a></p>
+<ul>
+<li>
+<ol>
+<li>What is wrong here?</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #336666">print</span> <span style="color: #CC3300">&quot;Hello world&quot;</span>
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>  File &quot;&lt;ipython-input-3-9fb80848b1b7&gt;&quot;, line 1
+    print &quot;Hello world&quot;
+                      ^
+SyntaxError: Missing parentheses in call to &#39;print&#39;. Did you mean print(&quot;Hello world&quot;)?
+</code></pre></div>
+
+
+<ul>
+<li>
+<ol>
+<li>What is wrong here?</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">4</span>):
+<span style="color: #336666">print</span>(i)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>  File &quot;&lt;ipython-input-5-8ee9e742a8b8&gt;&quot;, line 2
+    print(i)
+        ^
+IndentationError: expected an indented block
+</code></pre></div>
+
+
+<ul>
+<li>
+<ol>
+<li>What is wrong here?</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>L <span style="color: #555555">=</span> [<span style="color: #FF6600">3</span>,<span style="color: #FF6600">5</span>,<span style="color: #FF6600">7</span>]
+L[<span style="color: #FF6600">3</span>]
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+IndexError                                Traceback (most recent call last)
+
+&lt;ipython-input-13-e5031a802bc6&gt; in &lt;module&gt;
+      1 L = [3,5,7]
+----&gt; 2 L[3]
+
+
+IndexError: list index out of range
+</code></pre></div>
+
+
+<ul>
+<li>
+<ol>
+<li>What is wrong here?</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>A <span style="color: #555555">=</span> npp<span style="color: #555555">.</span>array([<span style="color: #FF6600">2</span>,<span style="color: #FF6600">5</span>,<span style="color: #FF6600">7</span>])
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-8-c9813575a7f9&gt; in &lt;module&gt;
+----&gt; 1 A = npp.array([2,5,7])
+
+
+NameError: name &#39;npp&#39; is not defined
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">myfunction</span>():
+    x <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint()
+    <span style="color: #006699; font-weight: bold">return</span> x<span style="color: #555555">+</span><span style="color: #FF6600">10</span>
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>myfunction()
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-16-7b999452a26c&gt; in &lt;module&gt;
+----&gt; 1 myfunction()
+
+
+&lt;ipython-input-15-6920121cfd0d&gt; in myfunction()
+      1 def myfunction():
+----&gt; 2     x = random.randint()
+      3     return x+10
+
+
+NameError: name &#39;random&#39; is not defined
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">myfunction</span>(x):
+    <span style="color: #006699; font-weight: bold">return</span> x<span style="color: #555555">+</span>y
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>myfunction(<span style="color: #FF6600">5</span>)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-18-8afb436c6a81&gt; in &lt;module&gt;
+----&gt; 1 myfunction(5)
+
+
+&lt;ipython-input-17-29ec7037f18c&gt; in myfunction(x)
+      1 def myfunction(x):
+----&gt; 2     return x+y
+
+
+NameError: name &#39;y&#39; is not defined
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">myfunction</span>(x):
+    y<span style="color: #555555">=</span><span style="color: #FF6600">6</span>
+    <span style="color: #006699; font-weight: bold">return</span> x<span style="color: #555555">+</span>y
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>myfunction(<span style="color: #FF6600">5</span>)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>11
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>y
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-22-9063a9f0e032&gt; in &lt;module&gt;
+----&gt; 1 y
+
+
+NameError: name &#39;y&#39; is not defined
+</code></pre></div>
+
+
+<ol>
+<li>What is wrong here?</li>
+</ol>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>):
+    <span style="color: #336666">print</span>(<span style="color: #FF6600">5</span><span style="color: #555555">/</span>i)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+ZeroDivisionError                         Traceback (most recent call last)
+
+&lt;ipython-input-29-7f38f68db52f&gt; in &lt;module&gt;
+      1 for i in range(5):
+----&gt; 2     print(5/i)
+
+
+ZeroDivisionError: division by zero
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #336666">open</span>(<span style="color: #CC3300">&quot;imaginary.txt&quot;</span>)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+FileNotFoundError                         Traceback (most recent call last)
+
+&lt;ipython-input-30-2bedf9c67314&gt; in &lt;module&gt;
+----&gt; 1 open(&quot;imaginary.txt&quot;)
+
+
+FileNotFoundError: [Errno 2] No such file or directory: &#39;imaginary.txt&#39;
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>L <span style="color: #555555">=</span> [<span style="color: #FF6600">1</span>,<span style="color: #FF6600">2</span>,<span style="color: #FF6600">3</span>,<span style="color: #FF6600">4</span>]
+<span style="color: #336666">type</span>(L)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>list
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">for</span> k,v <span style="color: #000000; font-weight: bold">in</span> L<span style="color: #555555">.</span>items():
+    <span style="color: #336666">print</span>(k,v)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-22-1284dd3b8bca&gt; in &lt;module&gt;
+----&gt; 1 for k,v in L.items():
+      2     print(k,v)
+
+
+AttributeError: &#39;list&#39; object has no attribute &#39;items&#39;
+</code></pre></div>
+
+
+<h3 id="types-of-error">Types of Error:</h3>
+<p><a href="https://www.programiz.com/python-programming/exceptions">Learn more about Python errors</a></p>
+<table>
+<thead>
+<tr>
+<th><strong>Exception</strong></th>
+<th>Cause of Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AssertionError</strong></td>
+<td>Raised when an assert statement fails.</td>
+</tr>
+<tr>
+<td><strong>AttributeError</strong></td>
+<td>Raised when attribute assignment or reference fails.</td>
+</tr>
+<tr>
+<td><strong>EOFError</strong></td>
+<td>Raised when the input() function hits end-of-file condition.</td>
+</tr>
+<tr>
+<td><strong>FloatingPointError</strong></td>
+<td>Raised when a floating point operation fails.</td>
+</tr>
+<tr>
+<td><strong>GeneratorExit</strong></td>
+<td>Raise when a generator's close() method is called.</td>
+</tr>
+<tr>
+<td><strong>ImportError</strong></td>
+<td>Raised when the imported module is not found.</td>
+</tr>
+<tr>
+<td><strong>IndexError</strong></td>
+<td>Raised when the index of a sequence is out of range.</td>
+</tr>
+<tr>
+<td><strong>KeyError</strong></td>
+<td>Raised when a key is not found in a dictionary.</td>
+</tr>
+<tr>
+<td><strong>KeyboardInterrupt</strong></td>
+<td>Raised when the user hits the interrupt key (Ctrl+C or Delete).</td>
+</tr>
+<tr>
+<td><strong>MemoryError</strong></td>
+<td>Raised when an operation runs out of memory.</td>
+</tr>
+<tr>
+<td><strong>NameError</strong></td>
+<td>Raised when a variable is not found in local or global scope.</td>
+</tr>
+<tr>
+<td><strong>NotImplementedError</strong></td>
+<td>Raised by abstract methods.</td>
+</tr>
+<tr>
+<td><strong>OSError</strong></td>
+<td>Raised when system operation causes system related error.</td>
+</tr>
+<tr>
+<td><strong>OverflowError</strong></td>
+<td>Raised when the result of an arithmetic operation is too large to be represented.</td>
+</tr>
+<tr>
+<td><strong>ReferenceError</strong></td>
+<td>Raised when a weak reference proxy is used to access a garbage collected referent.</td>
+</tr>
+<tr>
+<td><strong>RuntimeError</strong></td>
+<td>Raised when an error does not fall under any other category.</td>
+</tr>
+<tr>
+<td><strong>StopIteration</strong></td>
+<td>Raised by next() function to indicate that there is no further item to be returned by iterator.</td>
+</tr>
+<tr>
+<td><strong>SyntaxError</strong></td>
+<td>Raised by parser when syntax error is encountered.</td>
+</tr>
+<tr>
+<td><strong>IndentationError</strong></td>
+<td>Raised when there is incorrect indentation.</td>
+</tr>
+<tr>
+<td><strong>TabError</strong></td>
+<td>Raised when indentation consists of inconsistent tabs and spaces.</td>
+</tr>
+<tr>
+<td><strong>SystemError</strong></td>
+<td>Raised when interpreter detects internal error.</td>
+</tr>
+<tr>
+<td><strong>SystemExit</strong></td>
+<td>Raised by sys.exit() function.</td>
+</tr>
+<tr>
+<td><strong>TypeError</strong></td>
+<td>Raised when a function or operation is applied to an object of incorrect type.</td>
+</tr>
+<tr>
+<td><strong>UnboundLocalError</strong></td>
+<td>Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable.</td>
+</tr>
+<tr>
+<td><strong>UnicodeError</strong></td>
+<td>Raised when a Unicode-related encoding or decoding error occurs.</td>
+</tr>
+<tr>
+<td><strong>UnicodeEncodeError</strong></td>
+<td>Raised when a Unicode-related error occurs during encoding.</td>
+</tr>
+<tr>
+<td><strong>UnicodeDecodeError</strong></td>
+<td>Raised when a Unicode-related error occurs during decoding.</td>
+</tr>
+<tr>
+<td><strong>UnicodeTranslateError</strong></td>
+<td>Raised when a Unicode-related error occurs during translating.</td>
+</tr>
+<tr>
+<td><strong>ValueError</strong></td>
+<td>Raised when a function gets an argument of correct type but improper value.</td>
+</tr>
+<tr>
+<td><strong>ZeroDivisionError</strong></td>
+<td>Raised when the second operand of division or modulo operation is zero.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exception-handeling">Exception Handeling</h3>
+<p><a href="https://docs.python.org/3/library/exceptions.html">Learn more in builtin exceptions</a></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>D <span style="color: #555555">=</span> {<span style="color: #CC3300">&quot;1344&quot;</span>:<span style="color: #FF6600">234.98</span>,<span style="color: #CC3300">&quot;2564&quot;</span>:<span style="color: #FF6600">345.97</span>,<span style="color: #CC3300">&quot;3345&quot;</span>:<span style="color: #FF6600">367.95</span>,<span style="color: #CC3300">&quot;#&quot;</span>:<span style="color: #FF6600">358.63</span>,<span style="color: #CC3300">&quot;*&quot;</span>:<span style="color: #FF6600">283.54</span>}
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">for</span> k,v <span style="color: #000000; font-weight: bold">in</span> D<span style="color: #555555">.</span>items():
+        k <span style="color: #555555">=</span> <span style="color: #336666">int</span>(k)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-2-6fae1746f8e5&gt; in &lt;module&gt;
+      1 for k,v in D.items():
+----&gt; 2         k = int(k)
+
+
+ValueError: invalid literal for int() with base 10: &#39;#&#39;
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>int_dict <span style="color: #555555">=</span> {}
+non_int_dict <span style="color: #555555">=</span> {}
+<span style="color: #006699; font-weight: bold">for</span> k,v <span style="color: #000000; font-weight: bold">in</span> D<span style="color: #555555">.</span>items():
+    <span style="color: #006699; font-weight: bold">try</span>:
+        int_dict<span style="color: #555555">.</span>update({<span style="color: #336666">int</span>(k):v})
+        <span style="color: #336666">print</span>(<span style="color: #CC3300">&quot;this is integer&quot;</span>, k)
+    <span style="color: #006699; font-weight: bold">except</span>:
+        non_int_dict<span style="color: #555555">.</span>update({k:v})
+        <span style="color: #336666">print</span>(<span style="color: #CC3300">&#39;this is not integer&#39;</span>,k)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>this is integer 1344
+this is integer 2564
+this is integer 3345
+this is not integer #
+this is not integer *
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>int_dict
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>{1344: 234.98, 2564: 345.97, 3345: 367.95}
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>non_int_dict
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>{&#39;#&#39;: 358.63, &#39;*&#39;: 283.54}
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../FunctionClass/fnc/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Functions and Class
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../IO/io/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Input Output
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

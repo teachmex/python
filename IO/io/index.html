@@ -1,0 +1,890 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+    
+    
+      
+        <title>Input Output - Python Fundamentals</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#input-and-output" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Python Fundamentals" class="md-header-nav__button md-logo" aria-label="Python Fundamentals">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Python Fundamentals
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Input Output
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Fundamentals" class="md-nav__button md-logo" aria-label="Python Fundamentals">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Python Fundamentals
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/anaconda/" class="md-nav__link">
+      Guide to Installing Python
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/lib/" class="md-nav__link">
+      Guide to Python Libraries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/env/" class="md-nav__link">
+      Setting up Python Environment
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/jupyter/" class="md-nav__link">
+      Installing Jupyter Notebook
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/git/" class="md-nav__link">
+      How to Git
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../prog.md" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../DataStructure/ds/" class="md-nav__link">
+      DataStructure
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../LoopsConditions/lnc/" class="md-nav__link">
+      Loops and Conditions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../FunctionClass/fnc/" class="md-nav__link">
+      Functions and Class
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Errors/lfr/" class="md-nav__link">
+      Handeling Errors
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Input Output
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Input Output
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-output" class="md-nav__link">
+    Input and Output
+  </a>
+  
+    <nav class="md-nav" aria-label="Input and Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#txt-file" class="md-nav__link">
+    Txt file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-file" class="md-nav__link">
+    JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-file" class="md-nav__link">
+    CSV file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../StandardLibrary/psl/" class="md-nav__link">
+      Python Standard Library
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Fern/fern/" class="md-nav__link">
+      Project Fern
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Rwalk/Rwalk/" class="md-nav__link">
+      Project Random Walk
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Ncharges/Ncharges/" class="md-nav__link">
+      Project N-charges
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Projects/Diffusion/Diffusion/" class="md-nav__link">
+      Project Diffusion
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../References/ref/" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input-and-output" class="md-nav__link">
+    Input and Output
+  </a>
+  
+    <nav class="md-nav" aria-label="Input and Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#txt-file" class="md-nav__link">
+    Txt file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-file" class="md-nav__link">
+    JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-file" class="md-nav__link">
+    CSV file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Input Output</h1>
+                
+                <h2 id="input-and-output">Input and Output</h2>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">json</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">json</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">pandas</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">pd</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<span style="color: #555555">%</span>matplotlib inline
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #0099FF; font-style: italic">#mkdir newfolder</span>
+</code></pre></div>
+
+
+<h3 id="txt-file">Txt file</h3>
+<ul>
+<li><code>with open ()</code> method</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>mkdir data
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>A subdirectory or file data already exists.
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">with</span> <span style="color: #336666">open</span>(<span style="color: #CC3300">&#39;data/test.txt&#39;</span>, <span style="color: #CC3300">&#39;w&#39;</span>)<span style="color: #006699; font-weight: bold">as</span> file:
+    <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">100</span>):
+        file<span style="color: #555555">.</span>write(<span style="color: #CC3300">&quot;it is your &quot;</span><span style="color: #555555">+</span> <span style="color: #336666">str</span>(k) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;th turn! </span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>)
+</code></pre></div>
+
+
+<ul>
+<li><code>open()</code> and <code>close()</code> method</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>txtfile <span style="color: #555555">=</span> <span style="color: #336666">open</span>(<span style="color: #CC3300">&quot;data/textdata.txt&quot;</span>,<span style="color: #CC3300">&#39;w&#39;</span>)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span> (<span style="color: #FF6600">1000</span>):
+    <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;check even or odd&#39;&#39;&#39;</span>
+    <span style="color: #006699; font-weight: bold">if</span> i<span style="color: #555555">%</span><span style="color: #FF6600">2</span> <span style="color: #555555">==</span><span style="color: #FF6600">0</span>:
+        txtfile<span style="color: #555555">.</span>write(<span style="color: #336666">str</span>(i) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;|It is even </span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>)
+
+        <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;check above or below 500&#39;&#39;&#39;</span>
+        <span style="color: #006699; font-weight: bold">if</span> i<span style="color: #555555">&lt;</span><span style="color: #FF6600">500</span>:
+            txtfile<span style="color: #555555">.</span>write(<span style="color: #336666">str</span>(i) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;|It is below 500 </span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>)
+        <span style="color: #006699; font-weight: bold">else</span>:
+            txtfile<span style="color: #555555">.</span>write(<span style="color: #336666">str</span>(i) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;|It is above 500 </span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>)
+
+    <span style="color: #006699; font-weight: bold">else</span>:
+        txtfile<span style="color: #555555">.</span>write(<span style="color: #336666">str</span>(i) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;|It is odd </span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>)
+
+        <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;check above or below 500&#39;&#39;&#39;</span>
+        <span style="color: #006699; font-weight: bold">if</span> i<span style="color: #555555">&lt;</span><span style="color: #FF6600">500</span>:
+            txtfile<span style="color: #555555">.</span>write(<span style="color: #336666">str</span>(i) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;|It is below 500 </span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>)
+        <span style="color: #006699; font-weight: bold">else</span>:
+            txtfile<span style="color: #555555">.</span>write(<span style="color: #336666">str</span>(i) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;|It is above 500 </span><span style="color: #CC3300; font-weight: bold">\n</span><span style="color: #CC3300">&quot;</span>)
+
+txtfile<span style="color: #555555">.</span>close()
+</code></pre></div>
+
+
+<ul>
+<li>uploading/reading text file</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">with</span> <span style="color: #336666">open</span>(<span style="color: #CC3300">&#39;data/textdata.txt&#39;</span>,<span style="color: #CC3300">&#39;r&#39;</span>) <span style="color: #006699; font-weight: bold">as</span> f:
+    i <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
+    <span style="color: #006699; font-weight: bold">for</span> line <span style="color: #000000; font-weight: bold">in</span> f:
+        <span style="color: #336666">print</span>(line)
+        <span style="color: #006699; font-weight: bold">if</span> i <span style="color: #555555">&gt;</span><span style="color: #FF6600">10</span>:
+            <span style="color: #006699; font-weight: bold">break</span>
+        i <span style="color: #555555">=</span> i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>0|It is even
+
+0|It is below 500
+
+1|It is odd
+
+1|It is below 500
+
+2|It is even
+
+2|It is below 500
+
+3|It is odd
+
+3|It is below 500
+
+4|It is even
+
+4|It is below 500
+
+5|It is odd
+
+5|It is below 500
+</code></pre></div>
+
+
+<h3 id="json-file">JSON file</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Data <span style="color: #555555">=</span> []
+<span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">1000</span>):
+    Data<span style="color: #555555">.</span>append({<span style="color: #CC3300">&quot;x&quot;</span>: np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">10</span>),\
+        <span style="color: #CC3300">&quot;y&quot;</span>: np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">20</span>),\
+        <span style="color: #CC3300">&quot;z&quot;</span> : np<span style="color: #555555">.</span>random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">10</span>)})
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Data[<span style="color: #FF6600">101</span>:<span style="color: #FF6600">105</span>]
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[{&#39;x&#39;: 6.1054636810164595, &#39;y&#39;: 3.2863675264349634, &#39;z&#39;: 8.384891787980322},
+ {&#39;x&#39;: 7.069985836956237, &#39;y&#39;: 0.17988344698211423, &#39;z&#39;: 9.975981385348762},
+ {&#39;x&#39;: 2.7021265268361416, &#39;y&#39;: 9.729258889243164, &#39;z&#39;: 9.894201832125768},
+ {&#39;x&#39;: 6.418458045982539, &#39;y&#39;: 12.858408084598345, &#39;z&#39;: 5.91904399119246}]
+</code></pre></div>
+
+
+<ul>
+<li>Save data to a JSON file</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>mkdir data
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>A subdirectory or file data already exists.
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">with</span> <span style="color: #336666">open</span>(<span style="color: #CC3300">&quot;data/sample_data.json&quot;</span>, <span style="color: #CC3300">&#39;w&#39;</span>)<span style="color: #006699; font-weight: bold">as</span> f:
+    json<span style="color: #555555">.</span>dump(Data,f)
+</code></pre></div>
+
+
+<ul>
+<li>Upload data from JSON file</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">with</span> <span style="color: #336666">open</span>(<span style="color: #CC3300">&quot;data/sample_data.json&quot;</span>,<span style="color: #CC3300">&quot;r&quot;</span>)<span style="color: #006699; font-weight: bold">as</span> f:
+    uploaded_data <span style="color: #555555">=</span> json<span style="color: #555555">.</span>load(f)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>uploaded_data[<span style="color: #FF6600">0</span>:<span style="color: #FF6600">2</span>]
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[{&#39;x&#39;: 0.6982478944780635, &#39;y&#39;: 1.126719593276797, &#39;z&#39;: 0.4844149246453111},
+ {&#39;x&#39;: 9.508377504777027, &#39;y&#39;: 15.488536320226022, &#39;z&#39;: 2.7307796829523037}]
+</code></pre></div>
+
+
+<h3 id="csv-file">CSV file</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>DF <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>DataFrame(Data)
+DF<span style="color: #555555">.</span>head()
+</code></pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.698248</td>
+      <td>1.126720</td>
+      <td>0.484415</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9.508378</td>
+      <td>15.488536</td>
+      <td>2.730780</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7.248392</td>
+      <td>1.646036</td>
+      <td>5.782741</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5.829758</td>
+      <td>4.888937</td>
+      <td>7.824382</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3.174409</td>
+      <td>19.844952</td>
+      <td>4.117781</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<ul>
+<li>Save data to a CSV file</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>DF<span style="color: #555555">.</span>to_csv(<span style="color: #CC3300">&quot;data/sampledata.csv&quot;</span>)
+</code></pre></div>
+
+
+<ul>
+<li>Upload data from a CSV file</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>uploaded_data <span style="color: #555555">=</span> pd<span style="color: #555555">.</span>read_csv(<span style="color: #CC3300">&quot;data/sampledata.csv&quot;</span>)
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>uploaded_data<span style="color: #555555">.</span>head()
+</code></pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.698248</td>
+      <td>1.126720</td>
+      <td>0.484415</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>9.508378</td>
+      <td>15.488536</td>
+      <td>2.730780</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>7.248392</td>
+      <td>1.646036</td>
+      <td>5.782741</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>5.829758</td>
+      <td>4.888937</td>
+      <td>7.824382</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>3.174409</td>
+      <td>19.844952</td>
+      <td>4.117781</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>
+</code></pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../Errors/lfr/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Handeling Errors
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../StandardLibrary/psl/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Python Standard Library
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
